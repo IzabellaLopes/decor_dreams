@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_title %}
+  | Products
+{% endblock %}
+
 {% block page_header %}
   <div class="container header-container">
     <div class="row">
@@ -10,9 +14,36 @@
 {% endblock %}
 
 {% block content %}
-  <div class="container">
+  <div class="overlay"></div>
+
+  <div class="container container-wide">
     <div class="row">
-      <div class="col"></div>
+      <div class="col text-center mt-3">
+        <h2 class="logo-font text-center pt-4">All Products</h2>
+        <hr class="w-50 mb-1" />
+      </div>
+    </div>
+    <br />
+    <div class="row card-deck">
+      {% for product in products %}
+        <div class="col-sm-6 col-md-4 px-1">
+          <div class="card h-100">
+            {% if product.image %}
+              <a href=""><img class="card-img-top img-fluid product-img" src="{{ product.image.url }}" alt="{{ product.name }}" /></a>
+            {% else %}
+              <a href=""><img class="card-img-top img-fluid product-img" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}" /></a>
+            {% endif %}
+            <div class="card-body row py-2">
+              <p class="card-text col pl-0">
+                <small>{{ product.name }}</small>
+              </p>
+              <div class="col text-right pr-0">
+                <strong>€ {{ product.price }}</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
     </div>
   </div>
 {% endblock %}
