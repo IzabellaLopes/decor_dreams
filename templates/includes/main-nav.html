@@ -6,11 +6,11 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                <a href="" class="dropdown-item">Sofas</a>
-                <a href="" class="dropdown-item ">Tables &amp; desks</a>
-                <a href="" class="dropdown-item ">Chairs</a>
-                <a href="" class="dropdown-item ">Outdoor living</a>
-                <a href="" class="dropdown-item ">Decoration</a>
+                <a href="{% url 'products' %}?category=sofas" class="dropdown-item">Sofas</a>
+                <a href="{% url 'products' %}?category=tables,desks" class="dropdown-item ">Tables &amp; desks</a>
+                <a href="{% url 'products' %}?category=chairs" class="dropdown-item ">Chairs</a>
+                <a href="{% url 'products' %}?category=outdoor_living" class="dropdown-item ">Outdoor living</a>
+                <a href="{% url 'products' %}?category=decoration" class="dropdown-item ">Decoration</a>
             </div>
         </li>
 
