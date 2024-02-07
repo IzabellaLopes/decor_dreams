@@ -77,7 +77,19 @@ body {
     width: 100%;
 }
 
-/* -------------------------------- Media Queries */
+/*--------------------------------------------------------------
+# Product Detail
+--------------------------------------------------------------*/
+
+.product-detail-img {
+    object-fit: contain;
+    min-height: 400px;
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -98,5 +110,16 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }

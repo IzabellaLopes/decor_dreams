@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+  | Product Details
+{% endblock %}
+
+{% block page_header %}
+  <div class="container header-container">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="overlay"></div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-6 col-xl-8">
+        <div class="my-5">
+          {% if product.image %}
+            <a href="{{ product.image.url }}" target="_blank">
+              <img class="product-detail-img" src="{{ product.image.url }}" alt="{{ product.name }}" />
+            </a>
+          {% else %}
+            <img class="product-detail-img" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}" />
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4">
+        <div class="card my-5">
+          <div class="card-body pt-4 px-0 pl-md-5">
+            <div>
+              <h1 class="card-title text-left">{{ product.name }}</h1>
+            </div>
+            <hr />
+            <div>
+              <h1><strong>€ {{ product.price }}</strong></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <h4>Product Details</h4>
+          </div>
+          <div class="card-body">
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Description
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">{{ product.description }}</div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Details &amp; Dimensions
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">{{ product.details_dimensions|linebreaksbr }}</div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Delivery &amp; Returns
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">{{ product.delivery_returns }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
