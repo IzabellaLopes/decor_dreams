@@ -1,0 +1,1 @@
+web: gunicorn decor_dreams.wsgi:application
