@@ -19,9 +19,16 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+/*--------------------------------------------------------------
+# Nav
+--------------------------------------------------------------*/
+
+.logo-image {
+    height: 70px;
+}
+
+.logo-image-sm {
+    height: 50px;
 }
 
 .main-logo-link {
