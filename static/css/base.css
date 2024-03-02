@@ -1,5 +1,24 @@
+:root {
+    /*---------- TYPOGRAPHY ----------*/
+    --header-text: 'Comfortaa', sans-serif;
+    --content-text: 'Open Sans', sans-serif;
+
+    /*---------- COLOURS ----------*/
+    --light-green: #d4e3cb;
+    --green: #81aa73;
+    --dark-green: #1e332d;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
 html {
     height: 100%;
+}
+
+header {
+    font-family: var(--header-text);
 }
 
 body {
@@ -7,7 +26,7 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Comfortaa';
+    font-family: var(--content-text);
 }
 
 /* from Bulma */
@@ -28,8 +47,74 @@ body {
 }
 
 .logo-image-sm {
-    height: 50px;
+    height: 70px;
 }
+
+/* Remove border from toggler */
+/* Source: Navbar Hamburger Animation with CSS - Bootstrap 5 - https://www.youtube.com/watch?v=vJ85fm4m7lw */
+.navbar-toggler {
+    border: 0 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+}
+
+/* Lines of the Toggler */
+.toggler-icon{
+    width: 30px;
+    height: 3px;
+    background-color: var(--green);
+    display: block;
+    transition: all 0.2s;
+}
+
+/* Adds Space between the lines */
+.middle-bar{
+    margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: var(--dark-green);
+}
+
 
 .main-logo-link {
     width: fit-content;
@@ -306,6 +391,7 @@ input[name='q']::placeholder {
     }
 }
 
+/* For Medium devices (tablets, less than 992px) */
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
@@ -351,5 +437,19 @@ input[name='q']::placeholder {
     .increase-qty,
     .decrease-qty {
         padding: .25rem .5rem !important;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px */
+@media screen and (max-width: 767.98px) {
+    .logo-image-sm {
+        height: 60px;
+    }
+}
+
+/* Small devices (phones, less than 600px */
+@media screen and (max-width: 600px) {
+    .logo-image-sm {
+        height: 50px;
     }
 }
