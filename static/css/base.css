@@ -19,13 +19,14 @@ html {
 
 header {
     font-family: var(--header-text);
+    color: var(--dark-green);
 }
 
 body {
-    background: url('/media/homepage.jpg') no-repeat center center fixed;
+    background: url(https://decor-dreams.s3.eu-west-1.amazonaws.com/media/homepage.webp) no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    color: var(--dark-green);
     font-family: var(--content-text);
 }
 
@@ -38,6 +39,19 @@ body {
     width: 1.5rem;
 }
 
+.logo-font,
+a.nav-link {
+    color: var(--dark-green) !important;
+}
+
+.green-hover:hover {
+    color: var(--green) !important;
+}
+
+.border-green {
+    border-color: var(--light-green);
+}
+
 /*--------------------------------------------------------------
 # Nav
 --------------------------------------------------------------*/
@@ -48,6 +62,20 @@ body {
 
 .logo-image-sm {
     height: 70px;
+}
+
+.nav-icons i:hover {
+    color: var(--green) !important;
+    ;
+}
+
+.navbar ul a {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.navbar ul a:hover {
+    color: var(--green) !important;
 }
 
 /* Remove border from toggler */
@@ -154,16 +182,8 @@ body {
     color: white;
 }
 
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
-
-.bg-black {
-    background: #000 !important;
+.bg-lightgreen {
+    background: var(--light-green) !important;
 }
 
 .overlay {
