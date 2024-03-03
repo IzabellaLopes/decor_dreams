@@ -7,6 +7,7 @@
     --light-green: #d4e3cb;
     --green: #81aa73;
     --dark-green: #1e332d;
+    --golden: #c9ae5d;
 }
 
 /*--------------------------------------------------------------
@@ -17,17 +18,15 @@ html {
     height: 100%;
 }
 
-header {
+header,
+.logo-font {
     font-family: var(--header-text);
     color: var(--dark-green);
 }
 
 body {
-    background: url(https://decor-dreams.s3.eu-west-1.amazonaws.com/media/homepage.webp) no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: var(--dark-green);
     font-family: var(--content-text);
+    color: var(--dark-green);
 }
 
 /* from Bulma */
@@ -39,17 +38,24 @@ body {
     width: 1.5rem;
 }
 
-.logo-font,
-a.nav-link {
-    color: var(--dark-green) !important;
-}
-
 .green-hover:hover {
     color: var(--green) !important;
 }
 
 .border-green {
     border-color: var(--light-green);
+}
+
+.bg-lightgreen {
+    background: var(--light-green) !important;
+}
+
+/*--------------------------------------------------------------
+# Header container
+--------------------------------------------------------------*/
+
+.header-container {
+    padding-top: 193px;
 }
 
 /*--------------------------------------------------------------
@@ -64,14 +70,17 @@ a.nav-link {
     height: 70px;
 }
 
+a.nav-link {
+    color: var(--dark-green) !important;
+}
+
 .nav-icons i:hover {
     color: var(--green) !important;
-    ;
 }
 
 .navbar ul a {
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 0.8rem;
 }
 
 .navbar ul a:hover {
@@ -143,20 +152,45 @@ a.nav-link {
     background-color: var(--dark-green);
 }
 
-
 .main-logo-link {
     width: fit-content;
 }
 
+/*--------------------------------------------------------------
+# Homepage
+--------------------------------------------------------------*/
+
+.hero-callout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: url(https://decor-dreams.s3.eu-west-1.amazonaws.com/media/homepage.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 50px;
+}
+
+.slogan {
+    font-size: 1em;
+}
+
 .shop-now-button {
-    background: black;
-    color: white;
+    background: var(--light-green);
+    color: var(--dark-green);
+    border: 2px solid var(--golden);
     min-width: 260px;
 }
 
-.btn-black {
-    background: black;
-    color: white;
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: var(--dark-green);
+    color: var(--light-green);
 }
 
 .btn-outline-black {
@@ -172,19 +206,9 @@ a.nav-link {
     color: white !important;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
 
-.bg-lightgreen {
-    background: var(--light-green) !important;
-}
+
+
 
 .overlay {
 	height: 100%;
@@ -396,8 +420,23 @@ input[name='q']::placeholder {
   }
 }
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
+/* For Large devices (laptops, less than 1200px) */
+@media (max-width: 1200px) {
+    .navbar ul a {
+        font-size: 0.7rem;
+    }
+}
+
+/* For Large devices (less than 1038px) */
+@media (max-width: 1038px) {
+    .navbar ul a {
+        font-size: 0.6rem;
+    }
+}
+
+/* For Medium devices (tablets, less than 992px) */
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -407,23 +446,11 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 164px;
-    }
-}
-
-/* For Medium devices (tablets, less than 992px) */
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 148px;
+        padding-top: 116px;
     }
 
     body {
-        height: calc(100vh - 148px);
-    }
-
-    .display-4.logo-font.text-black {
-        font-size: 2rem;
+        height: calc(100vh - 116px);
     }
 
     .nav-link {
@@ -442,6 +469,18 @@ input[name='q']::placeholder {
     #delivery-banner h4 {
         font-size: .9rem;
     }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .slogan {
+        font-size: 0.9em;
+    }
+
+
+
+
 
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
@@ -462,13 +501,34 @@ input[name='q']::placeholder {
 
 /* Small devices (landscape phones, less than 768px */
 @media screen and (max-width: 767.98px) {
+    .header-container {
+        padding-top: 106px;
+    }
+
     .logo-image-sm {
         height: 60px;
+    }
+
+    .hero-callout {
+        height: 50vh;
+    }
+
+    .margin-top-0 {
+        margin-top: 0 !important;
+    }
+
+    .shop-now-button {
+        min-width: 200px;
+        font-size: small;
     }
 }
 
 /* Small devices (phones, less than 600px */
 @media screen and (max-width: 600px) {
+    .header-container {
+        padding-top: 96px;
+    }
+
     .logo-image-sm {
         height: 50px;
     }
