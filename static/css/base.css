@@ -156,6 +156,27 @@ a.nav-link {
     width: fit-content;
 }
 
+.banner {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.banner-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-100%, 0);
+    }
+}
+
 /*--------------------------------------------------------------
 # Homepage
 --------------------------------------------------------------*/
@@ -176,22 +197,57 @@ a.nav-link {
     font-size: 1em;
 }
 
-.shop-now-button {
+.button {
     background: var(--light-green);
     color: var(--dark-green);
-    border: 2px solid var(--golden);
-    min-width: 260px;
+    border: 3px solid var(--golden);
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.button:hover,
+.button:active,
+.button:focus {
     background: var(--dark-green);
     color: var(--light-green);
 }
+
+.home-button {
+    min-width: 260px;
+}
+
+.jumbotron {
+    color: var(--dark-green);
+    animation: slideInFromTop 1s ease-out;
+  }
+  
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.footer {
+    box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.25);
+    font-family: var(--header-text);
+    color: var(--dark-green);
+}
+
+.footer a {
+    color: var(--dark-green)!important;
+}
+
+footer a:hover {
+    color: var(--green)!important;
+}
+
 
 .btn-outline-black {
     background: white;
@@ -517,9 +573,15 @@ input[name='q']::placeholder {
         margin-top: 0 !important;
     }
 
-    .shop-now-button {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .home-button {
+        font-size: 14px;
         min-width: 200px;
-        font-size: small;
+        padding-top: 0.8rem !important;
+        padding-bottom: 0.8rem !important;
     }
 }
 
@@ -531,5 +593,45 @@ input[name='q']::placeholder {
 
     .logo-image-sm {
         height: 50px;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .home-button {
+        font-size: 12px;
+    }
+}
+
+/* Small devices (phones, less than 453px */
+@media screen and (max-width: 453px) {
+    .home-button {
+        font-size: 10px;
+        min-width: 160px;
+    }
+}
+
+
+/* Small devices (phones, less than 384px */
+@media screen and (max-width: 384px) {
+    .home-button {
+        font-size: 8px;
+        min-width: 140px;
+    }
+}
+
+/* Small devices (phones, less than 330px */
+@media screen and (max-width: 330px) {
+    .home-button {
+        font-size: 7px;
+    }
+}
+
+
+/* Small devices (phones, less than 325px */
+@media screen and (max-width: 325px) {
+    .title {
+        font-size: 1rem;
     }
 }
