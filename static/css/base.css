@@ -238,14 +238,42 @@ a.nav-link {
     box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.25);
     font-family: var(--header-text);
     color: var(--dark-green);
+    line-height: 2;
+    font-size: 0.8rem
 }
 
-.footer a {
+.footer a,
+.navbar-nav .nav-link {
     color: var(--dark-green)!important;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    position: relative;
 }
 
-footer a:hover {
+.footer a:hover,
+.navbar-nav .nav-link:hover {
     color: var(--green)!important;
+}
+
+.footer a:hover::after,
+.navbar-nav .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--golden);
+    animation: underline-animation 0.3s ease forwards;
+}
+
+@keyframes underline-animation {
+    from {
+        width: 0;
+    to {
+        width: 100%;
+    }
+}
 }
 
 
