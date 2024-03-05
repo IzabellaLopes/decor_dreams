@@ -520,6 +520,10 @@ input[name='q']::placeholder {
     .navbar ul a {
         font-size: 0.6rem;
     }
+
+    .list-inline-item:not(:last-child) {
+        margin-right: 0.2rem;
+    }
 }
 
 /* For Medium devices (tablets, less than 992px) */
@@ -570,6 +574,8 @@ input[name='q']::placeholder {
     .card-price {
         font-size: 14px;
     }
+
+
 
 
 
@@ -665,6 +671,14 @@ input[name='q']::placeholder {
     .home-button {
         font-size: 8px;
         min-width: 140px;
+    }
+
+    .footer {
+        font-size: 0.7rem
+    }
+
+    .list-inline-item:not(:last-child) {
+        margin-right: 0;
     }
 }
 
