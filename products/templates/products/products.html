@@ -14,26 +14,26 @@
 {% endblock %}
 
 {% block content %}
-  <div class="overlay"></div>
-
   <div class="container container-wide">
-    <div class="row">
-      <div class="col-12 mt-3">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
         {% if current_categories %}
           {% for c in current_categories %}
-            <h1 class="logo-font text-center pt-4">{{ c.friendly_name }}</h1>
+          <hr>
+          <h2 class="logo-font text-center">{{ c.friendly_name }}</h2>
+          <hr/>
           {% endfor %}
         {% else %}
-          <h1 class="logo-font text-center pt-4">All Products</h1>
+          <hr>
+          <h2 class="logo-font text-center">All Products</h2>
+          <hr/>
         {% endif %}
-        <hr class="w-50 mb-1" />
       </div>
     </div>
-    <br />
     <div class="row mb-2">
       <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
           <div class="sort-select-wrapper w-50">
-              <select id="sort-selector" class="custom-select custom-select-sm rounded-0">
+              <select id="sort-selector" class="custom-select custom-select-sm rounded border-green">
                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price
                       (low to high)</option>
@@ -59,18 +59,18 @@
     </div>
     <div class="row card-deck">
       {% for product in products %}
-        <div class="col-sm-6 col-md-4 px-1">
-          <div class="card h-100">
+        <div class="col-6 col-md-4 mb-4">
+          <div class="card item-card rounded-4 h-100">
             {% if product.image %}
-              <a href="{% url 'product_detail' product.id %}"><img class="card-img-top img-fluid product-img" src="{{ product.image.url }}" alt="{{ product.name }}" /></a>
+              <a href="{% url 'product_detail' product.id %}"><img class="card-img-top img-fluid product-img" src="{{ product.image.url }}" draggable="false" alt="{{ product.name }}" /></a>
             {% else %}
-              <a href="{% url 'product_detail' product.id %}"><img class="card-img-top img-fluid product-img" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}" /></a>
+              <a href="{% url 'product_detail' product.id %}"><img class="card-img-top img-fluid product-img" src="{{ MEDIA_URL }}noimage.jpg" draggable="false" alt="{{ product.name }}" /></a>
             {% endif %}
             <div class="card-body row py-2">
-              <p class="card-text col pl-0">
+              <p class="card-text card-title col pl-1">
                 <small>{{ product.name }}</small>
               </p>
-              <p class="col text-right lead font-weight-bold pr-0">€ {{ product.price }}</p>
+              <p class="card-price col text-right lead font-weight-bold pr-1">€ {{ product.price }}</p>
             </div>
             <div class="row">
               {% if request.user.is_superuser %}
@@ -80,7 +80,7 @@
               </small>
             {% endif %}
             </div>
-            <div class="card-footer text-left">
+            <div class="card-footer">
               {% if product.category %}
                 <small class="mt-1 mb-0">
                   <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}"><i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</a>
@@ -92,7 +92,7 @@
       {% endfor %}
     </div>
   </div>
-  <div class="btt-button shadow-sm rounded-0 border border-black">
+  <div class="btt-button shadow-sm rounded-pill border-green">
     <a class="btt-link d-flex h-100">
         <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
     </a>	
