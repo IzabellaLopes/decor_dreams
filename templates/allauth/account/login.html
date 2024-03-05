@@ -45,7 +45,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <a class="btn btn-outline-dark border-green rounded-pill" href="{% url 'home' %}" role="button">Home</a>
+  <a class="btn btn-outline-dark border-green rounded-pill m-2" href="{% url 'home' %}" role="button">Home</a>
   <button class="primaryAction btn-green rounded-pill" type="submit">{% trans "Sign In" %}</button>
   <p class="mt-2">
     <a class="button secondaryAction green-hover" href="{% url 'account_reset_password' %}" role="button">{% trans "Forgot Password?" %}</a>

@@ -20,7 +20,7 @@
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
   {% endif %}
-  <a class="btn btn-outline-dark border-green rounded-pill" href="{% url 'home' %}">Cancel</a>
+  <a class="btn btn-outline-dark border-green rounded-pill m-2" href="{% url 'home' %}">Cancel</a>
   <button type="submit" class="btn-green rounded-pill">{% trans 'Sign Out' %}</button>
 </form>
 
