@@ -50,6 +50,10 @@ body {
     background: var(--light-green) !important;
 }
 
+.bg-golden {
+    background: var(--golden)!important;
+}
+
 hr {
     border-top: 2px solid var(--light-green);
 }
