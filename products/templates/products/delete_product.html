@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+  | Delete Product
+{% endblock %}
+
+{% block page_header %}
+  <div class="container header-container">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  {% load crispy_forms_tags %}
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <hr />
+        <h2 class="logo-font text-center">Delete a Product</h2>
+        <hr />
+      </div>
+    </div>
+
+    <p class="text-center mt-3">
+      Are you sure you want to delete the <strong>{{ product.name }}</strong>?
+    </p>
+    <div class="row justify-content-center">
+      <div class="col-11 col-md-6 col-lg-4 my-3">
+        <form class="text-center" method="POST">
+          {% csrf_token %}
+          <div>
+            <a class="btn btn-outline-dark border-green rounded-pill m-2" href="{% url 'products' %}">Cancel</a>
+            <button type="submit" class="btn btn-green rounded-pill">Delete</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
