@@ -43,7 +43,7 @@ body {
 }
 
 .border-green {
-    border-color: var(--light-green);
+    border: 1px solid var(--light-green);
 }
 
 .bg-lightgreen {
@@ -377,8 +377,6 @@ a.nav-link {
     color: var(--dark-green)!important;
 }
 
-
-
 /*--------------------------------------------------------------
 # Product Form
 --------------------------------------------------------------*/
@@ -412,6 +410,33 @@ a.nav-link {
 input[name='q']::placeholder {
     color: #aab7c4;
 }
+
+/*--------------------------------------------------------------
+# Bag
+--------------------------------------------------------------*/
+
+.edit-delete-btns {
+    z-index: 5000;
+    color: var(--golden) !important;
+}
+
+.edit-delete-btns span {
+    color: var(--golden);
+}
+
+.edit-delete-btns a {
+    color: var(--golden);
+}
+
+.table-shopping,
+.form-control-sm,
+.increase-qty,
+.decrease-qty {
+    font-size: 13px;
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Bootstrap toasts
@@ -556,6 +581,13 @@ input[name='q']::placeholder {
     .navbar ul a {
         font-size: 0.7rem;
     }
+
+    .table-shopping,
+    .form-control-sm,
+    .increase-qty,
+    .decrease-qty {
+        font-size: 12px;
+      }
 }
 
 /* For Large devices (less than 1038px) */
@@ -625,6 +657,13 @@ input[name='q']::placeholder {
     .increase-qty,
     .decrease-qty {
         padding: .25rem .5rem !important;
+    }
+
+    .table-shopping,
+    .form-control-sm,
+    .increase-qty,
+    .decrease-qty {
+        font-size: 9px;
     }
 }
 
