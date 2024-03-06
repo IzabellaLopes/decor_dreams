@@ -58,6 +58,10 @@ hr {
     border-top: 2px solid var(--light-green);
 }
 
+.rounded-4 {
+    border-radius: 1rem;
+}
+
 /*--------------------------------------------------------------
 # Header container
 --------------------------------------------------------------*/
@@ -331,10 +335,49 @@ a.nav-link {
 --------------------------------------------------------------*/
 
 .product-detail-img {
+    background-color: #ffffff;
+    box-shadow: 0 1px 20px 1px rgba(0, 0, 0, 0.10);
+    border: none;
+    max-height: 100%;
+}
+
+.product-detail-img img {
     object-fit: contain;
     min-height: 400px;
     width: 100%;
+    border-radius: 1rem;
 }
+
+.product-detail-title {
+    font-family: var(--header-text);
+}
+
+.card-header.product-detail-info {
+    background-color: var(--light-green);
+    color: var(--dark-green);
+    box-shadow: 0 1px 20px 1px rgba(0, 0, 0, 0.10);
+}
+
+.card-header.product-detail-info h4 {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+}
+
+.card-body-detail {
+    box-shadow: 0 1px 20px 1px rgba(0, 0, 0, 0.10);
+    border: 1px solid var(--golden);
+    font-size: 14px;
+}
+
+.card-body-detail .card {
+    margin-bottom: 10px;
+}
+
+.btn-link {
+    color: var(--dark-green)!important;
+}
+
+
 
 /*--------------------------------------------------------------
 # Product Form
@@ -575,21 +618,8 @@ input[name='q']::placeholder {
         font-size: 14px;
     }
 
-
-
-
-
-
-
-    .btn.btn-outline-black.rounded-0,
-    .btn.btn-black.rounded-0 {
-        padding: .375rem .375rem;
-    }
-
-    .btn.btn-outline-black.rounded-0.btn-lg,
-    .btn.btn-black.rounded-0.btn-lg {
-        padding: .375rem .375rem;
-        font-size: .75rem;
+    .product-detail-title {
+        font-size: 1.5rem;
     }
 
     .increase-qty,
@@ -658,10 +688,21 @@ input[name='q']::placeholder {
         min-width: 160px;
     }
 
-    
     .card-title,
     .card-price {
         font-size: 12px;
+    }
+
+    .product-detail-img {
+        margin-top: 1rem!important;
+    }
+    
+    .product-detail-img img {
+        min-height: 300px;
+    }
+
+    .product-detail-title {
+        font-size: 1.17em;
     }
 }
 
@@ -679,6 +720,11 @@ input[name='q']::placeholder {
 
     .list-inline-item:not(:last-child) {
         margin-right: 0;
+    }
+
+    .keep-shopping, 
+    .add-bag {
+        font-size: small;
     }
 }
 
