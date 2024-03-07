@@ -57,9 +57,9 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <form method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
-              <input class="form-control border-green rounded-0" type="text" name="q" placeholder="Search our site" aria-label="Search" />
+              <input class="form-control border-green rounded-4" type="text" name="q" placeholder="Search our site" aria-label="Search" />
               <div class="input-group-append green-hover">
-                <button class="form-control btn btn-outline-dark border-green rounded-0" type="submit" aria-label="Search Button"><span class="icon"><i class="fas fa-search"></i></span></button>
+                <button class="form-control btn bg-lightgreen border-green rounded-4" type="submit" aria-label="Search Button"><span class="icon"><i class="fas fa-search"></i></span></button>
               </div>
             </div>
           </form>
@@ -67,7 +67,7 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
             <li class="list-inline-item dropdown nav-icons">
-              <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center green-hover">
                   <div>
                     <i class="fas fa-user fa-lg"></i>
@@ -75,7 +75,7 @@
                   <p class="my-0">My Account</p>
                 </div>
               </a>
-              <div class="dropdown-menu border-0" aria-labelledby="user-options">
+              <div class="dropdown-menu border-green border-4" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
                   {% if request.user.is_superuser %}
                     <a href="{% url 'add_product' %}" class="dropdown-item">Add a Product</a>

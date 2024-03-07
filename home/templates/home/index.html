@@ -10,32 +10,25 @@
 {% endblock %}
 
 {% block content %}
-  <div class="container-fluid hero-callout" role="img" aria-label="Modern living room">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col">
-          <h1 class="logo-font title">Welcome to Decor Dreams!</h1> <br />
-          <h2 class="logo-font slogan d-none d-md-block">Turn your house into a haven and transform your dreams into reality!</h2>
-        </div>
-      </div>
-      <div class="row justify-content-center text-center">
-        <div class="my-5 margin-top-0">
-          <div class="d-flex flex-row justify-content-center">
-            <a href="{% url 'products' %}" class="btn-green home-button btn rounded-pill text-uppercase py-3 logo-font font-weight-bold mb-5 mr-2">Shop Now</a>
-            <a href="" class="btn-green home-button btn rounded-pill text-uppercase py-3 logo-font font-weight-bold mb-5">Schedule a Consultation</a>
-          </div>
-        </div>
+  <section id="hero-callout-section">
+    <div class="container-fluid hero-callout" role="img" aria-label="Modern living room">
+      <div class="transparent-box rounded-4">
+        <h1 class="logo-font title text-uppercase pb-2">Decor <b class="text-darkgolden">Your</b> Dreams</h1>
+        <h2 class="logo-font slogan pb-2">Your destination for all your home decor needs</h2>
+        <a href="{% url 'products' %}" class="home-button btn btn-green text-uppercase rounded-4 py-3 logo-font font-weight-bold mr-md-2">Shop Now</a>
+        <a href="" class="home-button btn btn-green text-uppercase rounded-4 py-3 logo-font font-weight-bold">Schedule a Consultation</a>
       </div>
     </div>
-  </div>
-
+  </section>
   <div class="container mt-3">
     <div class="row">
       <div class="col-md-6">
         <div class="jumbotron text-center">
           <div class="about-us-text">
             <h3 class="logo-font title"><strong>Discover Unique Pieces</strong></h3>
-            <p>Explore our carefully selected collection of <strong>stylish homeware and decorations</strong>, featuring elegant sofas, chic tables & desks, cozy chairs, and captivating outdoor living essentials.</p>
+            <p>
+              Explore our carefully selected collection of <strong>stylish homeware and decorations</strong>, featuring elegant sofas, chic tables & desks, cozy chairs, and captivating outdoor living essentials.
+            </p>
             <a href="{% url 'products' %}" class="btn-green home-button btn rounded-pill text-uppercase py-3 logo-font font-weight-bold mb-5 mr-2">Shop Now</a>
           </div>
         </div>
@@ -44,7 +37,9 @@
         <div class="jumbotron text-center">
           <div class="about-us-text">
             <h3 class="logo-font title mb-2"><strong>Elevate Your Space</strong></h3>
-            <p>Transform your home with our tailored <strong>interior design services</strong>. Our expert team helps plan and design your space just for you, all across Ireland.</p>
+            <p>
+              Transform your home with our tailored <strong>interior design services</strong>. Our expert team helps plan and design your space just for you, all across Ireland.
+            </p>
             <a href="" class="btn-green home-button btn rounded-pill text-uppercase py-3 logo-font font-weight-bold mb-5">Schedule a Consultation</a>
           </div>
         </div>
@@ -53,3 +48,11 @@
   </div>
 {% endblock %}
 
+{% block postloadjs %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var transparentBox = document.querySelector('.transparent-box')
+      transparentBox.classList.add('show')
+    })
+  </script>
+{% endblock %}

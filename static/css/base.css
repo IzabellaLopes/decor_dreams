@@ -8,6 +8,7 @@
     --green: #81aa73;
     --dark-green: #1e332d;
     --golden: #c9ae5d;
+    --darkgolden: darkgoldenrod;
 }
 
 /*--------------------------------------------------------------
@@ -38,12 +39,16 @@ body {
     width: 1.5rem;
 }
 
-.green-hover:hover {
-    color: var(--green) !important;
+.text-darkgolden {
+    color: var(--darkgolden);
 }
 
 .border-green {
     border: 1px solid var(--light-green);
+}
+
+.border-golden {
+    border: 1px solid var(--golden);
 }
 
 .bg-lightgreen {
@@ -52,6 +57,23 @@ body {
 
 .bg-golden {
     background: var(--golden)!important;
+}
+
+.btn-green {
+    background: var(--light-green);
+    color: var(--dark-green);
+    border: 3px solid var(--golden);
+}
+
+.btn-green:hover,
+.btn-green:active,
+.btn-green:focus {
+    background: var(--dark-green);
+    color: var(--light-green);
+}
+
+.green-hover:hover {
+    color: var(--green) !important;
 }
 
 hr {
@@ -199,35 +221,37 @@ a.nav-link {
 
 .hero-callout {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     background-image: url(https://decor-dreams.s3.eu-west-1.amazonaws.com/media/homepage.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100vh;
-    padding-top: 50px;
+}
+
+.transparent-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    max-width: 80%;
+    text-align: center;
+    position: absolute;
+    top: 220px;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.transparent-box.show {
+    opacity: 1;
 }
 
 .slogan {
     font-size: 1em;
 }
 
-.btn-green {
-    background: var(--light-green);
-    color: var(--dark-green);
-    border: 3px solid var(--golden);
-}
-
-.btn-green:hover,
-.btn-green:active,
-.btn-green:focus {
-    background: var(--dark-green);
-    color: var(--light-green);
-}
-
 .home-button {
     min-width: 260px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .jumbotron {
@@ -641,6 +665,10 @@ input[name='q']::placeholder {
         font-size: 2rem;
     }
 
+    .transparent-box {
+        top: 160px;
+    }
+
     .slogan {
         font-size: 0.9em;
     }
@@ -685,15 +713,19 @@ input[name='q']::placeholder {
         margin-top: 0 !important;
     }
 
+    .transparent-box {
+        top: 120px;
+    }
+
     .title {
         font-size: 1.5rem;
     }
 
     .home-button {
         font-size: 14px;
-        min-width: 200px;
         padding-top: 0.8rem !important;
         padding-bottom: 0.8rem !important;
+        margin-bottom: .3rem;
     }
 
     .product-img {
@@ -724,7 +756,6 @@ input[name='q']::placeholder {
 @media screen and (max-width: 453px) {
     .home-button {
         font-size: 10px;
-        min-width: 160px;
     }
 
     .card-title,
