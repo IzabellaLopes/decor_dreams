@@ -3,11 +3,11 @@
   <div class="form-group mx-md-2 mx-lg-3">
     <div class="input-group input-group-{{ item.item_id }}">
       <div class="input-group-prepend">
-        <button class="decrease-qty btn btn-sm border-green decrease-qty_{{ item.item_id }}" data-item_id="{{ item.item_id }}" aria-label="Decrease Quantity"><span><i class="fas fa-minus fa-sm"></i></span></button>
+        <button class="decrease-qty btn btn-sm border-golden bg-lightgreen decrease-qty_{{ item.item_id }}" data-item_id="{{ item.item_id }}" aria-label="Decrease Quantity"><span><i class="fas fa-minus fa-sm"></i></span></button>
       </div>
-      <input class="form-control border-green form-control-sm qty_input id_qty_{{ item.item_id }}" name="quantity" type="number" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" aria-label="Quantity" />
+      <input class="form-control border-green text-center form-control-sm qty_input id_qty_{{ item.item_id }}" name="quantity" type="number" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" aria-label="Quantity" />
       <div class="input-group-append">
-        <button class="increase-qty btn btn-sm border-green increase-qty_{{ item.item_id }}" data-item_id="{{ item.item_id }}" aria-label="Increase Quantity"><span><i class="fas fa-plus fa-sm"></i></span></button>
+        <button class="increase-qty btn btn-sm border-golden bg-lightgreen increase-qty_{{ item.item_id }}" data-item_id="{{ item.item_id }}" aria-label="Increase Quantity"><span><i class="fas fa-plus fa-sm"></i></span></button>
       </div>
     </div>
   </div>

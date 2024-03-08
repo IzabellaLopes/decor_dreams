@@ -27,7 +27,51 @@
     <div class="row">
       <div class="col">
         {% if bag_items %}
-          <div class="table-responsive table-shopping rounded-4">
+          <div class="d-block d-md-none mx-3 mx-sm-0">
+            <div class="row">
+              <div class="col">
+                {% include 'bag/bag_total.html' %}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                {% include 'bag/checkout_buttons.html' %}
+                <p class="text-muted my-3 text-center">A summary of your bag contents is below</p>
+              </div>
+            </div>
+            {% for item in bag_items %}
+              <div class="row">
+                <div class="col-12 col-sm-6 mb-2">
+                  {% include 'bag/product_image.html' %}
+                </div>
+                <div class="col-12 col-sm-6 mb-2">
+                  {% include 'bag/product_info.html' %}
+                </div>
+                <div class="col-12 col-sm-6 order-sm-last">
+                  <p class="my-0">Price Each: € {{ item.product.price }}</p>
+                  <p>
+                    <strong>Subtotal: € {{ item.product.price|calc_subtotal:item.quantity }}</strong>
+                  </p>
+                </div>
+                <div class="col-12 col-sm-6 edit-delete-btns">
+                  {% include 'bag/quantity_form.html' %}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <hr />
+                </div>
+              </div>
+            {% endfor %}
+            <div class="btt-button shadow-sm rounded-4 border-green">
+              <a class="btt-link d-flex h-100">
+                  <i class="fas fa-arrow-up mx-auto my-auto"></i>
+              </a>	
+            </div>
+          </div>
+
+
+          <div class="table-responsive table-shopping rounded-4 d-none d-md-block">
             <table class="table table-sm table-borderless">
               <thead>
                 <tr class="bg-lightgreen text-center rounded-4">
@@ -45,13 +89,13 @@
                     {% include 'bag/product_image.html' %}
                   </td>
                   <td class="py-3">
-                    {% include "bag/product_info.html" %}
+                    {% include 'bag/product_info.html' %}
                   </td>
                   <td class="py-3 text-center">
                     <p class="my-0">€ {{ item.product.price }}</p>
                   </td>
                   <td class="py-3 mx-auto">
-                    {% include "bag/quantity_form.html" %}
+                    {% include 'bag/quantity_form.html' %}
                   </td>
                   <td class="py-3 edit-delete-btns">
                     <span class="update-link btn p-0"><small><i class="fas fa-sync"></i></small></span>
@@ -66,26 +110,12 @@
               {% endfor %}
               <tr>
                 <td colspan="5" class="pt-5 text-right">
-                  <h6><strong>Bag Total: € {{ total|floatformat:2 }}</strong></h6>
-                  <h6>Delivery: € {{ delivery|floatformat:2 }}</h6>
-                  <h4 class="mt-4"><strong>Grand Total: € {{ grand_total|floatformat:2 }}</strong></h4>
-                  {% if free_delivery_delta > 0 %}
-                    <p class="mb-1 text-danger">
-                      You could get free delivery by spending just <strong>€ {{ free_delivery_delta }}</strong> more!
-                    </p>
-                  {% endif %}
+                  {% include 'bag/bag_total.html' %}
                 </td>
               </tr>
               <tr>
                 <td colspan="5" class="text-right">
-                  <a href="{% url 'products' %}" class="btn btn-outline-dark border-green rounded-pill btn-lg mr-2">
-                    <span class="icon"><i class="fas fa-chevron-left"></i></span>
-                    <span class="text-uppercase">Keep Shopping</span>
-                  </a>
-                  <a href="{% url 'checkout' %}" class="btn btn-green rounded-pill btn-lg">
-                    <span class="text-uppercase">Secure Checkout</span>
-                    <span class="icon"><i class="fas fa-lock"></i></span>
-                  </a>
+                  {% include 'bag/checkout_buttons.html' %}
                 </td>
               </tr>
             </table>
@@ -106,6 +136,11 @@
 
 {% block postloadjs %}
   {{ block.super }}
+  <script type="text/javascript">
+    $('.btt-link').click(function(e) {
+      window.scrollTo(0,0)
+    })
+  </script>
   {% include 'products/includes/quantity_input_script.html' %}
 
   <script>
