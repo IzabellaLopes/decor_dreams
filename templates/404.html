@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+  | Page Not Found
+{% endblock %}
+
+{% block page_header %}
+  <div class="container header-container">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <hr />
+        <h2 class="logo-font text-center">404 Not Found</h2>
+        <hr />
+        <h3 class="mt-3 error">Oops! Page Not Found</h3>
+        <br />
+        <p class="text-center">
+          The page you're looking for doesn't exist.
+          <br />Return to the home page using the link below.
+        </p>
+        <div class="text-center">
+          <a href="{% url 'home' %}" class="btn-green">Back to home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
