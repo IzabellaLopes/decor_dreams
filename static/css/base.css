@@ -9,6 +9,7 @@
     --dark-green: #1e332d;
     --golden: #c9ae5d;
     --darkgolden: darkgoldenrod;
+    --soft-white: #fdfdfd;
 }
 
 /*--------------------------------------------------------------
@@ -26,8 +27,11 @@ header,
 }
 
 body {
+    height: 100%;
     font-family: var(--content-text);
     color: var(--dark-green);
+    background-color: var(--soft-white);
+    margin: 0;
 }
 
 /* from Bulma */
@@ -62,7 +66,7 @@ body {
 .btn-green {
     background: var(--light-green);
     color: var(--dark-green);
-    border: 3px solid var(--golden);
+    border: 2px solid var(--darkgolden);
 }
 
 .btn-green:hover,
