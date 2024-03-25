@@ -475,6 +475,26 @@ input[name='q']::placeholder {
 }
 
 /*--------------------------------------------------------------
+# Interior Design Services
+--------------------------------------------------------------*/
+
+.alt-colour {
+    background: var(--soft-white);
+}
+
+.alt-colour:nth-child(odd) {
+    background: #f6f6f6;
+}
+
+.design-img {
+    height: 300px;
+    object-fit: cover;
+    width: 300px;
+    border-radius: 50%;
+}
+
+
+/*--------------------------------------------------------------
 # Bag
 --------------------------------------------------------------*/
 
@@ -497,9 +517,6 @@ input[name='q']::placeholder {
 .decrease-qty {
     font-size: 13px;
 }
-
-
-
 
 /*--------------------------------------------------------------
 # Bootstrap toasts
