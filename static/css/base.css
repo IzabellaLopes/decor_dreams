@@ -297,10 +297,16 @@ a.nav-link {
 
 #mc_embed_signup div.response {
     width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .response {
     display: none;
+}
+
+#mc_embed_signup .button:hover {
+    color: var(--darkgolden);
 }
 
 /*--------------------------------------------------------------
