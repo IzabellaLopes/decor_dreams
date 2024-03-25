@@ -275,6 +275,35 @@ a.nav-link {
   }
 
 /*--------------------------------------------------------------
+# Mailchimp
+--------------------------------------------------------------*/
+
+.mailchimp {
+    background-color: var(--darkgolden);
+}
+
+#mc_embed_signup {
+    background: transparent;
+    clear: left;
+}
+
+.asterisk {
+    color: var(--light-green) !important;
+}
+
+#mc_embed_signup #mce-success-response {
+    color: black !important;
+}
+
+#mc_embed_signup div.response {
+    width: 100%;
+}
+
+.response {
+    display: none;
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 
