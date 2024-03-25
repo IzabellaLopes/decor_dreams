@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+  | Design &amp; Planning
+{% endblock %}
+
+{% block page_header %}
+  <div class="container header-container">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="container container-wide">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <hr />
+        <h2 class="logo-font text-center">Design &amp; Planning</h2>
+        <hr />
+      </div>
+      <div class="container">
+        <div class="col-12 pl-md-4">
+          <div class="card my-3 border-0 bg-transparent">
+            <div class="row no-gutters">
+              <div class="col-12 col-md-5 col-lg-4">
+                {% if design.image %}
+                  <img src="{{ design.image.url }}" class="design-img" alt="{{ design.type }}" />
+                {% else %}
+                  <img src="{{ MEDIA_URL }}noimage.jpg" alt="{{ design.type }}" class="design-img" />
+                {% endif %}
+              </div>
+              <div class="col-12 col-md-7 col-lg-8">
+                <div class="card-body px-0 px-md-4 py-2">
+                  <div>
+                    <h2 class="pt-2 pt-md-0 card-title text-left">Full Interior Design Services</h2>
+                  </div>
+                  <div class="mb-5">
+                    <p>Transform your space with our full interior design services. Our expert designers will work with you to create the perfect ambiance for your home or office.</p>
+                    <a href="#" class="btn btn-primary">Request Service</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
