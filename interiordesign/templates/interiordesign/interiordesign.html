@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_title %}
-  | Design &amp; Planning
+  | Interior Design Service
 {% endblock %}
 
 {% block page_header %}
@@ -18,12 +18,12 @@
     <div class="row justify-content-center">
       <div class="col-12 col-md-6">
         <hr />
-        <h2 class="logo-font text-center">Design &amp; Planning</h2>
+        <h2 class="logo-font text-center">Interior Design Service</h2>
         <hr />
         {% if user.is_superuser %}
           <div class="col-12">
             <div class="pt-3 text-center">
-              <a href="{% url 'add_design' %}" class="btn btn-sm btn-green py-2 mb-3 rounded-4" aria-label="Add new interior design service">Add New Interior Design Service</a>
+              <a href="{% url 'add_design' %}" class="btn btn-sm btn-green py-2 mb-3 rounded-4" aria-label="Add new interior design service">Add a Interior Design Service</a>
             </div>
           </div>
         {% endif %}
@@ -55,6 +55,14 @@
                     <p>{{ design.description }}</p>
                     <a href="#" class="btn btn-primary">Request Service</a>
                   </div>
+                </div>
+                <div class="row">
+                  {% if request.user.is_superuser %}
+                  <small class="ml-3">
+                    <a href="{% url 'edit_design' design.id %}" class="btn btn-sm btn-info ml-1 mb-2 rounded-pill"><i class="fas fa-edit"></i> Edit</a> |
+                    <a href="{% url 'delete_design' design.id %}" class="btn btn-sm btn-danger mb-2 rounded-pill"><i class="fas fa-trash-alt"></i> Delete</a>
+                  </small>
+                  {% endif %}
                 </div>
               </div>
             </div>
