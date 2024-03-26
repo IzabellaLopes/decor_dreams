@@ -75,10 +75,11 @@
                   <p class="my-0">My Account</p>
                 </div>
               </a>
-              <div class="dropdown-menu border-green border-4" aria-labelledby="user-options">
+              <div class="dropdown-menu border-green rounded-4 logo-font font-weight-bold" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
                   {% if request.user.is_superuser %}
                     <a href="{% url 'add_product' %}" class="dropdown-item green-hover">Add a Product</a>
+                    <a href="{% url 'add_design' %}" class="dropdown-item green-hover">Add a Interior Design Service</a>
                   {% endif %}
                   <a href="{% url 'profile' %}" class="dropdown-item green-hover">My Profile</a>
                   <a href="{% url 'account_logout' %}" class="dropdown-item green-hover">Sign out</a>
