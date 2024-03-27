@@ -46,7 +46,7 @@ class DeleteProjectImage(
     """
     model = PreviousProject
     template_name = 'projects/delete_project_image.html'
-    success_message = "Image successfully deleted"
+    success_message = "Project successfully deleted"
     success_url = reverse_lazy('project_gallery')
 
     def test_func(self):

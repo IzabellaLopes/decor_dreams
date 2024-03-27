@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+  | Decor Dreams Projects
+{% endblock %}
+
+{% block page_header %}
+  <div class="container header-container">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="container container-wide">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <hr />
+        <h2 class="logo-font text-center">Decor Dreams Projects</h2>
+        <hr />
+        {% if user.is_superuser %}
+          <div class="col-12">
+            <div class="pt-3 text-center">
+              <a href="{% url 'add_project_image' %}" class="btn btn-sm btn-green py-2 mb-3 rounded-4" aria-label="Add new Decor Dreams project">Add new Decor Dreams project</a>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="container container-wide">
+    <div class="row card-deck mb-5">
+      {% for project in previousproject_list %}
+        <div class="col-sm-6 col-md-4">
+          <div class="card border-0 mx-0 py-lg-3">
+            <div class="hover">
+              <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.design.type }}" />
+              <a href="{{ project.image.url }}" target="_blank" class="stretched-link" aria-label="product-image"></a>
+            </div>
+            <div class="d-none p-2 my-auto d-lg-block project-text bg-soft-white border-golden rounded-4 appear">
+              <strong>{{ project.design.type }}</strong>
+              <br />
+              {{ project.location }}
+            </div>
+            <div class="card-body text-center d-lg-none">
+              <strong>{{ project.design.type }}</strong>
+              {{ project.location }}
+            </div>
+
+          </div>
+          <div class="text-center pt-1">
+            {% if user.is_superuser %}
+              <a href="{% url 'delete_project_image' project.id %}" class="btn btn-sm btn-danger mb-2 rounded-pill" aria-label="Delete Image"><i class="fas fa-trash-alt"></i> Delete</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="btt-button shadow-sm rounded-4 border-green">
+    <a class="btt-link d-flex h-100"><i class="fas fa-arrow-up mx-auto my-auto"></i></a>
+  </div>
+{% endblock %}
+
+{% block postloadjs %}
+  {{ block.super }}
+  <script type="text/javascript">
+    $('.btt-link').click(function (e) {
+      window.scrollTo(0, 0)
+    })
+  </script>
+{% endblock %}

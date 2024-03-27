@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_title %}
-  | Add Interior Design Service
+  | Add Project
 {% endblock %}
 
 {% block page_header %}
@@ -20,18 +20,24 @@
     <div class="row justify-content-center">
       <div class="col-12 col-md-6">
         <hr />
-        <h2 class="logo-font text-center">Add a Interior Design Service</h2>
+        <h2 class="logo-font text-center">Add Decor Dreams Project</h2>
         <hr />
       </div>
     </div>
     <div class="row justify-content-center mb-3">
       <div class="col-11 col-md-8 col-lg-6 mt-3">
         <form method="POST" enctype="multipart/form-data">
-          {{ form|crispy }}
           {% csrf_token %}
+          {% for field in form %}
+            {% if field.name != 'image' %}
+              {{ field|as_crispy_field }}
+            {% else %}
+              {{ field }}
+            {% endif %}
+          {% endfor %}
           <div class="text-right">
-            <button type="submit" class="btn btn-green rounded-pill">Submit</button>
-            <a class="btn btn-outline-dark border-green rounded-pill m-2" href="{% url 'interiordesign' %}">Cancel</a>
+            <button type="submit" class="btn btn-green rounded-pill">Add Project</button>
+            <a class="btn btn-outline-dark border-green rounded-pill m-2" href="{% url 'project_gallery' %}">Cancel</a>
           </div>
         </form>
       </div>
