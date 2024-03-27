@@ -50,9 +50,7 @@
     <header class="header bg-white container-fluid fixed-top">
       <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div class="col-lg-4 my-auto py-1 py-lg-2">
-          <a href="{% url 'home' %}" class="nav-link main-logo-link" aria-label="home">
-            <img class="logo-image" src="https://decor-dreams.s3.eu-west-1.amazonaws.com/static/icons/logo.png" alt="Decor Dreams logo" >
-          </a>
+          <a href="{% url 'home' %}" class="nav-link main-logo-link" aria-label="home"><img class="logo-image" src="https://decor-dreams.s3.eu-west-1.amazonaws.com/static/icons/logo.png" alt="Decor Dreams logo" /></a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <form method="GET" action="{% url 'products' %}">
@@ -65,14 +63,18 @@
           </form>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+          <ul class="list-inline list-unstyled text-center text-lg-right my-0 user-bag">
             <li class="list-inline-item dropdown nav-icons">
-              <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="user options menu">
                 <div class="text-center green-hover">
                   <div>
                     <i class="fas fa-user fa-lg"></i>
                   </div>
+                  {% if request.user.is_authenticated %}
+                  <span class="my-0 text-uppercase">{{ user.username }}</span>
+                  {% else %}
                   <p class="my-0">My Account</p>
+                  {% endif %}
                 </div>
               </a>
               <div class="dropdown-menu border-green rounded-4 logo-font font-weight-bold" aria-labelledby="user-options">
@@ -80,6 +82,7 @@
                   {% if request.user.is_superuser %}
                     <a href="{% url 'add_product' %}" class="dropdown-item green-hover">Add a Product</a>
                     <a href="{% url 'add_design' %}" class="dropdown-item green-hover">Add a Interior Design Service</a>
+                    <a href="{% url 'add_project_image' %}" class="dropdown-item green-hover">Add a Decor Dreams Project</a>
                     <a href="{% url 'consultation' %}" class="dropdown-item green-hover">Check consultations</a>
                   {% endif %}
                   <a href="{% url 'profile' %}" class="dropdown-item green-hover">My Profile</a>
@@ -158,11 +161,10 @@
     {% include 'includes/footer.html' %}
 
     {% block postloadjs %}
-    <!-- Shows toasts -->
-    <script type="text/javascript">
-      $('.toast').toast('show');
-  </script>
-
+      <!-- Shows toasts -->
+      <script type="text/javascript">
+        $('.toast').toast('show')
+      </script>
     {% endblock %}
   </body>
 </html>
