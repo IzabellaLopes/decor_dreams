@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+  | Consultation
+{% endblock %}
+
+{% block page_header %}
+  <div class="container header-container">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="container container-wide">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <hr />
+        <h2 class="logo-font text-center">Consultation</h2>
+        <hr />
+        <div class="container justify-content-center mb-3">
+          <table class="table consultation-table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Consultation</th>
+                <th scope="col" class="d-none d-md-table-cell">Message</th>
+                <th scope="col">Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for consultation in contact_list %}
+                <tr>
+                  <th scope="row">{{ forloop.counter }}</th>
+                  <td>
+                    <a href="{% url 'consultation_detail' consultation.id %}">{{ consultation.name }}</a>
+                  </td>
+                  <td>
+                    <a href="{% url 'consultation_detail' consultation.id %}">{{ consultation.get_consultation_display }}</a>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    <a href="{% url 'consultation_detail' consultation.id %}">{{ consultation.message|truncatechars:15 }}</a>
+                  </td>
+                  <td>{{ consultation.date }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -497,6 +497,17 @@ input[name='q']::placeholder {
     border-radius: 50%;
 }
 
+/*--------------------------------------------------------------
+# Contact - Consultation
+--------------------------------------------------------------*/
+
+.consultation-table a {
+    color: var(--dark-green);
+}
+
+.consultation-table a:visited {
+    color: var(--green);
+}
 
 /*--------------------------------------------------------------
 # Bag

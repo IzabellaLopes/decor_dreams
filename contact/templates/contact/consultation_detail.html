@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+  | Consultation Details
+{% endblock %}
+
+{% block page_header %}
+  <div class="container header-container">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="container container-wide">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <hr />
+        <h2 class="logo-font text-center">Consultation Details</h2>
+        <hr />
+        <div class="row justify-content-center mb-3">
+          <div class="col-12 mt-3">
+            <table class="table table-borderless">
+              <tbody>
+                <tr>
+                  <th>Name:</th>
+                  <td>{{ contact.name }}</td>
+                </tr>
+                <tr>
+                  <th>Email:</th>
+                  <td>{{ contact.email }}</td>
+                </tr>
+                <tr>
+                  <th>Consultation Type:</th>
+                  <td>{{ contact.get_consultation_display }}</td>
+                </tr>
+                <tr>
+                  <th>Message:</th>
+                  <td>{{ contact.message }}</td>
+                </tr>
+                <tr>
+                  <th>Date:</th>
+                  <td>{{ contact.date }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="text-right">
+            <a class="btn btn-outline-dark border-green rounded-pill m-2" href="{% url 'consultation' %}">Back</a>
+            <a class="btn btn-green rounded-pill" href="{% url 'delete_consultation' contact.id %}">Delete</a>
+        </div>  
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
