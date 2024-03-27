@@ -1,13 +1,12 @@
 """Contact Views"""
 
-from django.shortcuts import render
+from django.shortcuts import render, reverse, redirect
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.mail import send_mail
 from django.views import generic, View
 from django.conf import settings
 from django.template.loader import render_to_string
-from django.urls import reverse_lazy
 from .forms import ContactForm
 from .models import Contact
 
@@ -30,9 +29,7 @@ class ContactUs(View):
         return render(
             request,
             "contact/contact.html",
-            {
-                "contact_form": form,
-            },
+            {"contact_form": form},
         )
 
     def post(self, request):
@@ -43,13 +40,14 @@ class ContactUs(View):
         contact_form = ContactForm(data=request.POST)
 
         if contact_form.is_valid():
-            cust_name = contact_form.instance.name
-            cust_email = contact_form.instance.email
-            subject = contact_form.instance.consultation
+            contact = contact_form.save()
+            cust_name = contact.name
+            cust_email = contact.email
+            subject = contact.consultation
             subject = render_to_string(
                 'contact/confirmation_emails/confirmation_email_subject.txt',
                 {'subject': subject})
-            message = contact_form.instance.message
+            message = contact.message
             message = render_to_string(
                 'contact/confirmation_emails/confirmation_email_body.txt',
                 {'cust_name': cust_name, 'message': message}
@@ -61,23 +59,19 @@ class ContactUs(View):
                 [cust_email]
             )
 
-            contact_form.save()
-            messages.success(self.request, 'Your consultation has been sent')
+            messages.success(request, "Your consultation has been sent")
 
-            target = "home/index.html"
-            context = {"plain_message": True}
+            return redirect("home")
 
         else:
-            messages.error(request, """Form failed. Please ensure the
-            form is valid """)
+            messages.error(request,
+                           "Form failed. Please ensure the form is valid"
+                           )
 
-            target = "contact/contact.html"
-            context = {
-                "plain_message": True,
-                "contact_form": contact_form
-                }
-
-        return render(request, target, context)
+            return render(request,
+                          "contact/contact.html",
+                          {"plain_message": True, "contact_form": contact_form}
+                          )
 
 
 class Consultation(LoginRequiredMixin, UserPassesTestMixin, generic.ListView):
@@ -89,20 +83,14 @@ class Consultation(LoginRequiredMixin, UserPassesTestMixin, generic.ListView):
         """
         Ensures only superuser can view consultations
         """
-        if self.request.user.is_superuser:
-            return True
-
-    def get_context_data(self, **kwargs):
-        """
-        Ensures success message doesn't include bag items
-        """
-        context = super().get_context_data(**kwargs)
-        context['plain_message'] = True
-        return context
+        return self.request.user.is_superuser
 
 
 class ConsultationDetail(
-        LoginRequiredMixin, UserPassesTestMixin, generic.DetailView):
+    LoginRequiredMixin,
+    UserPassesTestMixin,
+    generic.DetailView
+    ):
     """ This view is used to display selected consultation detail """
     model = Contact
     template_name = 'contact/consultation_detail.html'
@@ -111,33 +99,38 @@ class ConsultationDetail(
         """
         Ensures only superuser can add view consultations
         """
-        if self.request.user.is_superuser:
-            return True
-
+        return self.request.user.is_superuser
 
 class DeleteConsultation(
-        LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+    LoginRequiredMixin,
+    UserPassesTestMixin,
+    generic.DeleteView
+    ):
     """
     This view is used to allow the superuser to delete a consultation
     """
     model = Contact
     template_name = 'contact/delete_consultation.html'
     success_message = "Consultation deleted successfully"
-    success_url = reverse_lazy('consultation')
 
     def test_func(self):
         """
-       Ensure only superuser can edit service details
+        Ensure only superuser can edit service details
         """
-        if self.request.user.is_superuser:
-            return True
+        return self.request.user.is_superuser
 
     def delete(self, request, *args, **kwargs):
         """
-        This function is used to display sucess message given
-        SucessMessageMixin cannot be used in generic.DeleteView.
+        This function is used to display success message given
+        SuccessMessageMixin cannot be used in generic.DeleteView.
         Credit: https://stackoverflow.com/questions/24822509/
         success-message-in-deleteview-not-shown
         """
-        messages.success(self.request, self.success_message)
-        return super(DeleteConsultation, self).delete(request, *args, **kwargs)
+        messages.success(request, self.success_message)
+        return super().delete(request, *args, **kwargs)
+
+    def get_success_url(self):
+        """
+        Get the success URL dynamically using reverse
+        """
+        return reverse("consultation")
