@@ -1,0 +1,11 @@
+Hello, {{ cust_name }}!
+
+Thank you for reaching out to us. We've received your consultation message:
+
+{{ message }}
+
+Please be assured that we'll respond to you at the earliest opportunity.
+
+Warm regards,
+
+Decor Dreams
