@@ -31,44 +31,51 @@
     </div>
   </div>
 
-  {% for design in design_list %}
-    <div class="row alt-colour">
-      <div class="container">
-        <div class="col-12 pl-md-4">
-          <div class="card my-3 border-0 bg-transparent">
-            <div class="row no-gutters">
-              <div class="col-md-5">
-                <div class="card-img">
-                  {% if design.image %}
-                    <img src="{{ design.image.url }}" class="img-fluid design-img" alt="{{ design.type }}" />
-                  {% else %}
-                    <img src="{{ MEDIA_URL }}noimage.jpg" alt="{{ design.type }}" class="img-fluid design-img" />
-                  {% endif %}
-                </div>
-              </div>
-              <div class="col-md-7">
-                <div class="card-body px-0 px-md-4 py-2">
-                  <div>
-                    <h2 class="pt-2 pt-md-0 card-title text-left">{{ design.type }}</h2>
-                  </div>
-                  <div class="mb-5">
-                    <p>{{ design.description }}</p>
-                    <a href="#" class="btn btn-primary">Request Service</a>
-                  </div>
-                </div>
-                <div class="row">
-                  {% if request.user.is_superuser %}
-                  <small class="ml-3">
-                    <a href="{% url 'edit_design' design.id %}" class="btn btn-sm btn-info ml-1 mb-2 rounded-pill"><i class="fas fa-edit"></i> Edit</a> |
-                    <a href="{% url 'delete_design' design.id %}" class="btn btn-sm btn-danger mb-2 rounded-pill"><i class="fas fa-trash-alt"></i> Delete</a>
-                  </small>
-                  {% endif %}
-                </div>
-              </div>
-            </div>
+  <div class="container">
+    <p class="design-text">At <span class="text-darkgolden font-weight-bold">Decor Dreams</span>, we believe that great design should be accessible to everyone. Let us help you transform your home into a place you'll love to live in. Get in touch with us today to <span class="text-darkgolden font-weight-bold">schedule a consultation!</span>
+    </p>
+    {% for design in design_list %}
+      <div class="row align-items-center p-3">
+        {% if forloop.counter|divisibleby:2 %}
+          <div class="col-md-6 order-md-2">
+            {% if design.image %}
+              <img src="{{ design.image.url }}" class="img-fluid design-img border-golden rounded-4" alt="{{ design.type }}" />
+            {% else %}
+              <img src="{{ MEDIA_URL }}noimage.jpg" class="img-fluid design-img border-golden rounded-4" alt="{{ design.type }}"/>
+            {% endif %}
           </div>
-        </div>
+          <div class="col-md-6 order-md-1">
+            <h5 class="text-darkgolden font-weight-bold">{{ design.type }}</h5>
+            <p>{{ design.description }}</p>
+            <a href="#" class="btn btn-sm btn-green py-2 mb-3 rounded-4">Schedule a consultation</a>
+            {% if request.user.is_superuser %}
+              <div class="mt-3">
+                <a href="{% url 'edit_design' design.id %}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                <a href="{% url 'delete_design' design.id %}" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Delete</a>
+              </div>
+            {% endif %}
+          </div>
+        {% else %}
+          <div class="col-md-6">
+            {% if design.image %}
+              <img src="{{ design.image.url }}" class="img-fluid design-img border-golden rounded-4" alt="{{ design.type }}" />
+            {% else %}
+              <img src="{{ MEDIA_URL }}noimage.jpg" class="img-fluid design-img border-golden rounded-4" alt="{{ design.type }}"/>
+            {% endif %}
+          </div>
+          <div class="col-md-6">
+            <h5 class="text-darkgolden font-weight-bold">{{ design.type }}</h5>
+            <p>{{ design.description }}</p>
+            <a href="#" class="btn btn-sm btn-green py-2 mb-3 rounded-4">Schedule a consultation</a>
+            {% if request.user.is_superuser %}
+              <div class="mt-3">
+                <a href="{% url 'edit_design' design.id %}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                <a href="{% url 'delete_design' design.id %}" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Delete</a>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
       </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 {% endblock %}
