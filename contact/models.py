@@ -12,7 +12,7 @@ class Contact(models.Model):
     ORDER_QUERY = 'OQ'
     OTHER = 'O'
     CONSULTATION_CHOICES = [
-        ('DESIGN_CONSULTATION', 'interior Design Consultation'),
+        ('DESIGN_CONSULTATION', 'Interior Design Service'),
         ('PRODUCT_QUERY', 'Product Query'),
         ('ORDER_QUERY', 'Order Query'),
         ('OTHER', 'Other')
