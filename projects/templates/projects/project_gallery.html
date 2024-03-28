@@ -18,7 +18,7 @@
     <div class="row justify-content-center">
       <div class="col-12 col-md-6">
         <hr />
-        <h2 class="logo-font text-center">Decor Dreams Projects</h2>
+        <h2 class="logo-font title text-center">Decor Dreams Projects</h2>
         <hr />
         {% if user.is_superuser %}
           <div class="col-12">
@@ -53,7 +53,7 @@
           </div>
           <div class="text-center pt-1">
             {% if user.is_superuser %}
-              <a href="{% url 'delete_project_image' project.id %}" class="btn btn-sm btn-danger mb-2 rounded-pill" aria-label="Delete Image"><i class="fas fa-trash-alt"></i> Delete</a>
+              <a href="{% url 'delete_project_image' project.id %}" class="btn btn-sm btn-danger mb-2 rounded-4" aria-label="Delete Image"><i class="fas fa-trash-alt"></i> Delete</a>
             {% endif %}
           </div>
         </div>

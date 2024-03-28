@@ -77,7 +77,6 @@ body {
     background: var(--light-green);
     color: var(--dark-green);
     border: 1px solid var(--darkgolden);
-    padding: 10px 20px;
     transition: all 0.3s ease;
 }
 
@@ -283,6 +282,7 @@ a.nav-link {
 .jumbotron {
     color: var(--dark-green);
     animation: slideInFromTop 1s ease-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
   
   @keyframes slideInFromTop {
@@ -307,6 +307,10 @@ a.nav-link {
 #mc_embed_signup {
     background: transparent;
     clear: left;
+}
+
+#mc_embed_signup form {
+    margin-bottom: 20px;
 }
 
 .asterisk {
@@ -952,6 +956,14 @@ input[name='q']::placeholder {
 
     .edit-delete {
         font-size: 10px;
+    }
+
+    .signup-title {
+        font-size: 1.2rem;
+    }
+
+    .signup-body {
+        font-size: 0.8rem;
     }
 }
 
