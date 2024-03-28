@@ -31,7 +31,7 @@
     <div class="container mb-4">
       <div class="card-columns">
         {% for testimonial in testimonial_list %}
-          <div class="card my-3 testimonial-bg border-0">
+          <div class="card my-3 testimonial-bg border-0 rounded-4">
             <div class="text-center quote">
               <i class="fas fa-quote-right"></i>
             </div>
@@ -45,8 +45,8 @@
               {{ testimonial.created_on }}
               {% if user.is_authenticated and testimonial.name == user or user.is_superuser %}
                 <div class="card-footer mt-2 text-center">
-                  <a href="{% url 'edit_testimonial' testimonial.id %}" class="btn btn-sm btn-info ml-1 mb-2 rounded-pill"><i class="fas fa-edit"></i> Edit</a> |
-                  <a href="{% url 'delete_testimonial' testimonial.id %}" class="btn btn-sm btn-danger mb-2 rounded-pill"><i class="fas fa-trash-alt"></i> Delete</a>
+                  <a href="{% url 'edit_testimonial' testimonial.id %}" class="btn btn-sm btn-info ml-1 mb-2 rounded-pill edit-delete"><i class="fas fa-edit"></i> Edit</a> |
+                  <a href="{% url 'delete_testimonial' testimonial.id %}" class="btn btn-sm btn-danger mb-2 rounded-pill edit-delete"><i class="fas fa-trash-alt"></i> Delete</a>
                 </div>
               {% endif %}
             </div>

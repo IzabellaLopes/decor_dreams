@@ -76,7 +76,9 @@ body {
 .btn-green {
     background: var(--light-green);
     color: var(--dark-green);
-    border: 2px solid var(--darkgolden);
+    border: 1px solid var(--darkgolden);
+    padding: 10px 20px;
+    transition: all 0.3s ease;
 }
 
 .btn-green:hover,
@@ -555,7 +557,9 @@ input[name='q']::placeholder {
 --------------------------------------------------------------*/
 
 .testimonial-bg {
-    background-color: #F6f6f6;
+    background-color: #f8f9fa;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-columns {
@@ -871,6 +875,10 @@ input[name='q']::placeholder {
     .product-img {
         height: 150px;
     }
+
+    .card-columns {
+        column-count: 1;
+    }
 }
 
 /* Small devices (phones, less than 600px */
@@ -940,6 +948,10 @@ input[name='q']::placeholder {
     .keep-shopping, 
     .add-bag {
         font-size: small;
+    }
+
+    .edit-delete {
+        font-size: 10px;
     }
 }
 
