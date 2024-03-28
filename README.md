@@ -6,6 +6,8 @@ Welcome to [Decor Dreams](https://decor-dreams-ff212364915e.herokuapp.com/), you
 
 Discover our top-notch collection of furniture and decor items, from cozy sofas to elegant tables and chairs, along with outdoor essentials and beautiful decorations. Plus, take advantage of our expert team's insights by scheduling a consultation right here in Dublin, Ireland, and delve into the world of interior design with ease.
 
+This is a fictional B2C e-commerce store created for educational purposes as part of the Portfolio of Code Institute.
+
 ## CONTENTS
 
 - [Decor Dreams](#decor-dreams)
@@ -13,6 +15,8 @@ Discover our top-notch collection of furniture and decor items, from cozy sofas 
   - [User Experience (UX)](#user-experience-ux)
     - [Target Audience](#target-audience)
     - [User Stories](#user-stories)
+  - [Design](#design)
+    - [Color Scheme](#color-scheme)
 
 ---
 
@@ -174,3 +178,20 @@ Decor Dreams is designed to cater to the following target audience:
 [Back to Contents](#contents)
 
 ---
+
+## Design
+
+Decor Dreams's design is intentionally crafted to be simple and clean.
+
+### Color Scheme
+
+Decor Dreams' color palette showcases tones of green and gold, cultivating a contemporary and chic aesthetic that harmonizes seamlessly with the hero call-out image on the homepage.
+
+In my CSS file, I employed variables to define colors and consistently applied them across the entire stylesheet. It enables easy color updates throughout the website by modifying the color once in the variable, maintaining consistency across the design.
+
+Great care was taken to establish a good contrast between background colors and text at all times to ensure maximum user accessibility, confirmed through the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/).
+
+The color palette was generated using the [Coolors](https://coolors.co/) website.
+
+![Coolors](documentation/readme_images/design/color_scheme.png)
+
