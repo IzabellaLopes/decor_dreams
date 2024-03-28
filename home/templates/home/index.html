@@ -14,38 +14,57 @@
     <div class="container-fluid hero-callout" role="img" aria-label="Modern living room">
       <div class="transparent-box rounded-4">
         <h1 class="logo-font title text-uppercase pb-2">Decor <b class="text-darkgolden">Your</b> Dreams</h1>
-        <h2 class="logo-font slogan pb-2">Your destination for all your home decor needs</h2>
+        <p class="logo-font slogan pb-2">Your destination for all your home decor needs</p>
         <a href="{% url 'products' %}" class="home-button btn btn-green text-uppercase rounded-4 py-3 logo-font font-weight-bold mr-md-2">Shop Now</a>
         <a href="{% url 'interiordesign' %}" class="home-button btn btn-green text-uppercase rounded-4 py-3 logo-font font-weight-bold">Schedule a Consultation</a>
       </div>
     </div>
   </section>
-  <div class="container mt-3">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="jumbotron text-center">
-          <div class="about-us-text">
-            <h3 class="logo-font title"><strong>Discover Unique Pieces</strong></h3>
-            <p>
-              Explore our carefully selected collection of <strong>stylish homeware and decorations</strong>, featuring elegant sofas, chic tables & desks, cozy chairs, and captivating outdoor living essentials.
-            </p>
-            <a href="{% url 'products' %}" class="btn-green home-button btn rounded-pill text-uppercase py-3 logo-font font-weight-bold mb-5 mr-2">Shop Now</a>
-          </div>
+
+  <section id="who-we-are">
+    <div class="container container-wide">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <hr />
+          <h2 class="logo-font title text-center">Who we are</h2>
+          <hr />
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="jumbotron text-center">
-          <div class="about-us-text">
-            <h3 class="logo-font title mb-2"><strong>Elevate Your Space</strong></h3>
-            <p>
-              Transform your home with our tailored <strong>interior design services</strong>. Our expert team helps plan and design your space just for you, all across Ireland.
-            </p>
-            <a href="" class="btn-green home-button btn rounded-pill text-uppercase py-3 logo-font font-weight-bold mb-5">Schedule a Consultation</a>
+    </div>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-12">
+          <p class="logo-font slogan pb-2 text-center">
+            At Decor Dreams, we believe that your home should be a reflection of who you are – your style, your personality, your way of life. <br />Let us be your partner in creating a space that you'll love coming home to, every single day.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="jumbotron text-center">
+            <div class="about-us-text">
+              <h3 class="logo-font title"><strong>Discover Unique Pieces</strong></h3>
+              <p>
+                Explore our carefully selected collection of <strong>stylish homeware and decorations</strong>
+              </p>
+              <a href="{% url 'products' %}" class="btn-green home-button btn rounded-4 text-uppercase py-3 logo-font font-weight-bold mb-5 mr-2">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="jumbotron text-center">
+            <div class="about-us-text">
+              <h3 class="logo-font title mb-2"><strong>Elevate Your Space</strong></h3>
+              <p>
+                Transform your home with our tailored <strong>interior design services</strong>, all across Ireland
+              </p>
+              <a href="{% url 'interiordesign' %}" class="btn-green home-button btn rounded-4 text-uppercase py-3 logo-font font-weight-bold mb-5">Schedule a Consultation</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 {% endblock %}
 
 {% block postloadjs %}
