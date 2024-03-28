@@ -64,7 +64,7 @@ class DeleteTestimonial(
     This view is used to allow logged in users to delete their own testimonials
     """
     model = Testimonial
-    template_name = 'services/delete_testimonial.html'
+    template_name = 'testimonials/delete_testimonial.html'
     success_message = "Testimonial successfully deleted"
     success_url = reverse_lazy('testimonials')
 

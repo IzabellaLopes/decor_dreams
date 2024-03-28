@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+  | Testimonials
+{% endblock %}
+
+{% block page_header %}
+  <div class="container header-container">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="container container-wide">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <hr />
+        <h2 class="logo-font text-center">Testimonials</h2>
+        <hr />
+        <div class="col-12">
+          <div class="pt-3 text-center">
+            <a href="{% url 'add_testimonial' %}" class="btn btn-sm btn-green py-2 mb-3 rounded-4" aria-label="add-testimonial">Add Testimonial</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="container mb-4">
+      <div class="card-columns">
+        {% for testimonial in testimonial_list %}
+          <div class="card my-3 testimonial-bg border-0">
+            <div class="text-center quote">
+              <i class="fas fa-quote-right"></i>
+            </div>
+            <div class="card-body">
+              <h4 class="text-center"><strong>{{ testimonial.design.type }}</strong></h4>
+              {{ testimonial.body }}
+            </div>
+            <div class="card-body">
+              <strong>{{ testimonial.name }}</strong>
+              <br />
+              {{ testimonial.created_on }}
+              {% if user.is_authenticated and testimonial.name == user or user.is_superuser %}
+                <div class="card-footer mt-2 text-center">
+                  <a href="{% url 'edit_testimonial' testimonial.id %}" class="btn btn-sm btn-info ml-1 mb-2 rounded-pill"><i class="fas fa-edit"></i> Edit</a> |
+                  <a href="{% url 'delete_testimonial' testimonial.id %}" class="btn btn-sm btn-danger mb-2 rounded-pill"><i class="fas fa-trash-alt"></i> Delete</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="btt-button shadow-sm rounded-4 border-green">
+      <a class="btt-link d-flex h-100"><i class="fas fa-arrow-up mx-auto my-auto"></i></a>
+    </div>
+  </div>
+{% endblock %}
+
+{% block postloadjs %}
+  {{ block.super }}
+  <script type="text/javascript">
+    $('.btt-link').click(function (e) {
+      window.scrollTo(0, 0)
+    })
+  </script>
+{% endblock %}

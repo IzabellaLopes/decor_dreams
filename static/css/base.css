@@ -551,6 +551,32 @@ input[name='q']::placeholder {
 }
 
 /*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+
+.testimonial-bg {
+    background-color: #F6f6f6;
+}
+
+.card-columns {
+    column-gap: 2rem;
+}
+
+.card-columns {
+    column-count: 2;
+}
+
+.quote {
+    left: 50%;
+    position: absolute;
+    top: -20px;
+    margin-left: -16px;
+    border-radius: 50%;
+    padding: 10px;
+    color: var(--darkgolden) !important;
+}
+
+/*--------------------------------------------------------------
 # Bag
 --------------------------------------------------------------*/
 

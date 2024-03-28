@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}
+  | Edit Testimonial
+{% endblock %}
+
+{% block page_header %}
+  <div class="container header-container">
+    <div class="row">
+      <div class="col"></div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  {% load crispy_forms_tags %}
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <hr />
+        <h2 class="logo-font text-center">Edit Testimonial</h2>
+        <hr />
+      </div>
+    </div>
+    <div class="row justify-content-center mb-3">
+      {% if (user.is_authenticated and testimonial.name == user) or user.is_superuser %}
+        <div class="col-11 col-md-8 col-lg-6 mt-3">
+          <form method="post" enctype="multipart/form-data">
+            {{ form|crispy }}
+            {% csrf_token %}
+            <div class="text-right">
+              <a class="btn btn-outline-dark border-green rounded-pill m-2" href="{% url 'testimonials' %}">Cancel</a>
+              <button type="submit" class="btn btn-green rounded-pill">Edit Testimonial</button>
+            </div>
+          </form>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
