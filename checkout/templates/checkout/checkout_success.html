@@ -24,7 +24,7 @@
         <hr />
         <h2 class="logo-font title text-center">Thank you</h2>
         <hr />
-        <p class="text-black text-center">
+        <p class="text-center">
           Your order information is below. A confirmation email will be sent to
           <strong>{{ order.email }}</strong>.
         </p>
@@ -34,7 +34,7 @@
 
     <div class="row justify-content-center">
       <div class="col-12 col-lg-7">
-        <div class="order-confirmation-wrapper p-2 border">
+        <div class="p-2 border-green rounded-4">
           <div class="row">
             <div class="col">
               <h3>Order Details:</h3>
@@ -178,12 +178,12 @@
     <div class="row">
       <div class="col-12 col-lg-7 text-right">
         {% if from_profile %}
-          <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+          <a href="{% url 'profile' %}" class="btn btn-outline-dark border-green rounded-4 my-2">
             <span class="icon mr-2"><i class="fas fa-angle-left"></i></span>
             <span class="text-uppercase">Back to Profile</span>
           </a>
         {% else %}
-          <a href="{% url 'products' %}" class="btn btn-black rounded-0 my-2">
+          <a href="{% url 'products' %}" class="btn btn-green rounded-4 my-2">
             <span class="icon mr-2"><i class="fas fa-gifts"></i></span>
             <span class="text-uppercase">Keep Shopping!</span>
           </a>

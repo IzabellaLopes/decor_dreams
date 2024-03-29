@@ -608,6 +608,15 @@ input[name='q']::placeholder {
 }
 
 /*--------------------------------------------------------------
+# Checkout
+--------------------------------------------------------------*/
+
+#payment-form .form-control, #card-element {
+    border: 1px solid var(--light-green) !important;
+    border-radius: .25rem !important;
+}
+
+/*--------------------------------------------------------------
 # Bootstrap toasts
 --------------------------------------------------------------*/
 
@@ -894,10 +903,6 @@ input[name='q']::placeholder {
         height: 50px;
     }
 
-    .title {
-        font-size: 1.2rem;
-    }
-
     .home-button {
         font-size: 12px;
     }
@@ -929,6 +934,10 @@ input[name='q']::placeholder {
     .design-img {
         height: 200px;
         width: 300px;
+    }
+
+    .consultation-table {
+        font-size: small;
     }
 }
 
@@ -976,8 +985,8 @@ input[name='q']::placeholder {
 
 /* Small devices (phones, less than 325px */
 @media screen and (max-width: 325px) {
-    .title,
     .design-slogan {
-        font-size: 1rem;
+        font-size: .8rem;
+        margin-bottom: 0;
     }
 }
