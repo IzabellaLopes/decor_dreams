@@ -28,6 +28,9 @@ This is a fictional B2C e-commerce store created for educational purposes as par
     - [Database Security](#database-security)
     - [Cross-Site Request Forgery (CSRF) Protection](#cross-site-request-forgery-csrf-protection)
     - [Custom Error Pages](#custom-error-pages)
+  - [Features](#features)
+    - [Existing Features](#existing-features)
+      - [Favicon](#favicon)
 
 ---
 
@@ -369,3 +372,13 @@ Custom Error Pages were created to give the user more information on the error a
 [Back to Contents](#contents)
 
 ---
+
+## Features
+
+### Existing Features
+
+#### Favicon
+
+The website features a favicon that is visible in the browser tab.
+
+![Favicon](documentation/readme_images/features/favicon.png)

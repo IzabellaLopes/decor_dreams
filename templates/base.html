@@ -10,6 +10,9 @@
       <meta name="description" content="Create a home that's uniquely you with Decor Dreams! Explore luxury home produts and personalized interior design services." />
       <meta name="keywords" content="Decor Dreams, home decor, home products, luxury furnishings, interior design consultation, interior design service Dublin" />
       <meta name="author" content="Izabella Lopes" />
+      <!-- Favicon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
     {% endblock %}
 
     {% block extra_meta %}
@@ -71,9 +74,9 @@
                     <i class="fas fa-user fa-lg"></i>
                   </div>
                   {% if request.user.is_authenticated %}
-                  <span class="my-0 text-uppercase">{{ user.username }}</span>
+                    <span class="my-0 text-uppercase">{{ user.username }}</span>
                   {% else %}
-                  <p class="my-0">My Account</p>
+                    <p class="my-0">My Account</p>
                   {% endif %}
                 </div>
               </a>
