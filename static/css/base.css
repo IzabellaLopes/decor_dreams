@@ -512,10 +512,9 @@ input[name='q']::placeholder {
 }
 
 .design-img {
-    height: 300px;
+    height: 400px;
     object-fit: cover;
-    width: 300px;
-    border-radius: 50%;
+    width: 400px;
 }
 
 /*--------------------------------------------------------------
