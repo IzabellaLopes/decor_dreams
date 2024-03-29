@@ -82,7 +82,7 @@
             {% if request.user.is_superuser %}
             <div class="card-footer text-center">
               <a href="{% url 'edit_product' product.id %}" class="btn btn-sm btn-info ml-1 mb-2 rounded-4 edit-delete"><i class="fas fa-edit"></i> Edit</a> |
-                <a href="{% url 'delete_product' product.id %}" class="btn btn-sm btn-danger mb-2 rounded-4 edit-delete"><i class="fas fa-trash-alt"></i> Delete</a>
+              <a href="{% url 'delete_product' product.id %}" class="btn btn-sm btn-danger mb-2 rounded-4 edit-delete"><i class="fas fa-trash-alt"></i> Delete</a>
             </div>
             {% endif %}
           </div>
