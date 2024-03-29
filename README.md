@@ -19,6 +19,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
     - [Color Scheme](#color-scheme)
     - [Imagery](#imagery)
     - [Typography](#typography)
+    - [Wireframes](#wireframes)
 
 ---
 
@@ -213,5 +214,79 @@ In Decor Dreams, the following sans-serif fonts, obtained from Google Fonts, wer
 
 ![Open Sans](documentation/readme_images/design/open_sans.png)
 
+### Wireframes
 
+I utilized Balsamiq to design the wireframes for the website.
+
+<details>
+ <summary>Home Page</summary>
+
+![Home Page](documentation/wireframes/home.png)
+</details>
+
+<details>
+ <summary>Shop Products</summary>
+
+![Shop Products](documentation/wireframes/shop_products.png)
+</details>
+
+<details>
+ <summary>Product Details</summary>
+
+![Product Details](documentation/wireframes/product_details.png)
+</details>
+
+<details>
+ <summary>Interior Design</summary>
+
+![Interior Design](documentation/wireframes/interior_design.png)
+</details>
+
+<details>
+ <summary>Decor Dreams Projects</summary>
+
+![Decor Dreams Projects](documentation/wireframes/decor_dreams_projects.png)
+</details>
+
+<details>
+ <summary>Testimonials</summary>
+
+![Testimonials](documentation/wireframes/testimonials.png)
+</details>
+
+<details>
+ <summary>Contact</summary>
+
+![Contact](documentation/wireframes/contact.png)
+</details>
+
+<details>
+ <summary>Shopping Bag</summary>
+
+![Shopping Bag](documentation/wireframes/shopping_bag.png)
+</details>
+
+<details>
+ <summary>Checkout</summary>
+
+![Checkout](documentation/wireframes/checkout.png)
+</details>
+
+<details>
+ <summary>Order Confirmation</summary>
+
+![Order Confirmation](documentation/wireframes/order_confirmation.png)
+</details>
+
+<details>
+ <summary>Consultation</summary>
+
+![Consultation](documentation/wireframes/consultation.png)
+</details>
+
+<br>
+
+[Back to Contents](#contents)
+
+---
 
