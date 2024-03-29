@@ -31,6 +31,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
   - [Features](#features)
     - [Existing Features](#existing-features)
       - [Favicon](#favicon)
+      - [Header](#header)
 
 ---
 
@@ -382,3 +383,20 @@ Custom Error Pages were created to give the user more information on the error a
 The website features a favicon that is visible in the browser tab.
 
 ![Favicon](documentation/readme_images/features/favicon.png)
+
+#### Header
+
+**Logo**
+
+I created two custom logos using Canva:
+  
+- One in a horizontal format tailored for larger devices:
+![Logo](documentation/readme_images/features/logo.png)
+
+- And another in a rounded shape suitable for medium and small devices.
+![Logo](documentation/readme_images/features/logo-sm.png)
+
+- The text is styled in dark green, while the circle surrounding it is light green, mirroring the main color scheme of the website. 
+- Positioned in the center is a modern house with a flourishing plant, symbolizing the growth of dreams to decorate your house.
+- The logo is situated in the top-left corner of the navigation bar and serves as a clickable link to the home page, enhancing user navigation.
+
