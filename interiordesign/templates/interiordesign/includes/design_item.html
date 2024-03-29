@@ -1,0 +1,24 @@
+<div class="row align-items-center p-3">
+  {% if forloop.counter|divisibleby:2 %}
+    <div class="col-md-6 order-md-2">
+      {% include 'interiordesign/includes/design_image.html' %}
+    </div>
+    <div class="col-md-6 order-md-1">
+      {% include 'interiordesign/includes/design_text.html' %}
+
+      {% if request.user.is_superuser %}
+        {% include 'interiordesign/includes/edit_delete.html' %}
+      {% endif %}
+    </div>
+  {% else %}
+    <div class="col-md-6">
+      {% include 'interiordesign/includes/design_image.html' %}
+    </div>
+    <div class="col-md-6">
+      {% include 'interiordesign/includes/design_text.html' %}
+      {% if request.user.is_superuser %}
+        {% include 'interiordesign/includes/edit_delete.html' %}
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

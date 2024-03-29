@@ -504,7 +504,7 @@ input[name='q']::placeholder {
 # Interior Design Service
 --------------------------------------------------------------*/
 
-.design-text {
+.design-slogan {
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 30px;
@@ -514,7 +514,7 @@ input[name='q']::placeholder {
 .design-img {
     height: 400px;
     object-fit: cover;
-    width: 400px;
+    width: 600px;
 }
 
 /*--------------------------------------------------------------
@@ -927,8 +927,8 @@ input[name='q']::placeholder {
     }
 
     .design-img {
-        height: 150px;
-        width: 150px;
+        height: 200px;
+        width: 300px;
     }
 }
 
@@ -976,7 +976,8 @@ input[name='q']::placeholder {
 
 /* Small devices (phones, less than 325px */
 @media screen and (max-width: 325px) {
-    .title {
+    .title,
+    .design-slogan {
         font-size: 1rem;
     }
 }
