@@ -20,6 +20,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
     - [Imagery](#imagery)
     - [Typography](#typography)
     - [Wireframes](#wireframes)
+  - [Agile Methodology](#agile-methodology)
 
 ---
 
@@ -290,3 +291,12 @@ I utilized Balsamiq to design the wireframes for the website.
 
 ---
 
+## Agile Methodology
+
+GitHub Projects was utilized to facilitate the development process following an agile methodology. You can refer to the project board through this [link](https://github.com/users/IzabellaLopes/projects/3).
+
+The 9 Epics mentioned earlier were documented as Milestones within the GitHub project. Each User Story was represented by a GitHub Issue, which was subsequently assigned to a milestone (Epic). Clear acceptance criteria were defined for each User Story to indicate when it is considered complete. Furthermore, these acceptance criteria were detailed into tasks, streamlining the execution of each User Story.
+
+[Back to Contents](#contents)
+
+---
