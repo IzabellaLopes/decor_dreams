@@ -732,12 +732,12 @@ input[name='q']::placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: white;
-    border: 2px solid var(--golden);
+    background-color: var(--light-green);
+    border: 2px solid var(--darkgolden);
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0;
+    border-radius: 1rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
