@@ -31,6 +31,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
   - [Features](#features)
     - [Favicon](#favicon)
     - [Header](#header)
+    - [Mailchimp](#mailchimp)
 
 ---
 
@@ -448,6 +449,13 @@ The options to "Register" or "Sign in" will change to "Log out" after a user has
 - The €250 threshold can be easily adjusted in the settings.py file by modifying the FREE_DELIVERY_THRESHOLD variable.
 
 ![Banner](documentation/readme_images/features/banner.png)
+
+
+### Mailchimp
+
+![Mailchimp](documentation/readme_images/features/mailchimp.png)
+
+- There is a newsletter signup section powered by Mailchimp, allowing users to enter their email address to subscribe to newsletters and receive email updates about our new stock.
 
 
 
