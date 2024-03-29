@@ -616,6 +616,10 @@ input[name='q']::placeholder {
     border-radius: .25rem !important;
 }
 
+.stripe-style-input {
+    padding: .375rem .75rem !important;
+ }
+
 /*--------------------------------------------------------------
 # Bootstrap toasts
 --------------------------------------------------------------*/
