@@ -21,6 +21,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
     - [Typography](#typography)
     - [Wireframes](#wireframes)
   - [Agile Methodology](#agile-methodology)
+  - [Database Diagram](#database-diagram)
 
 ---
 
@@ -296,6 +297,22 @@ I utilized Balsamiq to design the wireframes for the website.
 GitHub Projects was utilized to facilitate the development process following an agile methodology. You can refer to the project board through this [link](https://github.com/users/IzabellaLopes/projects/3).
 
 The 9 Epics mentioned earlier were documented as Milestones within the GitHub project. Each User Story was represented by a GitHub Issue, which was subsequently assigned to a milestone (Epic). Clear acceptance criteria were defined for each User Story to indicate when it is considered complete. Furthermore, these acceptance criteria were detailed into tasks, streamlining the execution of each User Story.
+
+[Back to Contents](#contents)
+
+---
+
+## Database Diagram
+
+The Decor Dreams project's data model adheres to Object-Oriented Programming principles and utilizes Django's Class-Based Generic Views.
+
+User authentication is managed through Django AllAuth.
+
+During development, SQLite was utilized as the relational database, while Postgres was employed for the Heroku-deployed version.
+
+An entity relationship diagram was crafted using [Lucidchart](https://lucid.app/documents#/dashboard).
+
+![Database Diagram](documentation/readme_images/database/db_diagram.png)
 
 [Back to Contents](#contents)
 
