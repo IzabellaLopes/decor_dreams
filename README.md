@@ -33,6 +33,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
     - [Header](#header)
     - [Mailchimp](#mailchimp)
     - [Footer](#footer)
+    - [Home Page](#home-page)
 
 ---
 
@@ -466,7 +467,19 @@ The options to "Register" or "Sign in" will change to "Log out" after a user has
 - The Quick Links section provides access to key parts of the site, including the ['Privacy Policy'](https://www.termsfeed.com/live/7bb0d942-6e1d-46d9-ac3c-1fe8a915cdb6).
 - On the right-hand side of the footer, icons representing various payment methods are displayed to draw attention and encourage users to make purchases.
 
+### Home Page
 
+**Hero-callout section**
 
+- The homepage showcases a prominent callout section with an animated slogan: "DECOR YOUR DREAMS: Your destination for all your home decor needs."
+- Additionally, it includes two primary links for users: "Shop now," which directs users to browse products, and "Schedule a consultation," which redirects users to the Interior Design Service page.
+
+![Hero](documentation/readme_images/features/hero.png)
+
+**Who we are section**
+
+The "Who we are" section offers a brief summary of the site's offerings, highlighting key features and incorporating relevant keywords within <strong></strong> tags to enhance the site's search ranking
+
+![Who we are](documentation/readme_images/features/who_we_are.png)
 
 
