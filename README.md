@@ -32,6 +32,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
     - [Favicon](#favicon)
     - [Header](#header)
     - [Mailchimp](#mailchimp)
+    - [Footer](#footer)
 
 ---
 
@@ -445,17 +446,26 @@ The options to "Register" or "Sign in" will change to "Log out" after a user has
 
 **Banner**
 
-- Below the navigation bar is an animated banner, where the sign "Free delivery on orders over €250!" grabs users' attention to encourage purchases. 
-- The €250 threshold can be easily adjusted in the settings.py file by modifying the FREE_DELIVERY_THRESHOLD variable.
-
 ![Banner](documentation/readme_images/features/banner.png)
 
+- Below the navigation bar is an animated banner, where the sign "Free delivery on orders over €250!" grabs users' attention to encourage purchases. 
+- The €250 threshold can be easily adjusted in the settings.py file by modifying the FREE_DELIVERY_THRESHOLD variable.
 
 ### Mailchimp
 
 ![Mailchimp](documentation/readme_images/features/mailchimp.png)
 
 - There is a newsletter signup section powered by Mailchimp, allowing users to enter their email address to subscribe to newsletters and receive email updates about our new stock.
+
+### Footer
+
+![Footer](documentation/readme_images/features/footer.png)
+
+- The footer is visible at the bottom of each page.
+- It contains a link to the [Decor Dreams Facebook page](https://www.facebook.com/people/Decor-Dreams/61557145091799/). Clicking on external links will open the respective website in a new tab, preventing users from being redirected away from the site.
+- The Quick Links section provides access to key parts of the site, including the ['Privacy Policy'](https://www.termsfeed.com/live/7bb0d942-6e1d-46d9-ac3c-1fe8a915cdb6).
+- On the right-hand side of the footer, icons representing various payment methods are displayed to draw attention and encourage users to make purchases.
+
 
 
 
