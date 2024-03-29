@@ -29,9 +29,8 @@ This is a fictional B2C e-commerce store created for educational purposes as par
     - [Cross-Site Request Forgery (CSRF) Protection](#cross-site-request-forgery-csrf-protection)
     - [Custom Error Pages](#custom-error-pages)
   - [Features](#features)
-    - [Existing Features](#existing-features)
-      - [Favicon](#favicon)
-      - [Header](#header)
+    - [Favicon](#favicon)
+    - [Header](#header)
 
 ---
 
@@ -376,15 +375,15 @@ Custom Error Pages were created to give the user more information on the error a
 
 ## Features
 
-### Existing Features
-
-#### Favicon
+### Favicon
 
 The website features a favicon that is visible in the browser tab.
 
 ![Favicon](documentation/readme_images/features/favicon.png)
 
-#### Header
+### Header
+
+![Header](documentation/readme_images/features/header.png)
 
 **Logo**
 
@@ -394,9 +393,62 @@ I created two custom logos using Canva:
 ![Logo](documentation/readme_images/features/logo.png)
 
 - And another in a rounded shape suitable for medium and small devices.
-![Logo](documentation/readme_images/features/logo-sm.png)
+![Logo-sm](documentation/readme_images/features/logo_sm.png)
 
 - The text is styled in dark green, while the circle surrounding it is light green, mirroring the main color scheme of the website. 
 - Positioned in the center is a modern house with a flourishing plant, symbolizing the growth of dreams to decorate your house.
 - The logo is situated in the top-left corner of the navigation bar and serves as a clickable link to the home page, enhancing user navigation.
+
+**Navigation Bar**
+
+- The navigation bar is consistently located at the top of each page, providing easy access to various sections.
+
+**Search Bar**
+
+![Search](documentation/readme_images/features/search.png)
+- The search bar appears above the navigation bar.
+- On smaller screens, this bar transforms into a search icon. Upon clicking the icon, the full search bar drops down.
+- Any entered search term will be matched against the product's title or description, and the results will be displayed on the product's page.
+
+**User Icon**
+
+- The User icon in the navigation bar serves as a dropdown menu containing the "Register" and "Sign in" links.
+  
+![User Non logged in](documentation/readme_images/features/user_nonlogged.png)
+
+  - Once a user logs in, their username will be displayed below the user icon.
+The options to "Register" or "Sign in" will change to "Log out" after a user has logged in.
+- After logging in, the "My Profile" option becomes accessible in the User dropdown.
+
+![User Logged in](documentation/readme_images/features/user_logged.png)
+
+- If the superuser has signed in, additional options such as 'Add a Product', 'Add an Interior Design Service', 'Add a Decor Dreams Project', and 'Check Consultations' become available in the User dropdown.
+  
+![Superuser Logged in](documentation/readme_images/features/superuser_logged.png)
+
+- The navigation bar is fully responsive, collapsing into a hamburger menu when the screen size becomes too small.
+- When hovering over the links, the font color changes to green and a golden bottom border appears.
+- Additionally, when a link is active, it will feature a golden bottom border.
+
+**Bag Icon**
+
+![Bag](documentation/readme_images/features/bag.png)
+
+- Situated on the right side of the navbar next to the User icon is the Bag icon.
+- When a product is added to the bag, the initial price of €0.00 will adjust according to the items in the bag.
+- As the user adds more products to their bag, a toast message appears in the top right corner of the screen, informing the user of the added item. It includes a quick view of the bag contents and the updated total cost.
+
+![Bag Total](documentation/readme_images/features/bag_total.png)
+
+- Clicking the bag icon navigates the user to the shopping bag page which displays a summary of what's been added.
+
+**Banner**
+
+- Below the navigation bar is an animated banner, where the sign "Free delivery on orders over €250!" grabs users' attention to encourage purchases. 
+- The €250 threshold can be easily adjusted in the settings.py file by modifying the FREE_DELIVERY_THRESHOLD variable.
+
+![Banner](documentation/readme_images/features/banner.png)
+
+
+
 
