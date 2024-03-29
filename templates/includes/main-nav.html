@@ -28,3 +28,20 @@
     </li>
   </ul>
 </div>
+
+{% block postloadjs %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var currentUrl = window.location.href;
+
+    var links = document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .dropdown-item');
+
+    links.forEach(function(link) {
+      if (link.href === currentUrl) {
+        link.closest('.nav-item').classList.add('active');
+      }
+    });
+  });
+</script>
+
+{% endblock %}

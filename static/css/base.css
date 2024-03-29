@@ -135,7 +135,7 @@ a.nav-link {
 .navbar ul a,
 .dropdown-menu.show {
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: .8rem;
 }
 
 .dropdown-item {
@@ -145,6 +145,11 @@ a.nav-link {
 .navbar ul a:hover {
     color: var(--green) !important;
 }
+
+.navbar-nav .nav-item.active .nav-link {
+    border-bottom: 2px solid var(--golden);
+  }
+
 
 /* Remove border from toggler */
 /* Source: Navbar Hamburger Animation with CSS - Bootstrap 5 - https://www.youtube.com/watch?v=vJ85fm4m7lw */
@@ -762,7 +767,7 @@ input[name='q']::placeholder {
 @media (max-width: 1200px) {
     .navbar ul a, 
     .dropdown-menu.show {
-        font-size: 0.7rem;
+        font-size: .7rem;
     }
 
     .table-shopping,
@@ -775,7 +780,6 @@ input[name='q']::placeholder {
 
 /* For Large devices (less than 1038px) */
 @media (max-width: 1038px) {
-    .navbar ul a,
     .dropdown-menu.show {
         font-size: 0.6rem;
     }
@@ -802,6 +806,12 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 116px);
+    }
+
+    .navbar ul a {
+        font-size: .8rem;
+        line-height: 2;
+        padding-top: 10px;
     }
 
     .nav-link {
