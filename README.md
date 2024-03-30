@@ -41,6 +41,10 @@ This is a fictional B2C e-commerce store created for educational purposes as par
     - [Profile](#profile)
     - [Shop Products](#shop-products)
     - [Product Details](#product-details)
+    - [Products Management](#products-management)
+      - [Add a Product](#add-a-product)
+      - [Edit a Product](#edit-a-product)
+      - [Delete a Product](#delete-a-product)
 
 ---
 
@@ -568,9 +572,61 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 - Delivery and Returns:
 ![Delivery and returns](documentation/readme_images/features/delivery_returns.png)
 
+### Products Management
 
+#### Add a Product
 
+![Add a Product](documentation/readme_images/features/products_add.png)
 
+- The "Add Product" page is accessible by clicking the corresponding button on the products page or within the user dropdown menu, under the "Add a Product" section. These options are exclusively visible to superusers.
 
+- If a user attempts to access the add product page by altering the URL without superuser privileges, they will be redirected to the sign in page.
 
+- To successfully submit the form, the user must complete all fields marked with an asterisk.
+  
+- If any of these mandatory fields are left blank or contain only whitespace upon submission, an error message will appear above the respective field, alerting the user to the issue.
+
+![Error form](documentation/readme_images/features/error_form.PNG)
+
+- The SKU field must be unique; if the entered SKU already exists, an error message will be displayed.
+
+![Sku](documentation/readme_images/features/sku.PNG)
+
+- If the price entered exceeds six digits, the form will fail, and an error message will appear beneath the price field.
+
+- Users have the option to upload a photo for their product. If they opt not to, a default image will be displayed as the product image.
+
+- Upon clicking the "Add Product" button at the bottom of the form, the product will be created, provided there are no errors present.
+
+- A success message will be displayed, informing the user that the product has been successfully added.
+
+![Add success](documentation/readme_images/features/add_success.PNG)
+
+#### Edit a Product
+
+![Edit a Product](documentation/readme_images/features/products_edit.png)
+
+- The superuser has the option to edit a product either by clicking the edit button on the product card or on the product detail page.
+
+- Upon opening the edit form, all fields are pre-populated with the original content.
+
+- In the image field, a thumbnail of the existing image is displayed, along with a checkbox option to remove it. Checking this checkbox will replace the image with the default one.
+
+- If a user attempts to edit a product by altering the URL without superuser privileges, they will be redirected to the sign in page.
+
+- Upon successful update, the superuser will receive a notification confirming that the product has been successfully updated.
+
+![Edit success](documentation/readme_images/features/edit_sucess.PNG)
+
+#### Delete a Product
+
+![Delete a Product](documentation/readme_images/features/products_delete.png)
+
+- The superuser has the option to delete a product by clicking the delete button on either the product card or the product detail page.
+
+- Upon clicking the delete button, the superuser is prompted to confirm their decision to delete the product or to cancel the action.
+
+- Once the deletion process is successfully executed, the superuser will receive a notification confirming that the product has been deleted.
+
+![Delete success](documentation/readme_images/features/delete_sucess.png)
 
