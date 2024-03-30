@@ -38,6 +38,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Sign Up](#sign-up)
       - [Sign In](#sign-in)
       - [Sign Out](#sign-out)
+    - [Profile](#profile)
 
 ---
 
@@ -502,7 +503,19 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 #### Sign Out
 ![Sign out](documentation/readme_images/features/signout.png)
 
+### Profile
 
+![Profile](documentation/readme_images/features/profile.png)
 
+**Delivery Details Information**
+
+- The delivery details section stores the user's delivery address and phone number, where the user can also update their information.
+- This information is utilized to automatically populate the delivery address during the checkout process.
+
+**Order History**
+
+- The order history section exhibits a comprehensive list of all the user's placed orders.
+- Within the table, users can view the order number, order date, and total amount.
+- By clicking on the order number, users are directed to a summary page providing details of that specific order.
 
 
