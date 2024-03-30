@@ -41,8 +41,20 @@ class OrderForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
-            
+
             self.fields['phone_number'].widget.attrs[
-            'pattern'] = "[0-9]{1,15}"
+                'pattern'] = "[0-9]{1,15}"
 
-
+            """
+            Form validation pattern
+            Avoid submission of forms containing only whitespace
+            Credit:
+            https://stackoverflow.com/questions/19619428/
+            html5-form-validation-pattern-alphanumeric-with-spaces
+            """
+            self.fields['full_name'].widget.attrs[
+                'pattern'] = "([^\\s][A-z0-9À-ž\x27\\s]+)"
+            self.fields['street_address1'].widget.attrs[
+                'pattern'] = "([^\\s][A-z0-9À-ž\x27\\s]+)"
+            self.fields['town_or_city'].widget.attrs[
+                'pattern'] = "([^\\s][A-z0-9À-ž\x27\\s]+)"
