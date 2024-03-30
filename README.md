@@ -39,6 +39,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Sign In](#sign-in)
       - [Sign Out](#sign-out)
     - [Profile](#profile)
+    - [Shop Products](#shop-products)
 
 ---
 
@@ -517,5 +518,36 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 - The order history section exhibits a comprehensive list of all the user's placed orders.
 - Within the table, users can view the order number, order date, and total amount.
 - By clicking on the order number, users are directed to a summary page providing details of that specific order.
+
+### Shop Products
+
+![Shop Products](documentation/readme_images/features/shop_products.png)
+
+- Upon selecting the 'Shop Products' link in the navigation bar, a dropdown menu will appear, presenting various categories such as 'Sofas,' 'Tables & Desks,' 'Chairs,' 'Outdoor Living,' and 'Decoration.'
+
+![Nav Products](documentation/readme_images/features/nav_categories.png)
+
+- The 'All Products' link will showcase a list of all products sourced from the database. 
+- Upon clicking any category, the product list will be filtered to exclusively exhibit items belonging to the chosen category.
+- The chosen category will then be prominently displayed as the heading of the page.
+
+![Decoration Products](documentation/readme_images/features/decoration.png)
+
+- Every product card features an image of the product, along with its product name, and price. 
+- For superusers, additional edit and delete buttons are displayed at the bottom of each product card.
+- The products page is designed to be fully responsive, dynamically adjusting the number of products displayed on each row according to the user's screen size.
+- Additionally, a sorting box is available on the products page, allowing users to sort all products by price in ascending or descending order, as well as by title in alphabetical order.
+
+![Sort by](documentation/readme_images/features/sortby.png)
+
+
+
+
+
+
+
+
+
+
 
 
