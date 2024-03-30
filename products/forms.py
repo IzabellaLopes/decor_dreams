@@ -20,3 +20,10 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-green rounded'
+            
+        self.fields['details_dimensions'].label = 'Details & Dimensions'
+        self.fields['delivery_returns'].label = 'Delivery & Returns'
+
+        
+        
+        
