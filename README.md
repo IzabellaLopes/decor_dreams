@@ -46,6 +46,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Edit a Product](#edit-a-product)
       - [Delete a Product](#delete-a-product)
     - [Shopping Bag](#shopping-bag)
+    - [Checkout](#checkout)
 
 ---
 
@@ -676,4 +677,43 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 - Additionally, two buttons are available below the grand total: users can either return to the products page by clicking 'Keep Shopping' or proceed to checkout by clicking 'Secure Checkout'.
 
 ![Bag total section](documentation/readme_images/features/bag_total_section.PNG)
+
+### Checkout
+
+![Checkout](documentation/readme_images/features/checkout.png)
+
+**Users Details:**
+- In this section, users can input their contact details, delivery address, and card number for making purchases.
+- If the user is a guest, they will find a link to create an account or login.
+![Guest](documentation/readme_images/features/guest.png)
+- For signed-in users, a checkbox is available to save delivery information. 
+- If delivery information is saved, it will be automatically filled in along with the email address.
+- Error messages will prompt users to fill in required fields or match the requested format if any discrepancies are found.
+
+**Order Summary:**
+- The order summary provides a breakdown of all items to be purchased, including quantity, subtotal, and grand total. 
+- The total number of items in the order is displayed alongside the summary title.
+- Clicking on a product image within the summary redirects the user to the corresponding product detail page.
+
+**Payment:**
+- Payment processing is securely handled by Stripe. 
+- Incorrect card numbers trigger an error message indicating an invalid card number. 
+- A loading screen prevents users from navigating away while payment is being processed. 
+- A warning message displays the impending charge on the user's card. 
+- In case of submission errors or browser closure during processing, orders are still created in the database through the webhook. 
+- Upon successful payment processing, the webhook verifies the existence of the order in the database and creates one if not found, using the payment information provided.
+
+**Confirmation:**
+- After the order is processed, the user is directed to the checkout success page, which provides a summary of the completed order. 
+![Thank you](documentation/readme_images/features/thankyou.png)
+
+- Additionally, a success message is displayed, and an email containing the order confirmation is sent to the user. 
+![Order success](documentation/readme_images/features/order_success.PNG)
+  
+- At the bottom of the summary, a "Keep Shopping" button is available, allowing the user to return to the 'Shop products' page.
+
+
+
+
+
 
