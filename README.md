@@ -48,6 +48,10 @@ This is a fictional B2C e-commerce store created for educational purposes as par
     - [Shopping Bag](#shopping-bag)
     - [Checkout](#checkout)
     - [Interior Design](#interior-design)
+    - [Interior Design Management](#interior-design-management)
+      - [Add a Interior Design Service](#add-a-interior-design-service)
+      - [Edit a Interior Design Service](#edit-a-interior-design-service)
+      - [Delete a Interior Design Service](#delete-a-interior-design-service)
 
 ---
 
@@ -723,10 +727,51 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 - An "Schedule a Consultation" button is positioned alongside each service, allowing users to easily navigate to the Contact form upon clicking. 
 - For superusers, additional edit and delete buttons are displayed at the bottom of each interior design service. 
 
+### Interior Design Management
 
+#### Add a Interior Design Service
 
+![Add Interior Design](documentation/readme_images/features/interiordesign_add.png)
 
+- The "Add a Interior Design Service" page is accessible by clicking the corresponding button on the Interior Design page or within the user dropdown menu, under the "Add a Interior Design Service" section. These options are exclusively visible to superusers.
 
+- If a user attempts to access the add interior design page by altering the URL without superuser privileges, they will be redirected to the sign in page.
 
+- To successfully submit the form, the user must complete all fields marked with an asterisk.
+  
+- If any of these mandatory fields are left blank or contain only whitespace upon submission, an error message will appear above the respective field, alerting the user to the issue.
 
+- Users have the option to upload a photo for their interior design service. If they opt not to, a default image will be displayed as the interior design image.
+
+- Upon clicking the "Add Interior Design Service" button at the bottom of the form, the interior design service will be created, provided there are no errors present.
+
+- A success message will be displayed, informing the user that the interior design service has been successfully added.
+
+![Add Interior Design success](documentation/readme_images/features/add_interior_success.PNG)
+
+#### Edit a Interior Design Service
+
+![Edit Interior Design](documentation/readme_images/features/interiordesign_edit.png)
+
+- The superuser has the option to edit a Interior Design Service by clicking the edit button located beneath the service description on the Interior Design Services Page. 
+  
+- Upon clicking, the form will appear with all fields pre-filled with the existing content. 
+
+- Within the form, the image field will exhibit a thumbnail of the current image and provide a checkbox option to remove it. 
+  
+- Selecting this checkbox will replace the image with the default one. 
+  
+- If a non-superuser attempts to add a service by altering the URL, they will be redirected to a sign in. Upon successful update, the superuser will receive a notification confirming the service's update.
+
+![Edit Interior Design success](documentation/readme_images/features/edit_interior_success.PNG)
+
+#### Delete a Interior Design Service
+
+![Delete Interior Design](documentation/readme_images/features/interiordesign_delete.png)
+
+- The superuser has the option to delete a Interior Design Service by selecting the delete button situated below the service description on the Interior Design Services Page. 
+- Upon clicking, the superuser will be prompted to confirm their choice to delete the service or to cancel the action. 
+- Following successful deletion, the superuser will be presented with a notification confirming the service's removal.
+
+![Delete Interior Design success](documentation/readme_images/features/delete_interior_success.PNG)
 
