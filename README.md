@@ -40,6 +40,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Sign Out](#sign-out)
     - [Profile](#profile)
     - [Shop Products](#shop-products)
+    - [Product Details](#product-details)
 
 ---
 
@@ -540,10 +541,32 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 
 ![Sort by](documentation/readme_images/features/sortby.png)
 
+### Product Details
 
+![Product Details](documentation/readme_images/features/product_details.png)
 
+- When a user clicks on an individual product card, they are directed to the complete product details page. The link is designed as a bootstrap stretched link, allowing users to click anywhere on the card to access the details.
 
+- On the product detail page, users can view the product image, name, and price. If the user is a superuser, they will see edit and delete buttons beneath these details.
 
+**Quantity Buttons:**
+- Below the main product details, users will find quantity buttons used to add items to their bag.
+- These buttons allow users to increase or decrease the quantity by clicking the plus and minus buttons respectively.
+- The minus button is disabled when the quantity is set to 1, and the plus button is disabled when the quantity is set to 99.
+- If a user manually enters a negative number or a number greater than 99 and clicks "Add to Bag," an error message will appear, prompting the user to input valid parameters.
+- Clicking the 'Add to Bag' button adds the specified quantity of the product to the bag, while clicking 'Keep Shopping' returns the user to the store.
+
+**Product Details Accordion:**
+- Below these main details lies the product details accordion, an interactive box where users can select information such as:
+
+- Description:
+![Description](documentation/readme_images/features/description.png)
+
+- Details and Dimensions:
+![Details and dimensions](documentation/readme_images/features/details_dimensions.png)
+
+- Delivery and Returns:
+![Delivery and returns](documentation/readme_images/features/delivery_returns.png)
 
 
 
