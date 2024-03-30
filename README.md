@@ -45,6 +45,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Add a Product](#add-a-product)
       - [Edit a Product](#edit-a-product)
       - [Delete a Product](#delete-a-product)
+    - [Shopping Bag](#shopping-bag)
 
 ---
 
@@ -629,4 +630,50 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 - Once the deletion process is successfully executed, the superuser will receive a notification confirming that the product has been deleted.
 
 ![Delete success](documentation/readme_images/features/delete_sucess.png)
+
+### Shopping Bag
+
+- After successfully adding a product, the shopper will receive a notification confirming the successful addition of the product to their bag.
+
+![Bag success](documentation/readme_images/features/bag_success.png)
+
+- Clicking either on the shopping bag icon in the navigation bar or on the "Go to secure checkout" button in the previous message redirects users to the shopping bag page.
+
+![Shopping Bag](documentation/readme_images/features/shopping_bag.png)
+
+- This page displays all the products that users have added to their cart, along with details such as unit price, quantity, and subtotal.
+
+**Quantity Buttons:**
+
+- The quantity input box on this page reflects the quantity of each product added to the bag.
+- Users can adjust the quantity using the plus and minus buttons:
+  
+![Quantity](documentation/readme_images/features/quantity.PNG)
+
+- The plus button increases the quantity.
+- The minus button decreases the quantity.
+- If the quantity is set to 1, the minus button is disabled.
+- Similarly, if the quantity reaches 99, the plus button becomes disabled.
+
+**Update and Delete Buttons:**
+
+- Users have the option to update or delete items from their shopping bag using the corresponding buttons provided on the page.
+
+![Update and delete](documentation/readme_images/features/update_delete.PNG)
+
+- Clicking the 'Update' icon button saves any changes made to the quantity and updates the item's subtotal accordingly.
+- Pressing the 'Bin' icon button removes the item entirely from the user's bag. 
+- If the user inputs a negative number manually and clicks 'update', the respective item will be removed from the bag. 
+- Similarly, if the user enters a number greater than 99 and clicks 'update', an error message will appear, prompting the user to input within the correct parameters.
+
+![Error quantity](documentation/readme_images/features/error_quantity.png)
+
+**Total Section:**
+
+- At the bottom of the line items, a summary of costs is provided. 
+- This summary includes the total cost of the items in the bag, the delivery cost, and the grand total to pay. 
+- Below the grand total, users will find a message indicating how much more they need to spend to qualify for free delivery if they haven't yet met the threshold (€ 250).
+- Additionally, two buttons are available below the grand total: users can either return to the products page by clicking 'Keep Shopping' or proceed to checkout by clicking 'Secure Checkout'.
+
+![Bag total section](documentation/readme_images/features/bag_total_section.PNG)
 
