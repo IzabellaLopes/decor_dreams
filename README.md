@@ -34,6 +34,10 @@ This is a fictional B2C e-commerce store created for educational purposes as par
     - [Mailchimp](#mailchimp)
     - [Footer](#footer)
     - [Home Page](#home-page)
+    - [User Account Pages](#user-account-pages)
+      - [Sign Up](#sign-up)
+      - [Sign In](#sign-in)
+      - [Sign Out](#sign-out)
 
 ---
 
@@ -481,5 +485,24 @@ The options to "Register" or "Sign in" will change to "Log out" after a user has
 The "Who we are" section offers a brief summary of the site's offerings, highlighting key features and incorporating relevant keywords within <strong></strong> tags to enhance the site's search ranking
 
 ![Who we are](documentation/readme_images/features/who_we_are.png)
+
+### User Account Pages
+
+- Django Allauth was installed and utilized to implement Sign Up, Log In, and Log Out functionalities. 
+- Success messages inform users about successful login and logout actions, while error messages notify them of any unsuccessful attempts during these processes.
+- When a user registers for an account, they need to verify their email address by clicking on the authentication link sent to the provided email address.
+- If a user forgets their password, they can reset it by clicking on the 'Forgot Password' link on the login page.
+
+#### Sign Up
+![Sign up](documentation/readme_images/features/signup.png)
+
+#### Sign In
+![Sign in](documentation/readme_images/features/signin.png)
+
+#### Sign Out
+![Sign out](documentation/readme_images/features/signout.png)
+
+
+
 
 
