@@ -31,7 +31,7 @@
         {% if user.is_superuser %}
         <div class="col-12">
           <div class="pt-3 text-center">
-            <a href="{% url 'add_product' %}" class="btn btn-sm btn-green py-2 mb-3 rounded-4" aria-label="Add a product">Add a Product</a>
+            <a href="{% url 'add_product' %}" class="btn btn-sm btn-green py-2 mb-3 rounded-4 text-uppercase" aria-label="Add a product">Add a Product</a>
           </div>
         </div>
       {% endif %}
@@ -66,7 +66,7 @@
     </div>
     <div class="row card-deck">
       {% for product in products %}
-        <div class="col-6 col-md-4 mb-4">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
           <div class="card item-card rounded-4 h-100">
             {% if product.image %}
               <a href="{% url 'product_detail' product.id %}"><img class="card-img-top img-fluid product-img" src="{{ product.image.url }}" draggable="false" alt="{{ product.name }}" /></a>
