@@ -770,13 +770,6 @@ input[name='q']::placeholder {
     .dropdown-menu.show {
         font-size: .7rem;
     }
-
-    .table-shopping,
-    .form-control-sm,
-    .increase-qty,
-    .decrease-qty {
-        font-size: 12px;
-      }
 }
 
 /* For Large devices (less than 1038px) */
@@ -905,6 +898,12 @@ input[name='q']::placeholder {
 
     .card-columns {
         column-count: 1;
+    }
+
+    .form-control-sm,
+    .increase-qty,
+    .decrease-qty {
+        font-size: .8rem;
     }
 }
 
