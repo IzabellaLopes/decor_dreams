@@ -45,9 +45,9 @@
             <div class="col-2 mb-1">
               <a href="{% url 'product_detail' item.product.id %}" aria-label="link-to-product">
                 {% if item.product.image %}
-                  <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}" />
+                  <img class="w-100 checkout-img" src="{{ item.product.image.url }}" alt="{{ product.name }}" />
                 {% else %}
-                  <img class="w-100" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}" />
+                  <img class="w-100 checkout-img" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ product.name }}" />
                 {% endif %}
               </a>
             </div>
@@ -80,7 +80,7 @@
       </div>
 
       <div class="col-12 col-lg-6">
-        <p class="px-2 text-muted">Please fill out the form below to complete your order</p>
+        <p class="px-3 text-muted">Please fill out the form below to complete your order</p>
         <form action="{% url 'checkout' %}" method="POST" id="payment-form">
           {% csrf_token %}
           <fieldset class="rounded px-3 mb-5">
@@ -121,12 +121,12 @@
           </fieldset>
 
           <div class="submit-button text-right mt-5 mb-5">
-            <a href="{% url 'view_bag' %}" class="btn btn-outline-dark border-green rounded-4 mb-2">
+            <a href="{% url 'view_bag' %}" class="btn btn-outline-dark border-green rounded-4 mb-2 mr-2">
               <span class="icon"><i class="fas fa-chevron-left"></i></span>
-              <span class="font-weight-bold">Adjust Bag</span>
+              <span class="text-uppercase">Adjust Bag</span>
             </a>
             <button id="submit-button" class="btn btn-green rounded-4 mb-2">
-              <span class="font-weight-bold">Complete Order</span>
+              <span class="font-weight-bold text-uppercase">Complete Order</span>
               <span class="icon"><i class="fas fa-lock"></i></span>
             </button>
             <p class="small text-danger my-2">

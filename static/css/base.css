@@ -613,9 +613,19 @@ input[name='q']::placeholder {
     font-size: 13px;
 }
 
+.bag-img {
+    max-height: 150px;
+}
+
+
 /*--------------------------------------------------------------
 # Checkout
 --------------------------------------------------------------*/
+
+.checkout-img {
+    width: 100% !important;
+    min-width: 50px;
+}
 
 #payment-form .form-control, #card-element {
     border: 1px solid var(--light-green) !important;
