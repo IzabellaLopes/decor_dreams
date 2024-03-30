@@ -47,6 +47,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Delete a Product](#delete-a-product)
     - [Shopping Bag](#shopping-bag)
     - [Checkout](#checkout)
+    - [Interior Design](#interior-design)
 
 ---
 
@@ -711,6 +712,18 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 ![Order success](documentation/readme_images/features/order_success.PNG)
   
 - At the bottom of the summary, a "Keep Shopping" button is available, allowing the user to return to the 'Shop products' page.
+
+### Interior Design
+
+![Interior Design](documentation/readme_images/features/interiordesign.png)
+
+- The Interior Design page is accessible via the link in the navigation bar. 
+- Upon arrival, users are greeted with a thorough list of services offered by Decor Dreams, including 'Full Interior Design Services', 'Color Consultation', 'Lighting Design', and 'Outdoor Living Design'. 
+- Each service is accompanied by images, titles, and detailed descriptions. 
+- An "Schedule a Consultation" button is positioned alongside each service, allowing users to easily navigate to the Contact form upon clicking. 
+- For superusers, additional edit and delete buttons are displayed at the bottom of each interior design service. 
+
+
 
 
 
