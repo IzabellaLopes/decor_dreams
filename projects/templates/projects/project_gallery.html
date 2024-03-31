@@ -23,7 +23,7 @@
         {% if user.is_superuser %}
           <div class="col-12">
             <div class="pt-3 text-center">
-              <a href="{% url 'add_project_image' %}" class="btn btn-sm btn-green py-2 mb-3 rounded-4" aria-label="Add new Decor Dreams project">Add new Decor Dreams project</a>
+              <a href="{% url 'add_project_image' %}" class="btn btn-sm btn-green py-2 mb-3 rounded-4 text-uppercase" aria-label="Add a Decor Dreams project">Add a Decor Dreams project</a>
             </div>
           </div>
         {% endif %}
@@ -35,9 +35,9 @@
     <div class="row card-deck mb-5">
       {% for project in previousproject_list %}
         <div class="col-sm-6 col-md-4">
-          <div class="card border-0 mx-0 py-lg-3">
+          <div class="card border-0 mx-0 py-lg-3 project-card">
             <div class="hover">
-              <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.design.type }}" />
+              <img src="{{ project.image.url }}" class="card-img-top rounded-4 project-img" alt="{{ project.design.type }}" />
               <a href="{{ project.image.url }}" target="_blank" class="stretched-link" aria-label="product-image"></a>
             </div>
             <div class="d-none p-2 my-auto d-lg-block project-text bg-soft-white border-golden rounded-4 appear">
@@ -47,14 +47,14 @@
             </div>
             <div class="card-body text-center d-lg-none">
               <strong>{{ project.design.type }}</strong>
+              <br>
               {{ project.location }}
             </div>
-
           </div>
-          <div class="text-center pt-1">
+          <div class="text-center">
             {% if user.is_superuser %}
               <a href="{% url 'delete_project_image' project.id %}" class="btn btn-sm btn-danger mb-2 rounded-4" aria-label="Delete Image"><i class="fas fa-trash-alt"></i> Delete</a>
-            {% endif %}
+              {% endif %}
           </div>
         </div>
       {% endfor %}

@@ -527,6 +527,24 @@ input[name='q']::placeholder {
 # Decor Dreams Projects
 --------------------------------------------------------------*/
 
+.project-card {
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+.project-img {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
+
 .project-text {
     position: absolute;
     top: 50%;

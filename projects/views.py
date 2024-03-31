@@ -29,7 +29,7 @@ class AddProjectImage(
     """
     form_class = AddProjectImageForm
     template_name = 'projects/add_project_image.html'
-    success_message = "Your image was added successfully"
+    success_message = "Decor Dreams project was added successfully"
 
     def test_func(self):
         """
@@ -46,7 +46,7 @@ class DeleteProjectImage(
     """
     model = PreviousProject
     template_name = 'projects/delete_project_image.html'
-    success_message = "Project successfully deleted"
+    success_message = "Successfully deleted Decor Dreams project!"
     success_url = reverse_lazy('project_gallery')
 
     def test_func(self):
