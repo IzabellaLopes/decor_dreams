@@ -53,6 +53,10 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Edit a Interior Design Service](#edit-a-interior-design-service)
       - [Delete a Interior Design Service](#delete-a-interior-design-service)
       - [Decor Dreams Projects](#decor-dreams-projects)
+    - [Decor Dreams Projects Management](#decor-dreams-projects-management)
+      - [Add a Decor Dreams Project](#add-a-decor-dreams-project)
+      - [Edit a Decor Dreams Project](#edit-a-decor-dreams-project)
+      - [Delete a Decor Dreams Project](#delete-a-decor-dreams-project)
 
 ---
 
@@ -784,3 +788,49 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 - In desktop view, hovering over the image reveals the type of design service and location at the center of the image. 
 - On mobile devices, this information appears below the image.
 - Clicking on the image opens it in a new tab for further exploration.
+
+### Decor Dreams Projects Management
+
+#### Add a Decor Dreams Project
+
+![Add Decor Dreams Project](documentation/readme_images/features/project_add.PNG)
+
+- The "Add a Decor Dreams Project" page is accessible by clicking the corresponding button on the Decor Dreams Projects page or within the user dropdown menu, under the "Add a Decor Dreams Project" section. These options are exclusively visible to superusers.
+
+- If a user attempts to access the add interior design page by altering the URL without superuser privileges, they will be redirected to the sign in page.
+
+- To successfully submit the form, the user must complete all fields marked with an asterisk.
+  
+- If any of these mandatory fields are left blank or contain only whitespace upon submission, an error message will appear above the respective field, alerting the user to the issue.
+
+- Upon clicking the "Add Decor Dreams Project" button at the bottom of the form, the project will be created, provided there are no errors present.
+
+- A success message will be displayed, informing the user that the interior design service has been successfully added.
+
+![Add Decor Dreams Project success](documentation/readme_images/features/project_add_success.PNG)
+
+#### Edit a Decor Dreams Project
+
+![Edit Decor Dreams Project](documentation/readme_images/features/project_edit.png)
+
+- The superuser has the option to edit a Decor Dreams Project by clicking the edit button located beneath the project description on the Decor Dreams Projects Page. 
+  
+- Upon clicking, the form will appear with all fields pre-filled with the existing content. 
+
+- Within the form, the image field will exhibit a thumbnail of the current image and provide a checkbox option to remove it. 
+  
+- Selecting this checkbox will replace the image with the default one. 
+  
+- If a non-superuser attempts to add a service by altering the URL, they will be redirected to a sign in. Upon successful update, the superuser will receive a notification confirming the service's update.
+
+![Edit Decor Dreams Project success](documentation/readme_images/features/project_edit_success.PNG)
+
+#### Delete a Decor Dreams Project
+
+![Delete Decor Dreams Project](documentation/readme_images/features/project_delete.PNG)
+
+- The superuser has the option to delete a Decor Dreams Project by selecting the delete button situated below the service description on the Decor Dreams Projects Page. 
+- Upon clicking, the superuser will be prompted to confirm their choice to delete the project or to cancel the action. 
+- Following successful deletion, the superuser will be presented with a notification confirming the projects's removal.
+
+![Delete Decor Dreams Project success](documentation/readme_images/features/project_delete_success.png)
