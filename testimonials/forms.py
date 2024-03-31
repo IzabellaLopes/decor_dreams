@@ -6,7 +6,7 @@ class TestimonialForm(forms.ModelForm):
     class Meta:
         model = Testimonial
         fields = [
-            'body',
+            'message',
             'design',
         ]
 

@@ -12,7 +12,7 @@ class Testimonial(models.Model):
         User, on_delete=models.CASCADE, related_name='testimonials')
     design = models.ForeignKey(
         Design, on_delete=models.CASCADE, related_name='testimonial')
-    body = models.TextField()
+    message = models.TextField()
     created_on = models.DateTimeField(auto_now=True)
 
     class Meta:
