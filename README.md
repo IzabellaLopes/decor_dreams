@@ -58,6 +58,10 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Edit a Decor Dreams Project](#edit-a-decor-dreams-project)
       - [Delete a Decor Dreams Project](#delete-a-decor-dreams-project)
     - [Testimonials](#testimonials)
+    - [Testimonials Management](#testimonials-management)
+      - [Add Testimonials](#add-testimonials)
+      - [Edit Testimonials](#edit-testimonials)
+      - [Delete Testimonials](#delete-testimonials)
 
 ---
 
@@ -767,7 +771,9 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
   
 - Selecting this checkbox will replace the image with the default one. 
   
-- If a non-superuser attempts to add a service by altering the URL, they will be redirected to a sign in. Upon successful update, the superuser will receive a notification confirming the service's update.
+- If a non-superuser attempts to add a service by altering the URL, they will be redirected to a sign in.
+
+- Upon successful update, the superuser will receive a notification confirming the service's update.
 
 ![Edit Interior Design success](documentation/readme_images/features/edit_interior_success.PNG)
 
@@ -822,7 +828,9 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
   
 - Selecting this checkbox will replace the image with the default one. 
   
-- If a non-superuser attempts to add a service by altering the URL, they will be redirected to a sign in. Upon successful update, the superuser will receive a notification confirming the service's update.
+- If a non-superuser attempts to add a service by altering the URL, they will be redirected to a sign in. 
+
+- Upon successful update, the superuser will receive a notification confirming the service's update.
 
 ![Edit Decor Dreams Project success](documentation/readme_images/features/project_edit_success.PNG)
 
@@ -848,8 +856,45 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 
 ![Testimonials](documentation/readme_images/features/testimonials_izabella.png)
 
+### Testimonials Management
 
+#### Add Testimonials
 
+![Add Testimonials](documentation/readme_images/features/testimonials_add.png)
+
+- When a logged-in user clicks on the "Add Testimonial" button on the Testimonials page, they are presented with a user-friendly form where they can submit a new testimonial to the site.
+- If the user is not logged in, they will be redirected to the sign in page.
+- Once submitted, the testimonial automatically includes the user's username and the current date underneath the text.
+- A success message will be displayed, informing the user that the testimonial has been successfully added.
+
+![Add Testimonials success](documentation/readme_images/features/testimonial_add_success.PNG)
+
+#### Edit Testimonials
+
+![Edit Testimonials](documentation/readme_images/features/testimonials_edit.png)
+
+- Users can edit their own testimonials by clicking the edit button displayed beside their testimonial on the Testimonials Page. 
+- The edit form fields are automatically filled with the existing testimonial text. 
+- If a user attempts to update a testimonial (by altering the URL) without being signed in, they will be redirected to the login page. 
+- Similarly, if a user tries to update another user's testimonial (by modifying the URL), they will receive a custom 403 error message. 
+- However, the superuser has the authority to edit anyone's testimonial. 
+- After successfully updating a testimonial, the user will receive a notification confirming the update.
+
+![Edit Testimonials success](documentation/readme_images/features/testimonial_edit_success.PNG)
+
+#### Delete Testimonials
+
+![Delete Testimonials](documentation/readme_images/features/testimonial_delete.PNG)
+
+- Users can opt to delete their own testimonials by clicking the delete button displayed beside their testimonial on the Testimonials Page. 
+- Upon clicking, they are prompted to confirm their decision to delete the testimonial or cancel the action. 
+- Following successful deletion, the user receives a notification confirming the deletion. 
+- If a user attempts to delete a testimonial (by altering the URL) without being signed in, they will be redirected to the login page. 
+- Similarly, if a user tries to delete another user's testimonial (by modifying the URL), they will receive a custom 403 error message. 
+- However, the superuser has the authority to delete anyone's testimonial.
+- After successfully deleting a testimonial, the user will receive a notification confirming the deletion.
+
+![Delete Testimonials success](documentation/readme_images/features/testimonial_delete_success.PNG)
 
 
 
