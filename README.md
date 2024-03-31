@@ -62,6 +62,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Add Testimonials](#add-testimonials)
       - [Edit Testimonials](#edit-testimonials)
       - [Delete Testimonials](#delete-testimonials)
+    - [Contact](#contact)
 
 ---
 
@@ -895,6 +896,34 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 - After successfully deleting a testimonial, the user will receive a notification confirming the deletion.
 
 ![Delete Testimonials success](documentation/readme_images/features/testimonial_delete_success.PNG)
+
+### Contact
+
+![Contact](documentation/readme_images/features/contact.png)
+
+- Users can access the contact form by clicking on the "Schedule a consultation" button on the Interior Design page or by selecting the 'Contact us' button in the navigation bar.
+- If the user is logged in, the email field is automatically populated with their email address.
+- The form includes a dropdown menu allowing users to select the type of consultation from a predefined list, ensuring clarity for the site owner.
+- Required fields are marked with an asterisk, and the user must complete all such fields.
+- If any required field is left blank or contains only whitespace upon submission, an error message will appear above the respective field, prompting the user to rectify the issue. 
+
+![Contact error](documentation/readme_images/features/consultation_error.PNG)
+
+- After submitting the form, the user will receive a success message, be redirected to the 'Contact Confirmation' page, and receive an email confirming their inquiry for their records.
+
+![Contact success](documentation/readme_images/features/consultation_success.PNG)
+
+![Contact Confirmation](documentation/readme_images/features/contact_confirmation.PNG)
+
+![Email](documentation/readme_images/features/email.PNG)
+
+
+
+
+
+
+
+
 
 
 
