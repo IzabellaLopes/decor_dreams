@@ -22,7 +22,7 @@
         <hr />
         <div class="col-12">
           <div class="pt-3 text-center">
-            <a href="{% url 'add_testimonial' %}" class="btn btn-sm btn-green py-2 mb-3 rounded-4" aria-label="add-testimonial">Add Testimonial</a>
+            <a href="{% url 'add_testimonial' %}" class="btn btn-sm btn-green py-2 mb-3 rounded-4 text-uppercase" aria-label="add-testimonial">Add Testimonial</a>
           </div>
         </div>
       </div>
@@ -37,10 +37,10 @@
             </div>
             <div class="card-body">
               <h4 class="text-center"><strong>{{ testimonial.design.type }}</strong></h4>
-              {{ testimonial.body }}
+              {{ testimonial.message }}
             </div>
             <div class="card-body">
-              <strong>{{ testimonial.name }}</strong>
+              <strong>{{ testimonial.name | upper }}</strong>
               <br />
               {{ testimonial.created_on }}
               {% if user.is_authenticated and testimonial.name == user or user.is_superuser %}
