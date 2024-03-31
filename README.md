@@ -63,6 +63,11 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Edit Testimonials](#edit-testimonials)
       - [Delete Testimonials](#delete-testimonials)
     - [Contact](#contact)
+    - [Check Consultations](#check-consultations)
+      - [Consultation Dashboard](#consultation-dashboard)
+    - [Consultations Management](#consultations-management)
+      - [Consultation Detail](#consultation-detail)
+      - [Delete Consultation](#delete-consultation)
 
 ---
 
@@ -917,17 +922,36 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 
 ![Email](documentation/readme_images/features/email.PNG)
 
+### Check Consultations
 
+- When the site owner logs in, they'll find an "Check Consultations" button in the contact us page and an option in the User drop-down menu.
 
+![Check Consultations Dropdowm](documentation/readme_images/features/check_consultations.png)
 
+![Check Consultations Button](documentation/readme_images/features/consultation_button.png)
 
+#### Consultation Dashboard
 
+- Upon navigating to the Consultation page, they'll encounter a list of user enquiries arranged from newest to oldest.
 
+![Consultation Dashboard](documentation/readme_images/features/consultation_dashboard.png)
 
+- Read emails will be visually distinguished by appearing in lightgreen color. 
 
+### Consultations Management
 
+#### Consultation Detail
 
+- Clicking on any enquiry will direct the site owner to its detailed information page.
 
+![Consultation Detail](documentation/readme_images/features/consultation_detail.png)
 
+#### Delete Consultation 
 
+- The site owner can choose to delete the enquiry or to go back to the list of enquiries.
 
+![Delete Consultation](documentation/readme_images/features/delete_consultation.PNG)
+
+- Upon deletion, a success message will be displayed.
+
+![Delete Consultation success](documentation/readme_images/features/delete_consultation_success.PNG)
