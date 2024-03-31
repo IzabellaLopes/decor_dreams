@@ -52,6 +52,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Add a Interior Design Service](#add-a-interior-design-service)
       - [Edit a Interior Design Service](#edit-a-interior-design-service)
       - [Delete a Interior Design Service](#delete-a-interior-design-service)
+      - [Decor Dreams Projects](#decor-dreams-projects)
 
 ---
 
@@ -775,3 +776,11 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 
 ![Delete Interior Design success](documentation/readme_images/features/delete_interior_success.PNG)
 
+#### Decor Dreams Projects
+
+![Decor Dreams Projects](documentation/readme_images/features/project_gallery.png)
+
+- When users click on the "Decor Dreams Projects" tab in the navigation bar, they are directed to a page displaying images of projects by Decor Dreams, situated in various locations across Ireland.
+- In desktop view, hovering over the image reveals the type of design service and location at the center of the image. 
+- On mobile devices, this information appears below the image.
+- Clicking on the image opens it in a new tab for further exploration.
