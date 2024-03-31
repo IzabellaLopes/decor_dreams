@@ -68,6 +68,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
     - [Consultations Management](#consultations-management)
       - [Consultation Detail](#consultation-detail)
       - [Delete Consultation](#delete-consultation)
+    - [Error Pages](#error-pages)
 
 ---
 
@@ -955,3 +956,17 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 - Upon deletion, a success message will be displayed.
 
 ![Delete Consultation success](documentation/readme_images/features/delete_consultation_success.PNG)
+
+### Error Pages
+
+As mentioned earlier, Custom Error Pages were designed to offer users additional information about the error and provide them with buttons for navigating back to the site.
+
+![403 Error Page](documentation/readme_images/features/403.PNG)
+
+- 400 Bad Request: Decor Dreams is unable to handle this request.
+
+- 403 Forbidden: Looks like you're trying to access forbidden content. Please log out and sign in to the correct account.
+
+- 404 Not Found: The page you're looking for doesn't exist.
+
+- 500 Internal Server Error: Due to an internal error we are unable to process this request.
