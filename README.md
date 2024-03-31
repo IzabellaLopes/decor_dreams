@@ -57,6 +57,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Add a Decor Dreams Project](#add-a-decor-dreams-project)
       - [Edit a Decor Dreams Project](#edit-a-decor-dreams-project)
       - [Delete a Decor Dreams Project](#delete-a-decor-dreams-project)
+    - [Testimonials](#testimonials)
 
 ---
 
@@ -834,3 +835,25 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 - Following successful deletion, the superuser will be presented with a notification confirming the projects's removal.
 
 ![Delete Decor Dreams Project success](documentation/readme_images/features/project_delete_success.png)
+
+### Testimonials
+
+![Testimonials](documentation/readme_images/features/testimonials.png)
+
+- To access the testimonials page, navigate to the link provided in the navigation bar.
+- Upon reaching the page, users will discover a compilation of testimonials contributed by previous clients.
+- Each testimonial contains information such as the corresponding Interior Design Service, submission date, and the name of the user who submitted it.
+- The "Add Testimonial" button at the top of the page is visible to everyone
+- The "Edit" and "Delete" buttons, located beneath each respective testimonial, are only visible to the superuser and the user who added the testimonial. For example, if the user IZABELLA, who added some testimonials, accesses the testimonial page, she will see it like this:
+
+![Testimonials](documentation/readme_images/features/testimonials_izabella.png)
+
+
+
+
+
+
+
+
+
+
