@@ -39,6 +39,29 @@ class AddProjectImage(
             return True
 
 
+class EditProjectImage(
+        LoginRequiredMixin, UserPassesTestMixin, 
+        SuccessMessageMixin, generic.UpdateView):
+    """
+    This view is used to allow the superuser to edit image from the gallery
+    """
+    model = PreviousProject
+    form_class = AddProjectImageForm
+    template_name = 'projects/edit_project_image.html'
+    success_message = "Successfully edited Decor Dreams project"
+
+    def test_func(self):
+        """
+        Ensure only superuser can edit an image
+        """
+        return self.request.user.is_superuser
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['form'] = self.form_class(instance=self.object)
+        return context
+
+
 class DeleteProjectImage(
         LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
     """

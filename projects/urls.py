@@ -11,6 +11,10 @@ urlpatterns = [
         name='add_project_image'
         ),
     path(
+        'project-gallery/edit/<int:pk>/', views.EditProjectImage.as_view(),
+        name='edit_project_image'
+        ),
+    path(
         'project-gallery/delete/<int:pk>/', views.DeleteProjectImage.as_view(),
         name='delete_project_image'
         ),
