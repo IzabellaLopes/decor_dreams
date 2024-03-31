@@ -27,7 +27,7 @@ class Contact(models.Model):
 
     def get_absolute_url(self):
         """Get url after user submits consultation """
-        return reverse('home')
+        return reverse('confirmation')
 
     class Meta:
         """ To display the consultations by date in ascending order """

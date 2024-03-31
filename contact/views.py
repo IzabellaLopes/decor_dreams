@@ -2,6 +2,7 @@
 
 from django.shortcuts import render, reverse, redirect
 from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.core.mail import send_mail
 from django.views import generic, View
@@ -11,7 +12,7 @@ from .forms import ContactForm
 from .models import Contact
 
 
-class ContactUs(View):
+class ContactUs(SuccessMessageMixin, View):
     """
     This view is used to display the contact form and
     handle GET and POST requests
@@ -61,7 +62,7 @@ class ContactUs(View):
 
             messages.success(request, "Your consultation has been sent")
 
-            return redirect("home")
+            return redirect("confirmation")
 
         else:
             messages.error(request,
@@ -72,6 +73,10 @@ class ContactUs(View):
                           "contact/contact.html",
                           {"plain_message": True, "contact_form": contact_form}
                           )
+
+
+class ContactConfirmation(generic.TemplateView):
+    template_name = 'contact/confirmation.html'
 
 
 class Consultation(LoginRequiredMixin, UserPassesTestMixin, generic.ListView):

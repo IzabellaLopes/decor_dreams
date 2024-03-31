@@ -5,6 +5,10 @@ urlpatterns = [
     path('', views.ContactUs.as_view(), name='contact'),
     path('consultation/', views.Consultation.as_view(), name='consultation'),
     path(
+        'confirmation/', views.ContactConfirmation.as_view(),
+         name='confirmation'
+         ),
+    path(
         'consultation/<int:pk>/',
         views.ConsultationDetail.as_view(), name='consultation_detail'
         ),
