@@ -22,6 +22,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [HTML](#html)
     - [CSS](#css)
     - [JavaScript](#javascript)
+    - [Python](#python)
 ---
 
 ## User Story Testing
@@ -164,3 +165,69 @@ All Javascript was passed through [JSHint](https://jshint.com/) with no issues.
 | *stripe elements*                     | ![stripe](documentation/readme_images/testing/js_validation/stripe_elements.js_js.png)  | Pass: No Errors |
 | *image selector*                     | ![add_image](documentation/readme_images/testing/js_validation/add_image.PNG)  | Pass: No Errors |
 | *profile*                     | ![profile](documentation/readme_images/testing/js_validation/profile.PNG)  | Pass: No Errors |
+
+### Python
+
+All Python files were run through [Code Institute Python Linter](https://pep8ci.herokuapp.com/#) and no errors were detected.
+
+Below are observed the most relevant items.
+
+**Bag**
+| File                           | Screenshot | Notes     |
+|--------------------------------|------------|-----------|
+| *contexts.py*                     | ![contexts](documentation/readme_images/testing/python/bag/context.PNG)  | Pass: No Errors |
+| *views.py*                     | ![views](documentation/readme_images/testing/python/bag/views.PNG)  | Pass: No Errors |
+
+**Checkout**
+| File                           | Screenshot | Notes     |
+|--------------------------------|------------|-----------|
+| *admin.py*                     | ![admin](documentation/readme_images/testing/python/checkout/admin.PNG)  | Pass: No Errors |
+| *forms.py*                     | ![forms](documentation/readme_images/testing/python/checkout/forms.PNG)  | Pass: No Errors |
+| *models.py*                     | ![models](documentation/readme_images/testing/python/checkout/models.PNG)  | Pass: No Errors |
+| *signals.py*                     | ![signals](documentation/readme_images/testing/python/checkout/signals.PNG)  | Pass: No Errors |
+| *views.py*                     | ![views](documentation/readme_images/testing/python/checkout/views.PNG)  | Pass: No Errors |
+| *webhook handler.py*                     | ![webhook handler](documentation/readme_images/testing/python/checkout/webhook_handler.PNG)  | Pass: No Errors |
+| *webhooks.py*                     | ![webhooks](documentation/readme_images/testing/python/checkout/webhooks.PNG)  | Pass: No Errors |
+
+**Contact**
+| File                           | Screenshot | Notes     |
+|--------------------------------|------------|-----------|
+| *admin.py*                     | ![admin](documentation/readme_images/testing/python/contact/admin.PNG)  | Pass: No Errors |
+| *forms.py*                     | ![forms](documentation/readme_images/testing/python/contact/forms.PNG)  | Pass: No Errors |
+| *models.py*                     | ![models](documentation/readme_images/testing/python/contact/models.PNG)  | Pass: No Errors |
+| *views.py*                     | ![views](documentation/readme_images/testing/python/contact/views.PNG)  | Pass: No Errors |
+
+**Interior Design**
+| File                           | Screenshot | Notes     |
+|--------------------------------|------------|-----------|
+| *admin.py*                     | ![admin](documentation/readme_images/testing/python/interior_design/admin.PNG)  | Pass: No Errors |
+| *forms.py*                     | ![forms](documentation/readme_images/testing/python/interior_design/forms.PNG)  | Pass: No Errors |
+| *models.py*                     | ![models](documentation/readme_images/testing/python/interior_design/models.PNG)  | Pass: No Errors |
+| *views.py*                     | ![views](documentation/readme_images/testing/python/interior_design/views.PNG)  | Pass: No Errors |
+
+**Products**
+| File                           | Screenshot | Notes     |
+|--------------------------------|------------|-----------|
+| *admin.py*                     | ![admin](documentation/readme_images/testing/python/products/admin.PNG)  | Pass: No Errors |
+| *forms.py*                     | ![forms](documentation/readme_images/testing/python/products/forms.PNG)  | Pass: No Errors |
+| *models.py*                     | ![models](documentation/readme_images/testing/python/products/models.PNG)  | Pass: No Errors |
+| *views.py*                     | ![views](documentation/readme_images/testing/python/products/views.PNG)  | Pass: No Errors |
+
+**Profiles**
+| File                           | Screenshot | Notes     |
+|--------------------------------|------------|-----------|
+| *forms.py*                     | ![forms](documentation/readme_images/testing/python/profiles/form.PNG)  | Pass: No Errors |
+| *models.py*                     | ![models](documentation/readme_images/testing/python/profiles/models.PNG)  | Pass: No Errors |
+| *views.py*                     | ![views](documentation/readme_images/testing/python/profiles/views.PNG)  | Pass: No Errors |
+
+**Projects**
+| File                           | Screenshot | Notes     |
+|--------------------------------|------------|-----------|
+| *models.py*                     | ![models](documentation/readme_images/testing/python/projects/models.PNG)  | Pass: No Errors |
+| *views.py*                     | ![views](documentation/readme_images/testing/python/projects/views.PNG)  | Pass: No Errors |
+
+**Testimonials**
+| File                           | Screenshot | Notes     |
+|--------------------------------|------------|-----------|
+| *models.py*                     | ![models](documentation/readme_images/testing/python/testimonials/models.PNG)  | Pass: No Errors |
+| *views.py*                     | ![views](documentation/readme_images/testing/python/testimonials/views.PNG)  | Pass: No Errors |
