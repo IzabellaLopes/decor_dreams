@@ -223,7 +223,7 @@ Decor Dreams is designed to cater to the following target audience:
 
 - **USER STORY: Product Management [#40](https://github.com/IzabellaLopes/decor_dreams/issues/40)** - As a Store Owner I want to be able to add, edit, and delete products using a user-friendly interface so that I can ensure smooth management of the store's contents
 - **USER STORY: Design & Planning Services Management [#41](https://github.com/IzabellaLopes/decor_dreams/issues/41)** - As a Store Owner I want to be able to add, edit, and delete interior design services using a simple interface so that I can manage the site's content
-- **USER STORY: Decor Dreams Projects Management [#42](https://github.com/IzabellaLopes/decor_dreams/issues/42)** - As a Store Owner I want to be able to add and delete images and locations of previous Decor Dreams design projects so that I can effectively manage the site's content
+- **USER STORY: Decor Dreams Projects Management [#42](https://github.com/IzabellaLopes/decor_dreams/issues/42)** - As a Store Owner I want to be able to add, edit, and delete images and locations of previous Decor Dreams design projects so that I can effectively manage the site's content
 - **USER STORY: Enquiries Dashboard [#43](https://github.com/IzabellaLopes/decor_dreams/issues/43)** - As a Store Owner I want to be able to view and delete customer enquiries directly on the front-end so that I can manage them without having to access the admin panel
 </details>
 </br>

@@ -14,6 +14,7 @@ This document provides an overview of the testing strategies applied throughout 
       - [EPIC - Viewing and Navigation](#epic---viewing-and-navigation)
       - [EPIC - User Authentication](#epic---user-authentication)
       - [EPIC - Shop Products](#epic---shop-products)
+      - [EPIC - Administration and Store Management](#epic---administration-and-store-management)
 ---
 
 ## User Story Testing
@@ -56,4 +57,13 @@ This document provides an overview of the testing strategies applied throughout 
 | *"As a Shopper I want to be able to checkout as a guest so that I can make a purchase without having to sign up for an account."*                                       | ![Guest checkout](documentation/readme_images/features/guest_checkout.png)          |
 | *"As a Shopper I want to be able to view an order confirmation after completing the checkout process so that I can ensure that my purchase was successful."*                                       | ![Thank you](documentation/readme_images/features/thankyou.png)          |
 | *"As a Shopper I want to be able to receive an email confirmation of my order so that I can have a record of my purchase."*                                       | ![Order success](documentation/readme_images/features/order_success.PNG)         |
+
+#### EPIC - Administration and Store Management
+
+| User Story                                                                                                                                                                     | Screenshot                                                               |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| *"As a Store Owner I want to be able to add, edit, and delete products using a user-friendly interface so that I can ensure smooth management of the store's contents."*                                       | ![Add a Product](documentation/readme_images/features/products_add.png) ![Edit a Product](documentation/readme_images/features/products_edit.png) ![Delete a Product](documentation/readme_images/features/products_delete.png)         |
+| *"As a Store Owner I want to be able to add, edit, and delete interior design services using a simple interface so that I can manage the site's content."*                                       | ![Add Interior Design](documentation/readme_images/features/interiordesign_add.png) ![Edit Interior Design](documentation/readme_images/features/interiordesign_edit.png) ![Delete Interior Design](documentation/readme_images/features/interiordesign_delete.png)         |
+| *"As a Store Owner I want to be able to add, edit, and delete images and locations of previous Decor Dreams design projects so that I can effectively manage the site's content."*                                       | ![Add Decor Dreams Project](documentation/readme_images/features/project_add.PNG) ![Edit Decor Dreams Project](documentation/readme_images/features/project_edit.png) ![Delete Decor Dreams Project](documentation/readme_images/features/project_delete.PNG)         |
+| *"As a Store Owner I want to be able to view and delete customer enquiries directly on the front-end so that I can manage them without having to access the admin panel."*                                       | ![Testimonials](documentation/readme_images/features/testimonials.png) ![Delete Testimonials](documentation/readme_images/features/testimonial_delete.PNG)         |
 
