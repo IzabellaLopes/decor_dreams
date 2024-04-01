@@ -30,6 +30,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [Site Navigation](#site-navigation)
     - [Home Page](#home-page)
     - [All Auth Pages](#all-auth-pages)
+    - [Shop Products](#shop-products)
 ---
 
 ## User Story Testing
@@ -437,3 +438,23 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Sign Out Confirmation           |                                           |                                              |           |
 | Sign Out  button                | Click                                     | Redirect to homepage                         | Pass      |
 | Sign Out  button                | Click                                     | Success message confirming Sign Out  appears | Pass      |
+
+### Shop Products
+
+| Element                         | Action  | Expected Result                                                                                | Pass/Fail |
+|---------------------------------|---------|------------------------------------------------------------------------------------------------|-----------|
+| Sort By' Dropdown               | Click   | Open 'sort by' options                                                                         | Pass      |
+| Sort By' Options (x3)           | Click   | Re-order products correctly                                                                    | Pass      |
+| If Category Selected            | Display | Pages heading changes to show category name                                                    | Pass      |
+| Product Number                  | Display | Displays correct number of products on page                                                    | Pass      |
+| Product Card                    | Hover   | Change card opacity                                                                            | Pass      |
+| Product Card                    | Click   | Redirect to product detail page                                                                | Pass      |
+| If Searched Product             | Display | Only display products with search term in either the product's title or description or excerpt | Pass      |
+| If Searched Product             | Display | Display number of products found for " searched product"                                       | Pass      |
+| If Superuser in session:        |         |                                                                                                |           |
+| Add New Product Button          | Click   | Redirect to add product page                                                                   | Pass      |
+| Edit product link               | Click   | Redirect to edit product page                                                                  | Pass      |
+| Delete product link             | Click   | Open delete confirmation  page                                                                 | Pass      |
+| Confirm Delete -  cancel button | Click   | Redirect to home decor page                                                                    | Pass      |
+| Confirm Delete -  delete button | Click   | Delete product                                                                                 | Pass      |
+| Confirm Delete -  delete button | Click   | Success message appears confirming product deleted successfully                                | Pass      |
