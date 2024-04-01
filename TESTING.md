@@ -43,6 +43,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [Testimonials](#testimonials)
     - [Testimonial Management](#testimonial-management)
     - [Contact](#contact)
+    - [Consultation Dashboard](#consultation-dashboard)
 ---
 
 ## User Story Testing
@@ -785,3 +786,26 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Submit button(form valid)     | Click                 | Redirect to home Page                                                               | Pass      |
 | Submit button(form valid)     | Click                 | Success message appears informing the superuser that the enquiry has been submitted | Pass      |
 | Submit button(form valid)     | Click                 | User receives confirmation email about their enquiry                                | Pass      |
+
+### Consultation Dashboard
+
+| Element                         | Action          | Expected Result                                                                                                                       | Pass/Fail |
+|---------------------------------|-----------------|---------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| Open Page                       | Access          | If a user tries to access the Consultation dashboard (by changing the url) without being signed in they are redirected to the login page | Pass      |
+| Open Page                       | Access          | If a user tries to access the dashboard (by changing the url) without being superuser they are redirected to a custom 403 page        | Pass      |
+| Email Links                     | Click           | Open Detailed Email View                                                                                                              | Pass      |
+| Email Links                     | If already read | Grey out                                                                                                                              | Pass      |
+|                                 |                 |                                                                                                                                       |           |
+| Consultation Detail                  |                 |                                                                                                                                       |           |
+| Element                         | Action          | Expected Result                                                                                                                       | Pass/Fail |
+| Back Button                     | Click           | Return to Enquiries Dashboard                                                                                                         | Pass      |
+| Delete Button                   | Click           | Open Confirm Delete page                                                                                                              | Pass      |
+|                                 |                 |                                                                                                                                       |           |
+| Confirm Delete Project Image    |                 |                                                                                                                                       |           |
+| Element                         | Action          | Expected Result                                                                                                                       | Pass/Fail |
+| Delete Consultation                  | Access          | If a user tries to delete an enquiry (by changing the url) without being signed in they are redirected to the login page              | Pass      |
+| Delete Consultation                  | Access          | If a user tries to delete an enquiry (by changing the url) without being superuser they are redirected to a custom 403 page           | Pass      |
+| Confirm Delete -  cancel button | Click           | Return to Enquiries Dashboard                                                                                                         | Pass      |
+| Confirm Delete -  delete button | Click           | Delete Enquiry from database                                                                                                          | Pass      |
+| Confirm Delete -  delete button | Click           | Success message appears confirming enquiry  deleted successfully                                                                      | Pass      |
+
