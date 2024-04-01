@@ -101,6 +101,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
     - [Docs](#docs)
     - [Content](#content)
     - [Media](#media)
+  - [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -1474,6 +1475,18 @@ To clone the repository:
 
 - [Lexica Art](https://lexica.art/) - Imagery on the site was sourced from Lexica Art
 - [Canva](https://www.canva.com/) - Used to create the Decor Dreams logo
+
+[Back to Contents](#contents)
+
+---
+
+## Acknowledgments
+
+I would like to express my deepest gratitude to the following individuals who played significant roles in the successful completion of my fifth project:
+
+- I am grateful to my family for their consistent support and understanding throughout this period of intense studying.
+- I want to express my sincere thanks to my fellow peers from the April 2023 cohort at Code Institute. 
+- Jubril Akolade, my mentor from the Code Institute.
 
 [Back to Contents](#contents)
 
