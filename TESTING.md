@@ -21,6 +21,7 @@ This document provides an overview of the testing strategies applied throughout 
   - [Code Validation](#code-validation)
     - [HTML](#html)
     - [CSS](#css)
+    - [JavaScript](#javascript)
 ---
 
 ## User Story Testing
@@ -144,11 +145,22 @@ I've used [HTML W3C Validator](https://validator.w3.org) to validate all of my H
 
 No errors were found when passing my CSS files through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
-*base.css*
-![base_css](documentation/readme_images/testing/css_validation/css.PNG)
+| Page                           | Screenshot | Notes     |
+|--------------------------------|------------|-----------|
+| *base.css*                     | ![base_css](documentation/readme_images/testing/css_validation/css.PNG)  | Pass: No Errors |
+| *checkout.css*                 | ![checkout_css](documentation/readme_images/testing/css_validation/checkout_css.PNG)  | Pass: No Errors |
+| *profile.css*                  | ![profile_css](documentation/readme_images/testing/css_validation/profile_css.PNG)  | Pass: No Errors |
 
-*checkout.css*
-![checkout_css](documentation/readme_images/testing/css_validation/checkout_css.PNG)
+### JavaScript
 
-*profile.css*
-![profile_css](documentation/readme_images/testing/css_validation/profile_css.PNG)
+All Javascript was passed through [JSHint](https://jshint.com/) with no issues.
+
+| File                           | Screenshot | Notes     |
+|--------------------------------|------------|-----------|
+| *base*                     | ![base_js](documentation/readme_images/testing/js_validation/base.PNG)  | Pass: No Errors |
+| *main nav*                     | ![main_nav](documentation/readme_images/testing/js_validation/main-nav.PNG)  | Pass: No Errors |
+| *products*                     | ![products](documentation/readme_images/testing/js_validation/products.PNG)  | Pass: No Errors |
+| *bag*                     | ![bag](documentation/readme_images/testing/js_validation/bag.PNG)  | Pass: No Errors |
+| *stripe elements*                     | ![stripe](documentation/readme_images/testing/js_validation/stripe_elements.js_js.png)  | Pass: No Errors |
+| *image selector*                     | ![add_image](documentation/readme_images/testing/js_validation/add_image.PNG)  | Pass: No Errors |
+| *profile*                     | ![profile](documentation/readme_images/testing/js_validation/profile.PNG)  | Pass: No Errors |
