@@ -25,6 +25,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [Python](#python)
     - [Lighthouse](#lighthouse)
   - [Browser Testing](#browser-testing)
+  - [Device Testing](#device-testing)
 ---
 
 ## User Story Testing
@@ -281,6 +282,14 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 ## Browser Testing
 
 - The Decor Dreams website was tested on Google Chrome, Firefox, and Safari browsers, with no issues noted.
+
+[Back to Contents](#contents)
+
+---
+
+## Device Testing
+
+- The Decor Dreams website was tested on a variety of devices, including Desktop, Laptop, iPhone 8, iPhone XR, and iPad, to ensure responsiveness across different screen sizes in both portrait and landscape modes. The website performed as intended, and the responsive design was checked using Chrome developer tools on multiple devices, maintaining structural integrity for various sizes.
 
 [Back to Contents](#contents)
 
