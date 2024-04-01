@@ -70,6 +70,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Delete Consultation](#delete-consultation)
     - [Error Pages](#error-pages)
     - [Future Features](#future-features)
+  - [🔥 Important: Payment Processing with Stripe](#-important-payment-processing-with-stripe)
   - [E-commerce Business Model](#e-commerce-business-model)
     - [SEO \& Social Media Marketing](#seo--social-media-marketing)
       - [Search Engine Optimization (SEO)](#search-engine-optimization-seo)
@@ -1016,6 +1017,14 @@ In addition to the user stories outlined in the "Future Features," I also plan t
 - **Social Sign-On**: We aim to introduce social media account integration for easy sign-in and registration.
 - **Payment Expansion**: We're looking to expand our payment options to include services like Apple Pay for a wider range of choices.
 - **Newsletter Unsubscription**: Recognizing the importance of choice, we will be implementing an easy unsubscription feature. This will allow users to opt-out of receiving newsletters via a simple link in the email, ensuring that we respect their communication preferences and keep their inbox clutter-free.
+
+[Back to Contents](#contents)
+
+---
+
+## 🔥 Important: Payment Processing with Stripe
+
+The payment system uses Stripe. Please note that this website is for educational purposes do not enter any personal credit/debit card details when using the site.
 
 [Back to Contents](#contents)
 
