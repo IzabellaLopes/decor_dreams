@@ -16,6 +16,7 @@ This document provides an overview of the testing strategies applied throughout 
       - [EPIC - Shop Products](#epic---shop-products)
       - [EPIC - Administration and Store Management](#epic---administration-and-store-management)
       - [EPIC - Design \& Planning](#epic---design--planning)
+      - [EPIC - Marketing and SEO](#epic---marketing-and-seo)
 ---
 
 ## User Story Testing
@@ -74,3 +75,10 @@ This document provides an overview of the testing strategies applied throughout 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
 | *"As a Site User I want to be able to submit an enquiry form so that I can contact the site owner."*                                       | ![Contact](documentation/readme_images/features/contact.png)         |
 | *"As a Site User I want to be able to add, edit, or delete a testimonial related to a consultation I received so that I can provide my feedback."*                                       | ![Add Testimonials](documentation/readme_images/features/testimonials_add.png) ![Edit Testimonials](documentation/readme_images/features/testimonials_edit.png) ![Delete Testimonials](documentation/readme_images/features/testimonial_delete.PNG)         |
+
+#### EPIC - Marketing and SEO
+
+| User Story                                                                                                                                                                     | Screenshot                                                               |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| *"As a Site User I want to be able to sign up for the Decor Dreams' newsletter so that I can stay informed about new products and promotions."*                                       | ![Mailchimp](documentation/readme_images/features/mailchimp.png)         |
+| *"As a Developer I want to be able to create a Facebook marketing promotional page to spotlight the Decor Dreams so that I can attract potential customers to the website."*                                       | ![Facebook Business page](documentation/readme_images/design/facebook.png)         |
