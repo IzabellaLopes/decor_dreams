@@ -1,3 +1,5 @@
+import stripe
+
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
@@ -9,7 +11,6 @@ from profiles.models import UserProfile
 
 import json
 import time
-import stripe
 
 
 class StripeWH_Handler:
