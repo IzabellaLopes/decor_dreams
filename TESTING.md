@@ -36,6 +36,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [Bag](#bag)
     - [Checkout](#checkout)
     - [Profile](#profile)
+    - [Interior Design Services](#interior-design-services)
 ---
 
 ## User Story Testing
@@ -614,3 +615,14 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Information Display    | Display           | All previous order information displays correctly                                                                              | Pass      |
 | Toast                  | On load           | Previous order info toast appears                                                                                              | Pass      |
 | Back to Profile button | Click             | Redirect to profile page                                                                                                       | Pass      |
+
+### Interior Design Services
+
+| Element                  | Action  | Expected Result                                 | Pass/Fail |
+|--------------------------|---------|-------------------------------------------------|-----------|
+| Service Content          | Display | Display correct service image, type and content | Pass      |
+| Schedule a consultation Now button       | Click   | Open Contact page                               | Pass      |
+| If Superuser in session: |         |                                                 |           |
+| Add service link        | Click   | Redirect to add service page                   | Pass      |
+| Edit service link        | Click   | Redirect to edit service page                   | Pass      |
+| Delete service link      | Click   | Open delete confirmation  page                  | Pass      |
