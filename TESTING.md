@@ -32,6 +32,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [All Auth Pages](#all-auth-pages)
     - [Shop Products](#shop-products)
     - [Product Details](#product-details)
+    - [Products Management](#products-management)
 ---
 
 ## User Story Testing
@@ -476,3 +477,41 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | If Superuser in session: |                           |                                                                                              |           |
 | Edit product link        | Click                     | Redirect to edit product page                                                                | Pass      |
 | Delete product link      | Click                     | Open delete confirmation  page                                                               | Pass      |
+
+### Products Management 
+
+| Element                         | Action                | Expected Result                                                                                                            | Pass/Fail |
+|---------------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------|-----------|
+| Add Product                     | Access                | If a user tries to add a product (by changing the url) without being signed in they are redirected to the login page       | Pass      |
+| Add Product                     | Access                | If a user tries to add a product (by changing the url) without being superuser they are redirected to a custom 403 page    | Pass      |
+| Form Text Input (if required)   | Leave blank           | On Submit: Warning appears, form won't submit                                                                              | Pass      |
+| Form Text Input (if required)   | Just input whitespace | On Submit: Form won't submit                                                                                               | Pass      |
+| SKU                             | Duplicate Entry       | On Submit: Warning appears, form won't submit                                                                              | Pass      |
+| Form image select button        | Click                 | Open device storage                                                                                                        | Pass      |
+| Form image select button        | Display               | Chosen image name displayed once selected                                                                                  | Pass      |
+| Form image select button        | Display               | Default image is used if no image is selected                                                                              | Pass      |
+| Cancel button                   | Click                 | Redirect to Home Decor page                                                                                                | Pass      |
+| Add Product button(form valid)  | Click                 | Form submit                                                                                                                | Pass      |
+| Add Product button(form valid)  | Click                 | Redirect to Product detail page for new product with all information displaying correctly                                  | Pass      |
+| Add Product button(form valid)  | Click                 | Success message appears informing the superuser that the product has been added                                            | Pass      |
+|                                 |                       |                                                                                                                            |           |
+|                                 |                       |                                                                                                                            |           |
+| Edit Product                    |                       |                                                                                                                            |           |
+| Element                         | Action                | Expected Result                                                                                                            | Pass/Fail |
+| Edit Product                    | Access                | If a user tries to add a product (by changing the url) without being signed in they are redirected to the login page       | Pass      |
+| Edit Product                    | Access                | If a user tries to add a product (by changing the url) without being superuser they are redirected to a custom 403 page    | Pass      |
+| Edit Product Form               | Display               | Form has all the fields filled out with the original content                                                               | Pass      |
+| Edit Product Form               | Image Field           | Thumbnail of original image is shown                                                                                       | Pass      |
+| Form Text Input (if required)   | Leave blank           | On Submit: Warning appears, form won't submit                                                                              | Pass      |
+| Form Text Input (if required)   | Just input whitespace | On Submit: Form won't submit                                                                                               | Pass      |
+| Cancel button                   | Click                 | Redirect to Home Decor page                                                                                                | Pass      |
+| Submit button(form valid)       | Click                 | Form submit                                                                                                                | Pass      |
+| Edit Product button(form valid) | Click                 | Redirect to Product detail page for new product with all information displaying correctly                                  | Pass      |
+| Edit Product button(form valid) | Click                 | Success message appears informing the superuser that the product has been updated                                          | Pass      |
+|                                 |                       |                                                                                                                            |           |
+| Confirm Delete Product          | Action                | Expected Result                                                                                                            | Pass/Fail |
+| Delete Product                  | Access                | If a user tries to Delete a product (by changing the url) without being signed in they are redirected to the login page    | Pass      |
+| Delete Product                  | Access                | If a user tries to Delete a product (by changing the url) without being superuser they are redirected to a custom 403 page | Pass      |
+| Confirm Delete -  cancel button | Click                 | Redirect to home decor page                                                                                                | Pass      |
+| Confirm Delete -  delete button | Click                 | Delete product                                                                                                             | Pass      |
+| Confirm Delete -  delete button | Click                 | Success message appears confirming product deleted successfully                                                            | Pass      |
