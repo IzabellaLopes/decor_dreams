@@ -33,6 +33,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [Shop Products](#shop-products)
     - [Product Details](#product-details)
     - [Products Management](#products-management)
+    - [Bag](#bag)
 ---
 
 ## User Story Testing
@@ -515,3 +516,23 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Confirm Delete -  cancel button | Click                 | Redirect to home decor page                                                                                                | Pass      |
 | Confirm Delete -  delete button | Click                 | Delete product                                                                                                             | Pass      |
 | Confirm Delete -  delete button | Click                 | Success message appears confirming product deleted successfully                                                            | Pass      |
+
+### Bag
+
+| Element                                                       | Action              | Expected Result                                        | Pass/Fail |
+|---------------------------------------------------------------|---------------------|--------------------------------------------------------|-----------|
+| No Bag Items                                                  |                     |                                                        |           |
+| Keep Shopping button                                          | Click               | Redirect to shop products page                            | Pass      |
+| Bag Items                                                     |                     |                                                        |           |
+| Qty control buttons                                           | Click               | Increase/decrease quantity                             | Pass      |
+| Qty control buttons                                           | Click               | Minus button disabled if quantity is 1                 | Pass      |
+| Qty control buttons                                           | Click               | Plus button disabled if quantity is 99                 | Pass      |
+| Qty control buttons                                           | Manually Input  >99 | Error message appears when refresh button is clicked   | Pass      |
+| Qty control buttons                                           | Manually Input  <1  | Shopping bag is emptied when refresh button is clicked | Pass      |
+| Refresh Icon button                                           | Click               | Update bag item quantity                               | Pass      |
+| Refresh Icon button                                           | Refresh Icon button | Updated confirmation toast appears                     | Pass      |
+| Bin Icon button                                               | Click               | Remove item from bag                                   | Pass      |
+| Bin Icon button                                               | Click               | Removed confirmation toast appears                     | Pass      |
+| Line item subtotal / Bag total / Delivery cost / Grand Total  | Calculate           | All numbers are calculated correctly                   | Pass      |
+| Continue shopping button                                      | Click               | Redirect to products page                              | Pass      |
+| Secure Checkout button                                        | Click               | Redirect to checkout page                              | Pass      |
