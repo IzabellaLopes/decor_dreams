@@ -26,6 +26,8 @@ This document provides an overview of the testing strategies applied throughout 
     - [Lighthouse](#lighthouse)
   - [Browser Testing](#browser-testing)
   - [Device Testing](#device-testing)
+  - [Manual Testing](#manual-testing)
+    - [Site Navigation](#site-navigation)
 ---
 
 ## User Story Testing
@@ -294,3 +296,81 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 [Back to Contents](#contents)
 
 ---
+
+## Manual Testing
+
+### Site Navigation
+
+| Element                          | Action                        | Expected Result                                              | Pass/Fail |
+|----------------------------------|-------------------------------|--------------------------------------------------------------|-----------|
+| NavBar                           |                               |                                                              |           |
+| Site Name (logo area)            | Click                         | Redirect to home                                             | Pass      |
+| Search Box Function              | Enter Text and Click Search   | Search both the product's title and description for a match. | Pass      |
+| My Account Dropdown              | Click                         | Open profile dropdown                                        | Pass      |
+| Register Link                    | Click                         | Redirect to Sign Up page                                     | Pass      |
+|                                  |                               | (Not visible if user in session)                             | Pass      |
+| Sign in Link                     | Click                         | Redirect to Login page                                       | Pass      |
+|                                  |                               | (Not visible if user in session)                             | Pass      |
+| Add a Product Link       | Click                         | Redirect to add_product page                                 | Pass      |
+|                                  |                               | (Only visible if superuser in session)                       | Pass      |
+| Add a Interior Design Service Link   | Click                         | Redirect to add_service page                                 | Pass      |
+|                                  |                               | (Only visible if superuser in session)                       | Pass      |
+| Add a Decor Dreams Project Management Link | Click                         | Redirect to add_project page                           | Pass      |
+|                                  |                               | (Only visible if superuser in session)                       | Pass      |
+| Check Consultations Link                   | Click                         | Redirect to consultations_dashboard page                         | Pass      |
+|                                  |                               | (Only visible if superuser in session)                       | Pass      |
+| My Profile Link                  | Click                         | Redirect to user profile page                                | Pass      |
+|                                  |                               | (Only visible if user in session)                            | Pass      |
+| Sign out Link                      | Click                         | Redirect to logout confirm page                              | Pass      |
+|                                  |                               | (Only visible if user in session)                            | Pass      |
+| Bag Link                         | Click                         | Redirect to bag page                                         | Pass      |
+|                                  |                               |                                                              |           |
+| Mobile Top Header                |                               |                                                              |           |
+| Search Icon Button               | Click                         | Open up search box                                           | Pass      |
+| Search Box Function              | Enter Text and Click Search   | Search both the product's title and description for a match. | Pass      |
+| My Account Dropdown              | Click                         | Open profile dropdown                                        | Pass      |
+| Register Link                      | Click                         | Redirect to Sign Up page                                     | Pass      |
+|                                  |                               | (Not visible if user in session)                             | Pass      |
+| Sign in Link                       | Click                         | Redirect to login page                                       | Pass      |
+|                                  |                               | (Not visible if user in session)                             | Pass      |
+| Add a Product Link       | Click                         | Redirect to add_product page                                 | Pass      |
+|                                  |                               | (Only visible if superuser in session)                       | Pass      |
+| Add a Interior Design Service Link   | Click                         | Redirect to add_service page                                 | Pass      |
+|                                  |                               | (Only visible if superuser in session)                       | Pass      |
+| Add a Decor Dreams Project Management Link | Click                         | Redirect to add_project_image page                           | Pass      |
+|                                  |                               | (Only visible if superuser in session)                       | Pass      |
+| Check Consultations Link                   | Click                         | Redirect to enquiries_dashboard page                         | Pass      |
+|                                  |                               | (Only visible if superuser in session)                       | Pass      |
+| My Profile Link                  | Click                         | Redirect to user profile page                                | Pass      |
+|                                  |                               | (Only visible if user in session)                            | Pass      |
+| Sign out Link                      | Click                         | Redirect to logout confirm page                              | Pass      |
+|                                  |                               | (Only visible if user in session)                            | Pass      |
+| Bag Link                         | Click                         | Redirect to bag page                                         | Pass      |
+|                                  |                               |                                                              |           |
+| Main Nav                         |                               |                                                              |           |
+| Shop Products Dropdown              | Click                         | Open Shop products dropdown                                     | Pass      |
+| All Products Link                         | Click                         | Redirect all products page                                   | Pass      |
+| Sofas Link                       | Click                         | Redirect to prints page filtered to Sofas                    | Pass      |
+| Tables & Desks Link                      | Click                         | Redirect to prints page filtered to Tables & Desks                   | Pass      |
+| Chairs Link                      | Click                         | Redirect to prints page filtered to Chairs                   | Pass      |
+| Outdoor Living Link                    | Click                         | Redirect to prints page filtered to Outdoor Living                 | Pass      |
+| Decoration Link                    | Click                         | Redirect to prints page filtered to Decoration                 | Pass      |
+| Interior Design Link    | Click                         | Open Interior Design Services Page                           | Pass      |
+| Decor Dreams Projects Link    | Click                         | Open Decor Dreams Projects Page                           | Pass      |
+| Testimonials Link                | Click                         | Open Testimonials Page                                       | Pass      |
+| Contact Us Link                     | Click                         | Open Contact Page                                            | Pass      |
+| Hamburger Menu                   | Responsive                    | Display when screen size reduces to medium size              | Pass      |
+| Home Link                        | Click                         | Redirect to home                                             | Pass      |
+|                                  |                               | (Only displays when screen size reduces to medium size)       | Pass      |
+| Footer                           |                               |                                                              |           |
+| Newsletter Email field           | Insert incorrect/empty format | On submit: form won't submit                                 | Pass      |
+| Newsletter Email field           | Insert incorrect/empty format | Error message displays                                       | Pass      |
+| Subscribe Button                 | Click                         | Form submit                                                  | Pass      |
+| Subscribe Button                 | Click                         | Message appears saying Thank You for subscribing!            | Pass      |
+| Facebook Link          | Click                         | Open correct location in new tab                             | Pass      |
+| Shop Products Link                  | Click                         | Open Shop Products Page                                         | Pass      |
+| Interior Design Services Link    | Click                         | Open Interior Design Services Page                           | Pass      |
+| Decor Dreams Projects Link    | Click                         | Open Decor Dreams Projects Page                           | Pass      |
+| Testimonials Link         | Click                         | Open Testimonials Page                                       | Pass      |
+| Contact Us Link                     | Click                         | Open Contact Page                                            | Pass      |
+| Privacy Policy Link              | Click                         | Open Privacy Policy Page in new tab                          | Pass      |
