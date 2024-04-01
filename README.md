@@ -75,6 +75,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Social Media Presence](#social-media-presence)
       - [Newsletter Engagement](#newsletter-engagement)
       - [Future Marketing Strategies](#future-marketing-strategies)
+  - [Testing](#testing)
 
 ---
 
@@ -1029,6 +1030,14 @@ Sitemap: https://decor-dreams-ff212364915e.herokuapp.com/sitemap.xml
 
 - **Google Search Console**: Plans to utilize tools like Google Search Console for deeper insights into our site's search performance.
 - **Enhanced Social Media Campaigns**: We aim to leverage social media platforms further by engaging with our community through regular updates, interactive posts, and promotional events.
+
+[Back to Contents](#contents)
+
+---
+
+## Testing
+
+Comprehensive manual testing was conducted to ensure all functionalities work as intended. Details provided in [TESTING.md](TESTING.md).
 
 [Back to Contents](#contents)
 
