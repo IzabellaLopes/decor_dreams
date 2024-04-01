@@ -97,6 +97,10 @@ This is a fictional B2C e-commerce store created for educational purposes as par
     - [Local Development](#local-development)
       - [How to Fork](#how-to-fork)
       - [How to Clone](#how-to-clone)
+  - [Credits](#credits)
+    - [Docs](#docs)
+    - [Content](#content)
+    - [Media](#media)
 
 ---
 
@@ -1444,6 +1448,32 @@ To clone the repository:
 6. Set up a virtual environment.
 7. Install the packages from the requirements.txt file - run Command pip3 install -r requirements.txt
 
+
+[Back to Contents](#contents)
+
+---
+
+## Credits
+
+### Docs
+
+- [Code Institute - Boutique Ado Walkthrough Project](https://github.com/Code-Institute-Solutions/boutique_ado_v1)
+- [Code Institute Template](https://github.com/Code-Institute-Org/ci-full-template)
+- [W3Schools](https://www.w3schools.com/)
+- [Django Docs](https://docs.djangoproject.com/en/4.0/)
+- [Django All Auth Documentation](https://docs.allauth.org/en/latest/installation/quickstart.html)
+- [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets)
+- [Bootstrap 4.6 Docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [Stack Overflow](https://stackoverflow.com/questions/19619428/html5-form-validation-pattern-alphanumeric-with-spaces) - To prevent form being submitted with whitespace
+
+### Content
+
+- Content for the website was written by Izabella Lopes.
+
+### Media
+
+- [Lexica Art](https://lexica.art/) - Imagery on the site was sourced from Lexica Art
+- [Canva](https://www.canva.com/) - Used to create the Decor Dreams logo
 
 [Back to Contents](#contents)
 
