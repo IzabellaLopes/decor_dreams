@@ -42,6 +42,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [Decor Dreams Projects Management](#decor-dreams-projects-management)
     - [Testimonials](#testimonials)
     - [Testimonial Management](#testimonial-management)
+    - [Contact](#contact)
 ---
 
 ## User Story Testing
@@ -769,3 +770,18 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Confirm Delete -  cancel button     | Click                 | Redirect to Testimonials page                                                                                               | Pass      |
 | Confirm Delete -  delete button     | Click                 | Delete Testimonial  from database                                                                                           | Pass      |
 | Confirm Delete -  delete button     | Click                 | Success message appears confirming Testimonial  deleted successfully                                                        | Pass      |
+
+### Contact
+
+| Element                       | Action                | Expected Result                                                                     | Pass/Fail |
+|-------------------------------|-----------------------|-------------------------------------------------------------------------------------|-----------|
+| Form Text Input (if required) | Leave blank           | On Submit: Warning appears, form won't submit                                       | Pass      |
+| Form Text Input (if required) | Just input whitespace | On Submit: Warning appears Form won't submit                                        | Pass      |
+| Email Input                   | User Logged In        | Email Field pre populated with user email address                                   | Pass      |
+| Email Input                   | Incorrect Format      | On Submit: Warning appears, form won't submit                                       | Pass      |
+| Enquiry Type Dropdown         | Click                 | Display all Enquiry Types in Database                                               | Pass      |
+| Cancel button                 | Click                 | Redirect to Home page                                                               | Pass      |
+| Submit button(form valid)     | Click                 | Form submit                                                                         | Pass      |
+| Submit button(form valid)     | Click                 | Redirect to home Page                                                               | Pass      |
+| Submit button(form valid)     | Click                 | Success message appears informing the superuser that the enquiry has been submitted | Pass      |
+| Submit button(form valid)     | Click                 | User receives confirmation email about their enquiry                                | Pass      |
