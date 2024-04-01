@@ -15,6 +15,7 @@ This document provides an overview of the testing strategies applied throughout 
       - [EPIC - User Authentication](#epic---user-authentication)
       - [EPIC - Shop Products](#epic---shop-products)
       - [EPIC - Administration and Store Management](#epic---administration-and-store-management)
+      - [EPIC - Design \& Planning](#epic---design--planning)
 ---
 
 ## User Story Testing
@@ -65,5 +66,11 @@ This document provides an overview of the testing strategies applied throughout 
 | *"As a Store Owner I want to be able to add, edit, and delete products using a user-friendly interface so that I can ensure smooth management of the store's contents."*                                       | ![Add a Product](documentation/readme_images/features/products_add.png) ![Edit a Product](documentation/readme_images/features/products_edit.png) ![Delete a Product](documentation/readme_images/features/products_delete.png)         |
 | *"As a Store Owner I want to be able to add, edit, and delete interior design services using a simple interface so that I can manage the site's content."*                                       | ![Add Interior Design](documentation/readme_images/features/interiordesign_add.png) ![Edit Interior Design](documentation/readme_images/features/interiordesign_edit.png) ![Delete Interior Design](documentation/readme_images/features/interiordesign_delete.png)         |
 | *"As a Store Owner I want to be able to add, edit, and delete images and locations of previous Decor Dreams design projects so that I can effectively manage the site's content."*                                       | ![Add Decor Dreams Project](documentation/readme_images/features/project_add.PNG) ![Edit Decor Dreams Project](documentation/readme_images/features/project_edit.png) ![Delete Decor Dreams Project](documentation/readme_images/features/project_delete.PNG)         |
-| *"As a Store Owner I want to be able to view and delete customer enquiries directly on the front-end so that I can manage them without having to access the admin panel."*                                       | ![Testimonials](documentation/readme_images/features/testimonials.png) ![Delete Testimonials](documentation/readme_images/features/testimonial_delete.PNG)         |
+| *"As a Store Owner I want to be able to view and delete customer enquiries directly on the front-end so that I can manage them without having to access the admin panel."*                                       | ![Consultation Dashboard](documentation/readme_images/features/consultation_dashboard.png) ![Consultation Detail](documentation/readme_images/features/consultation_detail.png) ![Delete Consultation](documentation/readme_images/features/delete_consultation.PNG)         |
 
+#### EPIC - Design & Planning
+
+| User Story                                                                                                                                                                     | Screenshot                                                               |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| *"As a Site User I want to be able to submit an enquiry form so that I can contact the site owner."*                                       | ![Contact](documentation/readme_images/features/contact.png)         |
+| *"As a Site User I want to be able to add, edit, or delete a testimonial related to a consultation I received so that I can provide my feedback."*                                       | ![Add Testimonials](documentation/readme_images/features/testimonials_add.png) ![Edit Testimonials](documentation/readme_images/features/testimonials_edit.png) ![Delete Testimonials](documentation/readme_images/features/testimonial_delete.PNG)         |
