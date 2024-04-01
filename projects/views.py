@@ -40,7 +40,7 @@ class AddProjectImage(
 
 
 class EditProjectImage(
-        LoginRequiredMixin, UserPassesTestMixin, 
+        LoginRequiredMixin, UserPassesTestMixin,
         SuccessMessageMixin, generic.UpdateView):
     """
     This view is used to allow the superuser to edit image from the gallery

@@ -79,7 +79,9 @@ class ContactConfirmation(generic.TemplateView):
     template_name = 'contact/confirmation.html'
 
 
-class Consultation(LoginRequiredMixin, UserPassesTestMixin, generic.ListView):
+class Consultation(LoginRequiredMixin,
+                   UserPassesTestMixin,
+                   generic.ListView):
     """ This view is used to display all consultations """
     model = Contact
     template_name = 'contact/consultation_dashboard.html'
@@ -91,11 +93,9 @@ class Consultation(LoginRequiredMixin, UserPassesTestMixin, generic.ListView):
         return self.request.user.is_superuser
 
 
-class ConsultationDetail(
-    LoginRequiredMixin,
-    UserPassesTestMixin,
-    generic.DetailView
-    ):
+class ConsultationDetail(LoginRequiredMixin,
+                         UserPassesTestMixin,
+                         generic.DetailView):
     """ This view is used to display selected consultation detail """
     model = Contact
     template_name = 'contact/consultation_detail.html'
@@ -106,11 +106,10 @@ class ConsultationDetail(
         """
         return self.request.user.is_superuser
 
-class DeleteConsultation(
-    LoginRequiredMixin,
-    UserPassesTestMixin,
-    generic.DeleteView
-    ):
+
+class DeleteConsultation(LoginRequiredMixin,
+                         UserPassesTestMixin,
+                         generic.DeleteView):
     """
     This view is used to allow the superuser to delete a consultation
     """

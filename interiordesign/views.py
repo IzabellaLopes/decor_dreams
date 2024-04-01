@@ -9,19 +9,24 @@ from django.urls import reverse_lazy
 from .models import Design
 from .forms import DesignForm
 
+
 class DesignListView(generic.ListView):
     """
     This view is used to display all interior design services
     """
     model = Design
     template_name = 'interiordesign/interiordesign.html'
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['plain_message'] = True
         return context
 
-class DesignCreateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, generic.CreateView):
+
+class DesignCreateView(LoginRequiredMixin,
+                       UserPassesTestMixin,
+                       SuccessMessageMixin,
+                       generic.CreateView):
     """
     This view is used to allow the site owner to add an interior design service
     """
@@ -52,7 +57,11 @@ class DesignCreateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
         """
         return self.request.user.is_superuser
 
-class DesignUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, generic.UpdateView):
+
+class DesignUpdateView(LoginRequiredMixin,
+                       UserPassesTestMixin,
+                       SuccessMessageMixin,
+                       generic.UpdateView):
     """
     This view is used to allow the superuser to edit an interior design service
     """
@@ -78,9 +87,13 @@ class DesignUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMi
             calculated_field=self.object.type,
         )
 
-class DesignDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+
+class DesignDeleteView(LoginRequiredMixin,
+                       UserPassesTestMixin,
+                       generic.DeleteView):
     """
-    This view is used to allow the superuser to delete an interior design service
+    This view is used to allow the superuser to delete
+    an interior design service
     """
     model = Design
     template_name = 'interiordesign/delete_design.html'
@@ -97,5 +110,6 @@ class DesignDeleteView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteVi
         This function is used to display success message given
         SuccessMessageMixin cannot be used in generic.DeleteView.
         """
-        messages.success(self.request, "Successfully deleted interior design service!")
+        messages.success(self.request,
+                         "Successfully deleted interior design service!")
         return super().delete(request, *args, **kwargs)
