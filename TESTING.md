@@ -40,6 +40,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [Interior Design Management](#interior-design-management)
     - [Decor Dreams Projects](#decor-dreams-projects)
     - [Decor Dreams Projects Management](#decor-dreams-projects-management)
+    - [Testimonials](#testimonials)
 ---
 
 ## User Story Testing
@@ -721,3 +722,13 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Confirm Delete -  delete button | Click                 | Delete Interior Design Projects  from database                                                                             | Pass      |
 | Confirm Delete -  delete button | Click                 | Success message appears confirming Interior Design Projects  deleted successfully                                          | Pass      |
 
+### Testimonials
+
+| Element                 | Action  | Expected Result                                                                    | Pass/Fail |
+|-------------------------|---------|------------------------------------------------------------------------------------|-----------|
+| Testimonial Content     | Display | Display correct testimonial content, service type, author and date                 | Pass      |
+| Add Testimonial button  | Click   | Open Add testimonial form                                                          | Pass      |
+| Edit testimonial link   | Display | Only display if user is the author of the testimonial or if they are the superuser | Pass      |
+| Edit testimonial link   | Click   | Redirect to edit testimonial page                                                  | Pass      |
+| Delete Testimonial link | Display | Only display if user is the author of the testimonial                              | Pass      |
+| Delete service link     | Click   | Open delete confirmation  page                                                     | Pass      |
