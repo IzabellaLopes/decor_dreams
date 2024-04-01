@@ -821,7 +821,7 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 
 | **BUG** | **DESCRIBE THE BUG**  | **HOW I SOLVED**|
 | ------- | -------               | -------         |
-
+ 
 [Back to Contents](#contents)
 
 ---
