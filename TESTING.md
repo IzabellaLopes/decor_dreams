@@ -38,6 +38,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [Profile](#profile)
     - [Interior Design Services](#interior-design-services)
     - [Interior Design Management](#interior-design-management)
+    - [Decor Dreams Projects](#decor-dreams-projects)
 ---
 
 ## User Story Testing
@@ -666,3 +667,16 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Confirm Delete -  delete button | Click                 | Delete Service from database                                                                                               | Pass      |
 | Confirm Delete -  delete button | Click                 | Success message appears confirming service deleted successfully                                                            | Pass      |
 
+### Decor Dreams Projects
+
+| Element                  | Action  | Expected Result                           | Pass/Fail |
+|--------------------------|---------|-------------------------------------------|-----------|
+| Decor Dreams Content | Display | Display correct image and location        | Pass      |
+| Project Card             | Hover   | Display Service Type and Project location | Pass      |
+| If Superuser in session: |         |                                           |           |
+| Add a Decor Dreams Project button    | Display | Below the title               | Pass      |
+| Add a Decor Dreams Project button    | Click   | Open add a Decor Dreams Project page            | Pass      |
+| Edit project button    | Display | In top right corner of image              | Pass      |
+| Edit project button    | Click   | Open edit a Decor Dreams page            | Pass      |
+| Delete project button    | Display | In top right corner of image              | Pass      |
+| Delete project button    | Click   | Open delete confirmation page            | Pass      |
