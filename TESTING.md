@@ -17,6 +17,7 @@ This document provides an overview of the testing strategies applied throughout 
       - [EPIC - Administration and Store Management](#epic---administration-and-store-management)
       - [EPIC - Design \& Planning](#epic---design--planning)
       - [EPIC - Marketing and SEO](#epic---marketing-and-seo)
+  - [Site Administration](#site-administration)
 ---
 
 ## User Story Testing
@@ -82,3 +83,17 @@ This document provides an overview of the testing strategies applied throughout 
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
 | *"As a Site User I want to be able to sign up for the Decor Dreams' newsletter so that I can stay informed about new products and promotions."*                                       | ![Mailchimp](documentation/readme_images/features/mailchimp.png)         |
 | *"As a Developer I want to be able to create a Facebook marketing promotional page to spotlight the Decor Dreams so that I can attract potential customers to the website."*                                       | ![Facebook Business page](documentation/readme_images/design/facebook.png)         |
+
+[Back to Contents](#contents)
+
+---
+
+## Site Administration
+
+- Admins possess complete access to Create, Read, Update, and Delete (CRUD) functionalities for all products, categories, interior design services, Decor Dreams projects, testimonials, and users within the admin panel.
+
+![Admin](documentation/readme_images/features/admin.png)
+
+[Back to Contents](#contents)
+
+---
