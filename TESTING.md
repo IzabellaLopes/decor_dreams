@@ -28,6 +28,7 @@ This document provides an overview of the testing strategies applied throughout 
   - [Device Testing](#device-testing)
   - [Manual Testing](#manual-testing)
     - [Site Navigation](#site-navigation)
+    - [Home Page](#home-page)
 ---
 
 ## User Story Testing
@@ -374,3 +375,11 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Testimonials Link         | Click                         | Open Testimonials Page                                       | Pass      |
 | Contact Us Link                     | Click                         | Open Contact Page                                            | Pass      |
 | Privacy Policy Link              | Click                         | Open Privacy Policy Page in new tab                          | Pass      |
+
+### Home Page
+
+| Element                | Action | Expected Result                    | Pass/Fail |
+|------------------------|--------|------------------------------------|-----------|
+| Shop Now Button        | Click  | Open Shop Products Page               | Pass      |
+| Schedule a Consultation Button | Click  | Open Interior Design Services Page | Pass      |
+
