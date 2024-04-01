@@ -20,6 +20,7 @@ This document provides an overview of the testing strategies applied throughout 
   - [Site Administration](#site-administration)
   - [Code Validation](#code-validation)
     - [HTML](#html)
+    - [CSS](#css)
 ---
 
 ## User Story Testing
@@ -138,3 +139,16 @@ I've used [HTML W3C Validator](https://validator.w3.org) to validate all of my H
 | Sign Up                        | ![screenshot](documentation/readme_images/testing/html_validation/signup.PNG)  | Pass: No Errors |
 | Log Out                        | ![screenshot](documentation/readme_images/testing/html_validation/logout.PNG)        | Pass: No Errors |
 | Password Reset                 | ![screenshot](documentation/readme_images/testing/html_validation/password_reset.PNG)  | Pass: No Errors |
+
+### CSS
+
+No errors were found when passing my CSS files through the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+*base.css*
+![base_css](documentation/readme_images/testing/css_validation/css.PNG)
+
+*checkout.css*
+![checkout_css](documentation/readme_images/testing/css_validation/checkout_css.PNG)
+
+*profile.css*
+![profile_css](documentation/readme_images/testing/css_validation/profile_css.PNG)
