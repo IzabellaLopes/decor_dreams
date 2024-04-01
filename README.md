@@ -69,6 +69,7 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Consultation Detail](#consultation-detail)
       - [Delete Consultation](#delete-consultation)
     - [Error Pages](#error-pages)
+    - [Future Features](#future-features)
   - [E-commerce Business Model](#e-commerce-business-model)
     - [SEO \& Social Media Marketing](#seo--social-media-marketing)
       - [Search Engine Optimization (SEO)](#search-engine-optimization-seo)
@@ -1003,6 +1004,18 @@ As mentioned earlier, Custom Error Pages were designed to offer users additional
 - 404 Not Found: The page you're looking for doesn't exist.
 
 - 500 Internal Server Error: Due to an internal error we are unable to process this request.
+
+### Future Features
+
+As mentioned earlier in [EPIC: Future Features](https://github.com/IzabellaLopes/decor_dreams/milestone/10), certain user stories have been omitted from the current project due to time constraints. They are marked as "Won't Have" on the GitHub project board with plans for future implementation.
+
+In addition to the user stories outlined in the "Future Features," I also plan to implement this features in the future:
+
+- **Reviews**: We plan to implement a review system where users can rate and review products.
+- **Shipping Info**: A feature to save shipping information, making repeat purchases more convenient for our users.
+- **Social Sign-On**: We aim to introduce social media account integration for easy sign-in and registration.
+- **Payment Expansion**: We're looking to expand our payment options to include services like Apple Pay for a wider range of choices.
+- **Newsletter Unsubscription**: Recognizing the importance of choice, we will be implementing an easy unsubscription feature. This will allow users to opt-out of receiving newsletters via a simple link in the email, ensuring that we respect their communication preferences and keep their inbox clutter-free.
 
 [Back to Contents](#contents)
 
