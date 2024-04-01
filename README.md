@@ -1077,6 +1077,8 @@ Comprehensive manual testing was conducted to ensure all functionalities work as
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Used to manage Django Forms.
 - [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - CSS Framework for developing responsiveness and styling.
 - [PostgreSQL](https://www.postgresql.org/) - Used as the database for this project.
+- [Stripe](https://stripe.com/ie) - Used for the payments system.
+- [AWS](https://aws.amazon.com/?nc2=h_lg) - Used for file storage.
 - [Balsamiq](https://balsamiq.com/) - Used to generate Wireframes.
 - [Coolors](https://coolors.co/) - Used to create color palette.
 - [Google Fonts](https://fonts.google.com/) - Used to import and alter fonts on the page.
@@ -1094,8 +1096,10 @@ Comprehensive manual testing was conducted to ensure all functionalities work as
 - [Techsini](https://techsini.com/multi-mockup/index.php) - To display the website image across various devices.
 - [ChatGPT by OpenAI](https://chat.openai.com/) - Enhance Readme.md readability; streamline content for effective communication.
 - [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) - A Google Chrome extension that allows you to view your site as people with accessibility needs would see it.
+- [Tables Generator](https://www.tablesgenerator.com/markdown_tables) - Used to convert excel testing tables to markdown.
+- [Sitemap Generator](www.xml-sitemaps.com) - Used to create sitemap.xml .
 - [Privacy Policy Generator](https://www.privacypolicygenerator.info/) - To generate privacy policy.
-
+- [Mailchimp](https://mailchimp.com/?currency=EUR) - Used to create the newsletter signup functionality.
 
 [Back to Contents](#contents)
 
