@@ -44,6 +44,8 @@ This document provides an overview of the testing strategies applied throughout 
     - [Testimonial Management](#testimonial-management)
     - [Contact](#contact)
     - [Consultation Dashboard](#consultation-dashboard)
+  - [Bugs](#bugs)
+    - [Solved Bugs](#solved-bugs)
 ---
 
 ## User Story Testing
@@ -809,3 +811,17 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Confirm Delete -  delete button | Click           | Delete Enquiry from database                                                                                                          | Pass      |
 | Confirm Delete -  delete button | Click           | Success message appears confirming enquiry  deleted successfully                                                                      | Pass      |
 
+[Back to Contents](#contents)
+
+---
+
+## Bugs 
+
+### Solved Bugs
+
+| **BUG** | **DESCRIBE THE BUG**  | **HOW I SOLVED**|
+| ------- | -------               | -------         |
+
+[Back to Contents](#contents)
+
+---
