@@ -24,6 +24,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [JavaScript](#javascript)
     - [Python](#python)
     - [Lighthouse](#lighthouse)
+  - [Browser Testing](#browser-testing)
 ---
 
 ## User Story Testing
@@ -273,3 +274,14 @@ I conducted Lighthouse validation on all pages, including both mobile and deskto
 
 The Lighthouse audit has been instrumental in pinpointing areas where the site performs well and where improvements can be made. The areas identified for improvement, such as image optimization and resource minimization, are planned for future iterations of the site. The current focus has been to meet functionality requirements within a strict deadline, with performance optimizations slated for subsequent updates.
 
+[Back to Contents](#contents)
+
+---
+
+## Browser Testing
+
+- The Decor Dreams website was tested on Google Chrome, Firefox, and Safari browsers, with no issues noted.
+
+[Back to Contents](#contents)
+
+---
