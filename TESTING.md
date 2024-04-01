@@ -31,6 +31,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [Home Page](#home-page)
     - [All Auth Pages](#all-auth-pages)
     - [Shop Products](#shop-products)
+    - [Product Details](#product-details)
 ---
 
 ## User Story Testing
@@ -458,3 +459,20 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Confirm Delete -  cancel button | Click   | Redirect to home decor page                                                                    | Pass      |
 | Confirm Delete -  delete button | Click   | Delete product                                                                                 | Pass      |
 | Confirm Delete -  delete button | Click   | Success message appears confirming product deleted successfully                                | Pass      |
+
+### Product Details
+
+| Element                  | Action                    | Expected Result                                                                              | Pass/Fail |
+|--------------------------|---------------------------|----------------------------------------------------------------------------------------------|-----------|
+| Product Content          | Display                   | Display correct product image, price, and product details       | Pass      |
+| Qty control buttons      | Click                     | Increase/decrease quantity                                                                   | Pass      |
+| Qty control buttons      | Click                     | Minus button disabled if quantity is 1                                                       | Pass      |
+| Qty control buttons      | Click                     | Plus button disabled if quantity is 99                                                       | Pass      |
+| Qty control buttons      | Manually Input  <1 or >99 | If quantity >99 or <1 manually entered, error message appears when Add to Bag button clicked | Pass      |
+| Keep Shopping button     | Click                     | Redirect to home decor page                                                                  | Pass      |
+| Add to bag button        | Click                     | Add item to bag                                                                              | Pass      |
+| Add to bag button        | Click                     | Toast Success appears                                                                        | Pass      |
+| Add to bag button        | Click                     | Product and quantity visible in toast success                                                | Pass      |
+| If Superuser in session: |                           |                                                                                              |           |
+| Edit product link        | Click                     | Redirect to edit product page                                                                | Pass      |
+| Delete product link      | Click                     | Open delete confirmation  page                                                               | Pass      |
