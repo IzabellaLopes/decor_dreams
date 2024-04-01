@@ -23,6 +23,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [CSS](#css)
     - [JavaScript](#javascript)
     - [Python](#python)
+    - [Lighthouse](#lighthouse)
 ---
 
 ## User Story Testing
@@ -126,9 +127,9 @@ I've used [HTML W3C Validator](https://validator.w3.org) to validate all of my H
 | Edit Interior Design Service   | ![screenshot](documentation/readme_images/testing/html_validation/edit_interior.PNG)        | Pass: No Errors      |
 | Delete Interior Design Service | ![screenshot](documentation/readme_images/testing/html_validation/delete_interior.PNG)        | Pass: No Errors |
 | Decor Dreams Projects          | ![screenshot](documentation/readme_images/testing/html_validation/decor_projects.PNG)  | Pass: No Errors |
-| Add Interior Design Project    | ![screenshot](documentation/readme_images/testing/html_validation/add_decor.PNG)        | Pass: No Errors      |
-| Edit Decor Dreams Projects     | ![screenshot](documentation/readme_images/testing/html_validation/edit_decor.PNG)  | Pass: No Errors |
-| Delete Interior Design         | ![screenshot](documentation/readme_images/testing/html_validation/delete_decor.PNG)        | Pass: No Errors |
+| Add Decor Dreams Project       | ![screenshot](documentation/readme_images/testing/html_validation/add_decor.PNG)        | Pass: No Errors      |
+| Edit Decor Dreams Project      | ![screenshot](documentation/readme_images/testing/html_validation/edit_decor.PNG)  | Pass: No Errors |
+| Delete Decor Dreams Project    | ![screenshot](documentation/readme_images/testing/html_validation/delete_decor.PNG)        | Pass: No Errors |
 | Testimonials                   | ![screenshot](documentation/readme_images/testing/html_validation/testimonials.PNG)  | Pass: No Errors |
 | Add Testimonial                | ![screenshot](documentation/readme_images/testing/html_validation/add_testimonial.PNG)        | Pass: No Errors |
 | Edit Testimonial               | ![screenshot](documentation/readme_images/testing/html_validation/edit_testimonial.PNG)        | Pass: No Errors |
@@ -231,3 +232,44 @@ Below are observed the most relevant items.
 |--------------------------------|------------|-----------|
 | *models.py*                     | ![models](documentation/readme_images/testing/python/testimonials/models.PNG)  | Pass: No Errors |
 | *views.py*                     | ![views](documentation/readme_images/testing/python/testimonials/views.PNG)  | Pass: No Errors |
+
+### Lighthouse
+
+I conducted Lighthouse validation on all pages, including both mobile and desktop versions, to assess accessibility and performance. Initially, a warning was flagged regarding 'Background and foreground colors do not have a sufficient contrast ratio' in some elements. I addressed this issue by modifying the colors, referencing the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/), to achieve the recommended Contrast Ratio. Subsequently, I implemented style adjustments based on Lighthouse recommendations, resulting in the following improved scores.
+
+| Page                           | Performance  | Accessibility | Best Practices  | SEO |
+|--------------------------------|:------------:|:-------------:|:---------------:|:---:|
+|                                |              |               |                 |     |
+| Desktop                        |              |               |                 |     |
+| Home                           |           89 |            96 |             100 | 100 |
+| Products                       |           94 |            98 |             100 | 100 |
+| Product Details                |           98 |            98 |             100 | 100 |
+| Add Product                    |           99 |           100 |             100 | 100 |
+| Edit Product                   |           96 |           100 |             100 | 100 |
+| Confirm Delete Product         |           97 |           100 |             100 | 100 |
+| Bag                            |           98 |            98 |             100 | 100 |
+| Checkout                       |           94 |            96 |             100 | 100 |
+| Profile                        |           98 |           100 |             100 | 100 |
+| Interior Design Services       |           99 |           100 |             100 | 100 |
+| Add Interior Design Service    |           99 |           100 |             100 | 100 |
+| Edit Interior Design Service   |           99 |           100 |             100 | 100 |
+| Delete Interior Design Service |           99 |           100 |             100 | 100 |
+| Decor Dreams Projects          |           99 |           100 |             100 | 100 |
+| Add Decor Dreams Project       |           99 |           100 |             100 | 100 |
+| Edit Decor Dreams Project      |           99 |           100 |             100 | 100 |
+| Delete Decor Dreams Project    |           99 |           100 |             100 | 100 |
+| Testimonials                   |           99 |            98 |             100 | 100 |
+| Add Testimonial                |           99 |           100 |             100 | 100 |
+| Edit Testimonial               |           99 |           100 |             100 | 100 |
+| Delete Testimonial             |           99 |           100 |             100 | 100 |
+| Contact                        |           99 |           100 |             100 | 100 |
+| Consultation Dashboard         |           99 |           100 |             100 | 100 |
+| Consultation Detail            |           99 |           100 |             100 | 100 |
+| Delete Consultation            |           99 |           100 |             100 | 100 |
+| Sign In                        |           99 |            98 |              98 | 100 |
+| Sign Up                        |           99 |            98 |             100 | 100 |
+| Log Out                        |           99 |           100 |             100 | 100 |
+| Password Reset                 |           98 |           100 |             100 | 100 |
+
+The Lighthouse audit has been instrumental in pinpointing areas where the site performs well and where improvements can be made. The areas identified for improvement, such as image optimization and resource minimization, are planned for future iterations of the site. The current focus has been to meet functionality requirements within a strict deadline, with performance optimizations slated for subsequent updates.
+
