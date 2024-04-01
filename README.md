@@ -179,7 +179,6 @@ Decor Dreams is designed to cater to the following target audience:
 - **USER STORY: Product Category [#15](https://github.com/IzabellaLopes/decor_dreams/issues/15)** - As a Shopper I want to be able to view a specific category of products so that I can find what I like more easily and have a smoother time shopping
 - **USER STORY: Search for Products [#16](https://github.com/IzabellaLopes/decor_dreams/issues/16)** - As a Shopper I want to be able to search for products across the website so that I can easily find what I need
 - **USER STORY: Sort Products [#17](https://github.com/IzabellaLopes/decor_dreams/issues/17)** - As a Shopper I want to be able to arrange all products by price or title so that I can easily compare and view them
-- **USER STORY: Wishlist Functionality Implementation [#18](https://github.com/IzabellaLopes/decor_dreams/issues/18)** - As a Shopper I want to be able to create a wishlist of desired products so that I can save items for future purchase and easily track them across browsing sessions
 - **USER STORY: Browse Interior Design Consultation Services [#19](https://github.com/IzabellaLopes/decor_dreams/issues/19)** - As a Site User I want to be able to view a comprehensive list of interior design services provided so that I can understand the scope of each service and easily make an enquiry if I'm interested
 - **USER STORY: View Testimonials [#20](https://github.com/IzabellaLopes/decor_dreams/issues/20)** - As a Site User I want to be able to access the testimonials left by other customers so that I can gauge the quality of the Interior Design Services they received
 - **USER STORY: View Decor Dreams Projects [#21](https://github.com/IzabellaLopes/decor_dreams/issues/21)** - As a Site User I want to be able to browse through pictures of previous Decor Dreams interior design projects so that I can assess the quality of work and develop trust in the service provider
@@ -262,6 +261,13 @@ Decor Dreams is designed to cater to the following target audience:
 </details>
 </br>
 
+<details>
+<summary><strong>10. EPIC - Future Features</strong></summary>
+
+[EPIC - Documentation](https://github.com/IzabellaLopes/decor_dreams/milestone/9)
+- **USER STORY: Wishlist Functionality Implementation [#18](https://github.com/IzabellaLopes/decor_dreams/issues/18)** - As a Shopper I want to be able to create a wishlist of desired products so that I can save items for future purchase and easily track them across browsing sessions
+</details>
+</br>
 [Back to Contents](#contents)
 
 ---
