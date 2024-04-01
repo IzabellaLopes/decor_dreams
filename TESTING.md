@@ -35,6 +35,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [Products Management](#products-management)
     - [Bag](#bag)
     - [Checkout](#checkout)
+    - [Profile](#profile)
 ---
 
 ## User Story Testing
@@ -593,3 +594,23 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Element                             | Action                          | Expected Result                                                     | Pass/Fail |
 | Order Confirmation                  | Display                         | Display Correct Order Details                                       | Pass      |
 | Keep Shopping! button               | Click                           | Redirect to products page                                           | Pass      |
+
+### Profile
+
+| Element                | Action            | Expected Result                                                                                                                | Pass/Fail |
+|------------------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------|-----------|
+| Open Profile Page      | Access            | If a user tries to access the profile page (by changing the url) without being signed in they are redirected to the login page | Pass      |
+| Form fields            | On load           | fields populated with user default info(if previously saved)                                                                   | Pass      |
+| All input fields       | Leave blank       | On submit: form submits                                                                                                        | Pass      |
+| All input fields       | Just whitespace   | On submit: form submits                                                                                                        | Pass      |
+| All input fields       | Fill in correctly | On submit: form submits                                                                                                        | Pass      |
+| Form Dropdown          | Click             | Show dropdown options                                                                                                          | Pass      |
+| Update button          | Click             | Form submits                                                                                                                   | Pass      |
+| Update button          | Click             | Success message appears confirming profile successfully updated                                                                | Pass      |
+| Previous order number  | Click             | Redirect to previous order page                                                                                                | Pass      |
+|                        |                   |                                                                                                                                |           |
+| Previous Order Page    |                   |                                                                                                                                |           |
+| Element                | Action            | Expected Result                                                                                                                | Pass/Fail |
+| Information Display    | Display           | All previous order information displays correctly                                                                              | Pass      |
+| Toast                  | On load           | Previous order info toast appears                                                                                              | Pass      |
+| Back to Profile button | Click             | Redirect to profile page                                                                                                       | Pass      |
