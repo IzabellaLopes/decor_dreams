@@ -69,6 +69,12 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Consultation Detail](#consultation-detail)
       - [Delete Consultation](#delete-consultation)
     - [Error Pages](#error-pages)
+  - [E-commerce Business Model](#e-commerce-business-model)
+    - [SEO \& Social Media Marketing](#seo--social-media-marketing)
+      - [Search Engine Optimization (SEO)](#search-engine-optimization-seo)
+      - [Social Media Presence](#social-media-presence)
+      - [Newsletter Engagement](#newsletter-engagement)
+      - [Future Marketing Strategies](#future-marketing-strategies)
 
 ---
 
@@ -970,3 +976,60 @@ As mentioned earlier, Custom Error Pages were designed to offer users additional
 - 404 Not Found: The page you're looking for doesn't exist.
 
 - 500 Internal Server Error: Due to an internal error we are unable to process this request.
+
+[Back to Contents](#contents)
+
+---
+
+## E-commerce Business Model
+
+Decor Dreams follows a simple Business to Customer (B2C) model, catering to individual customers seeking luxurious home products and interior design services. Our model is designed to facilitate individual transactions without the need for subscriptions, making it accessible and user-friendly.
+
+### SEO & Social Media Marketing
+
+Various marketing strategies have been employed to promote Decor Dreams, including SEO, content marketing, social media marketing, and email marketing.
+
+#### Search Engine Optimization (SEO)
+
+- **Keywords**: 
+  - We've identified a mix of short-tail and long-tail keywords that align with our products and brand, optimizing our site's visibility in search engine results.
+  - The most relevant keywords have been added to the site's meta-keywords and meta-description. These keywords have also been carefully included in page titles, headings, site content, <strong></strong> tags, image alt attributes and anchor tag links across the site.
+
+- **Building Trust**:
+  - To establish brand trust, a dedicated testimonial page showcasing interior design services has been integrated into the site. The link to this page is conveniently included both in the page footer and the main navigation bar.
+  - Additionally, the page footer provides links to the privacy policy, ensuring users are informed about the collection and processing of their data.
+
+- **Sitemap & Robots.txt**: 
+  - To aid in search engine indexing, we have generated a sitemap.xml and configured a robots.txt file, ensuring search engines can crawl our site efficiently.
+  - A sitemap file with a list of important page URLs was created to ensure that search engines are able to understand the site's structure and easily navigate through the site. This was made using xml-sitemaps.com.
+  - A robots.txt file was created to tell search engines where they are not allowed to go on the website. This improves SEO by increasing the quality of the site
+
+```
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /checkout/
+Disallow: /profile/
+Sitemap: https://decor-dreams-ff212364915e.herokuapp.com/sitemap.xml
+```
+
+#### Social Media Presence
+
+- **Facebook Business Page**: 
+  - We have established a presence on Facebook, a platform with a vast user base, to connect with our community, showcase our products, and drive traffic to our site. Our Facebook page serves as a platform for announcements, product highlights, and customer engagement.
+
+  ![Facebook Business page](documentation/readme_images/design/facebook.png)
+
+#### Newsletter Engagement
+
+- **Newsletter Sign-up**: 
+  - Site visitors have the option to subscribe to the newsletter without the necessity of creating an account. A subscription box is conveniently placed above the site footer, enabling users to sign up. This feature enables the business to disseminate news, such as updates on new products/services and special offers, to both existing and potential customers. Mailchimp was employed to establish and manage this service.
+
+#### Future Marketing Strategies
+
+- **Google Search Console**: Plans to utilize tools like Google Search Console for deeper insights into our site's search performance.
+- **Enhanced Social Media Campaigns**: We aim to leverage social media platforms further by engaging with our community through regular updates, interactive posts, and promotional events.
+
+[Back to Contents](#contents)
+
+---
