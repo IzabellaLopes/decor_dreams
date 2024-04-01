@@ -37,6 +37,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [Checkout](#checkout)
     - [Profile](#profile)
     - [Interior Design Services](#interior-design-services)
+    - [Interior Design Management](#interior-design-management)
 ---
 
 ## User Story Testing
@@ -626,3 +627,42 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Add service link        | Click   | Redirect to add service page                   | Pass      |
 | Edit service link        | Click   | Redirect to edit service page                   | Pass      |
 | Delete service link      | Click   | Open delete confirmation  page                  | Pass      |
+
+### Interior Design Management
+
+| Add Service                     |                       |                                                                                                                            |           |
+|---------------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------|-----------|
+| Element                         | Action                | Expected Result                                                                                                            | Pass/Fail |
+| Add Service                     | Access                | If a user tries to add a service (by changing the url) without being signed in they are redirected to the login page       | Pass      |
+| Add Service                     | Access                | If a user tries to add a service (by changing the url) without being superuser they are redirected to a custom 403 page    | Pass      |
+| Form Text Input (if required)   | Leave blank           | On Submit: Warning appears, form won't submit                                                                              | Pass      |
+| Form Text Input (if required)   | Just input whitespace | On Submit: Form won't submit                                                                                               | Pass      |
+| Form image select button        | Click                 | Open device storage                                                                                                        | Pass      |
+| Form image select button        | Display               | Chosen image name displayed once selected                                                                                  | Pass      |
+| Form image select button        | Display               | Default image is used if no image is selected                                                                              | Pass      |
+| Cancel button                   | Click                 | Redirect to Interior Design Services page                                                                                  | Pass      |
+| Add Service button(form valid)  | Click                 | Form submit                                                                                                                | Pass      |
+| Add Service button(form valid)  | Click                 | Redirect to Interior Design Services Page with all information displaying correctly                                        | Pass      |
+| Add Service button(form valid)  | Click                 | Success message appears informing the superuser that the service has been added                                            | Pass      |
+|                                 |                       |                                                                                                                            |           |
+| Edit Service                    |                       |                                                                                                                            |           |
+| Element                         | Action                | Expected Result                                                                                                            | Pass/Fail |
+| Edit Service                    | Access                | If a user tries to edit a service (by changing the url) without being signed in they are redirected to the login page      | Pass      |
+| Edit Service                    | Access                | If a user tries to edit a service (by changing the url) without being superuser they are redirected to a custom 403 page   | Pass      |
+| Edit Service Form               | Display               | Form has all the fields filled out with the original content                                                               | Pass      |
+| Edit Service Form               | Image Field           | Thumbnail of original image is shown                                                                                       | Pass      |
+| Form Text Input (if required)   | Leave blank           | On Submit: Warning appears, form won't submit                                                                              | Pass      |
+| Form Text Input (if required)   | Just input whitespace | On Submit: Form won't submit                                                                                               | Pass      |
+| Cancel button                   | Click                 | Redirect to Interior Design Services page                                                                                  |           |
+| Submit button(form valid)       | Click                 | Form submit                                                                                                                | Pass      |
+| Edit Service button(form valid) | Click                 | Redirect to Interior Design Services Page with all information displaying correctly                                        | Pass      |
+| Edit Service button(form valid) | Click                 | Success message appears informing the superuser that the service has been edited                                           | Pass      |
+|                                 |                       |                                                                                                                            |           |
+| Confirm Delete Service          |                       |                                                                                                                            |           |
+| Element                         | Action                | Expected Result                                                                                                            | Pass/Fail |
+| Delete Service                  | Access                | If a user tries to Delete a service (by changing the url) without being signed in they are redirected to the login page    | Pass      |
+| Delete Service                  | Access                | If a user tries to Delete a service (by changing the url) without being superuser they are redirected to a custom 403 page | Pass      |
+| Confirm Delete -  cancel button | Click                 | Redirect to Interior Design Services page                                                                                  | Pass      |
+| Confirm Delete -  delete button | Click                 | Delete Service from database                                                                                               | Pass      |
+| Confirm Delete -  delete button | Click                 | Success message appears confirming service deleted successfully                                                            | Pass      |
+
