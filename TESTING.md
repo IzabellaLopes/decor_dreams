@@ -41,6 +41,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [Decor Dreams Projects](#decor-dreams-projects)
     - [Decor Dreams Projects Management](#decor-dreams-projects-management)
     - [Testimonials](#testimonials)
+    - [Testimonial Management](#testimonial-management)
 ---
 
 ## User Story Testing
@@ -732,3 +733,39 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Edit testimonial link   | Click   | Redirect to edit testimonial page                                                  | Pass      |
 | Delete Testimonial link | Display | Only display if user is the author of the testimonial                              | Pass      |
 | Delete service link     | Click   | Open delete confirmation  page                                                     | Pass      |
+
+### Testimonial Management
+
+| Add Testimonial                     |                       |                                                                                                                             |           |
+|-------------------------------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------|-----------|
+| Element                             | Action                | Expected Result                                                                                                             | Pass/Fail |
+| Add Testimonial                     | Access                | If a user tries to add a testimonial (by changing the url) without being signed in they are redirected to the login page    | Pass      |
+| Form Text Input (if required)       | Leave blank           | On Submit: Warning appears, form won't submit                                                                               | Pass      |
+| Form Text Input (if required)       | Just input whitespace | On Submit: Form won't submit                                                                                                | Pass      |
+| Service Dropdown                    | Click                 | Display all Interior Design Services in Database                                                                            | Pass      |
+| Cancel button                       | Click                 | Redirect to Testimonials page                                                                                               |           |
+| Add Testimonial button(form valid)  | Click                 | Form submit                                                                                                                 | Pass      |
+| Add Testimonial button(form valid)  | Click                 | Redirect to Testimonials Page with all information displaying correctly                                                     | Pass      |
+| Add Testimonial button(form valid)  | Click                 | Success message appears informing the superuser that the testimonial has been added                                         | Pass      |
+|                                     |                       |                                                                                                                             |           |
+|                                     |                       |                                                                                                                             |           |
+| Edit Testimonial                    |                       |                                                                                                                             |           |
+| Element                             | Action                | Expected Result                                                                                                             | Pass/Fail |
+| Edit Testimonial                    | Access                | If a user tries to edit a Testimonial (by changing the url) without being signed in they are redirected to the login page   | Pass      |
+| Edit Testimonial                    | Access                | If a user tries to edit another user's Testimonial (by changing the url) they are redirected to a custom 403 page           | Pass      |
+| Edit Testimonial Form               | Display               | Form has all the fields filled out with the original content                                                                | Pass      |
+| Form Text Input (if required)       | Leave blank           | On Submit: Warning appears, form won't submit                                                                               | Pass      |
+| Form Text Input (if required)       | Just input whitespace | On Submit: Form won't submit                                                                                                | Pass      |
+| Cancel button                       | Click                 | Redirect to Testimonials page                                                                                               |           |
+| Submit button(form valid)           | Click                 | Form submit                                                                                                                 | Pass      |
+| Edit Testimonial button(form valid) | Click                 | Redirect to Testimonials Page with all information displaying correctly                                                     | Pass      |
+| Edit Testimonial button(form valid) | Click                 | Success message appears informing the superuser that the testimonial has been edited                                        | Pass      |
+|                                     |                       |                                                                                                                             |           |
+|                                     |                       |                                                                                                                             |           |
+| Confirm Delete Testimonial          |                       |                                                                                                                             |           |
+| Element                             | Action                | Expected Result                                                                                                             | Pass/Fail |
+| Delete Testimonial                  | Access                | If a user tries to delete a Testimonial (by changing the url) without being signed in they are redirected to the login page | Pass      |
+| Delete Testimonial                  | Access                | If a user tries to delete another user's Testimonial (by changing the url) they are redirected to a custom 403 page         | Pass      |
+| Confirm Delete -  cancel button     | Click                 | Redirect to Testimonials page                                                                                               | Pass      |
+| Confirm Delete -  delete button     | Click                 | Delete Testimonial  from database                                                                                           | Pass      |
+| Confirm Delete -  delete button     | Click                 | Success message appears confirming Testimonial  deleted successfully                                                        | Pass      |
