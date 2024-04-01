@@ -39,6 +39,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [Interior Design Services](#interior-design-services)
     - [Interior Design Management](#interior-design-management)
     - [Decor Dreams Projects](#decor-dreams-projects)
+    - [Decor Dreams Projects Management](#decor-dreams-projects-management)
 ---
 
 ## User Story Testing
@@ -680,3 +681,43 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Edit project button    | Click   | Open edit a Decor Dreams page            | Pass      |
 | Delete project button    | Display | In top right corner of image              | Pass      |
 | Delete project button    | Click   | Open delete confirmation page            | Pass      |
+
+### Decor Dreams Projects Management
+
+| Add Decor Dreams Project            |                       |                                                                                                                            |           |
+|---------------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------|-----------|
+| Element                         | Action                | Expected Result                                                                                                            | Pass/Fail |
+| Add Decor Dreams Project            | Access                | If a user tries to add a project (by changing the url) without being signed in they are redirected to the login page       | Pass      |
+| Add Decor Dreams Project            | Access                | If a user tries to add a project (by changing the url) without being superuser they are redirected to a custom 403 page    | Pass      |
+| Form Text Input (if required)   | Leave blank           | On Submit: Warning appears, form won't submit                                                                              | Pass      |
+| Form Text Input (if required)   | Just input whitespace | On Submit: Form won't submit                                                                                               | Pass      |
+| Service Dropdown                | Click                 | Display all Interior Design Services in Database                                                                           | Pass      |
+| Form image select button        | Click                 | Open device storage                                                                                                        | Pass      |
+| Form image select button        | Display               | Chosen image name displayed once selected                                                                                  | Pass      |
+| Form image select button        | Leave blank           | On Submit: Warning appears, form won't submit                                                                              | Pass      |
+| Cancel button                   | Click                 | Redirect to Interior Design Projects page                                                                                  | Pass      |
+| Add Project button(form valid)  | Click                 | Form submit                                                                                                                | Pass      |
+| Add Project button(form valid)  | Click                 | Redirect to Interior Design Projects Page with all information displaying correctly                                        | Pass      |
+| Add Project button(form valid)  | Click                 | Success message appears informing the superuser that the project has been added                                            | Pass      |
+|                                 |                       |                                                                                                                            |           |
+| Edit Decor Dreams Project                    |                       |                                                                                                                            |           |
+| Element                         | Action                | Expected Result                                                                                                            | Pass/Fail |
+| Edit Decor Dreams Project                    | Access                | If a user tries to edit a Decor Dreams Project (by changing the url) without being signed in they are redirected to the login page      | Pass      |
+| Edit Decor Dreams Project                    | Access                | If a user tries to edit a Decor Dreams Project (by changing the url) without being superuser they are redirected to a custom 403 page   | Pass      |
+| Edit Decor Dreams Project Form               | Display               | Form has all the fields filled out with the original content                                                               | Pass      |
+| Edit Decor Dreams Project Form               | Image Field           | Thumbnail of original image is shown                                                                                       | Pass      |
+| Form Text Input (if required)   | Leave blank           | On Submit: Warning appears, form won't submit                                                                              | Pass      |
+| Form Text Input (if required)   | Just input whitespace | On Submit: Form won't submit                                                                                               | Pass      |
+| Cancel button                   | Click                 | Redirect to Decor Dreams Project page                                                                                  |           |
+| Submit button(form valid)       | Click                 | Form submit                                                                                                                | Pass      |
+| Edit Service button(form valid) | Click                 | Redirect to Decor Dreams Project Page with all information displaying correctly                                        | Pass      |
+| Edit Service button(form valid) | Click                 | Success message appears informing the superuser that the service has been edited                                           | Pass      |
+|                                 |                       |                                                                                                                            |           |
+| Confirm Delete Project Image    |                       |                                                                                                                            |           |
+| Element                         | Action                | Expected Result                                                                                                            | Pass/Fail |
+| Delete Decor Dreams Project         | Access                | If a user tries to delete a project (by changing the url) without being signed in they are redirected to the login page    | Pass      |
+| Delete Decor Dreams Project         | Access                | If a user tries to delete a project (by changing the url) without being superuser they are redirected to a custom 403 page | Pass      |
+| Confirm Delete -  cancel button | Click                 | Redirect to Interior Design Projects page                                                                                  | Pass      |
+| Confirm Delete -  delete button | Click                 | Delete Interior Design Projects  from database                                                                             | Pass      |
+| Confirm Delete -  delete button | Click                 | Success message appears confirming Interior Design Projects  deleted successfully                                          | Pass      |
+
