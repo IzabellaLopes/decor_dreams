@@ -34,6 +34,7 @@ This document provides an overview of the testing strategies applied throughout 
     - [Product Details](#product-details)
     - [Products Management](#products-management)
     - [Bag](#bag)
+    - [Checkout](#checkout)
 ---
 
 ## User Story Testing
@@ -536,3 +537,59 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Line item subtotal / Bag total / Delivery cost / Grand Total  | Calculate           | All numbers are calculated correctly                   | Pass      |
 | Continue shopping button                                      | Click               | Redirect to products page                              | Pass      |
 | Secure Checkout button                                        | Click               | Redirect to checkout page                              | Pass      |
+
+### Checkout
+
+| Element                             | Action                          | Expected Result                                                     | Pass/Fail |
+|-------------------------------------|---------------------------------|---------------------------------------------------------------------|-----------|
+| Checkout Page                       | Direct URL input (empty bag)    | redirect to products page                                           | Pass      |
+| Checkout Page                       | Direct URL input (empty bag)    | empty bag toast appears                                             | Pass      |
+| Form fields(if user logged in)      | On load                         | fields populated with user default info(if previously saved)        | Pass      |
+| Text Input(if required)             | Leave blank                     | On submit:form won't submit                                         | Pass      |
+| Text Input(if required)             | Leave blank                     | error message on invalid field(s)                                   | Pass      |
+| Text Input(if required)             | Just whitespace                 | On submit:form won't submit                                         | Pass      |
+| Text Input(if required)             | Just whitespace                 | error message on invalid field(s)                                   | Pass      |
+| Text Input(if required)             | Fill in correctly               | On submit: form submits                                             | Pass      |
+| Phone number Input                  | Leave blank                     | On submit:form won't submit                                         | Pass      |
+| Phone number Input                  | Leave blank                     | error message on field                                              | Pass      |
+| Phone number Input                  | Just whitespace                 | On submit:form won't submit                                         | Pass      |
+| Phone number Input                  | Just whitespace                 | error message on field                                              | Pass      |
+| Phone number Input                  | Use non numeric characters      | On submit:form won't submit                                         | Pass      |
+| Phone number Input                  | Use non numeric characters      | error message on field                                              | Pass      |
+| Email Input                         | Leave blank                     | On submit:form won't submit                                         | Pass      |
+| Email Input                         | Leave blank                     | error message on field                                              | Pass      |
+| Email Input                         | Just whitespace                 | On submit:form won't submit                                         | Pass      |
+| Email Input                         | Just whitespace                 | error message on field                                              | Pass      |
+| Email Input                         | Fill in correctly               | On submit: form submits                                             | Pass      |
+| Form Dropdown                       | Click                           | Show dropdown options                                               | Pass      |
+| Save to profile checkbox            | On load(user logged in)         | Shown                                                               | Pass      |
+| Save to profile checkbox            | On load(user not logged in)     | Not shown                                                           | Pass      |
+| Save to profile checkbox            | Checked                         | On submit:Delivery information saved to user profile                | Pass      |
+| Save to profile checkbox            | Unchecked                       | On submit:Delivery information not saved to user profile            | Pass      |
+| Payment card input                  | Input invalid card number       | Error message on field                                              | Pass      |
+| Payment card input                  | Input invalid date              | Error message on field                                              |           |
+| Adjust Bag button                   | Click                           | Redirect to bag page                                                | Pass      |
+| Complete Order button(form invalid) | Click                           | Form won't submit                                                   | Pass      |
+| Complete Order button(form invalid) | Click                           | Error message on invalid fields                                     | Pass      |
+| Complete Order button(form valid)   | Payment succeeds                | loading screen reappears                                            | Pass      |
+| Complete Order button(form valid)   | Payment succeeds                | form submits                                                        | Pass      |
+| Complete Order button(form valid)   | Payment succeeds                | redirect to order confirmation page                                 | Pass      |
+| Complete Order button(form valid)   | (if user logged in)             | order saved to user profile                                         | Pass      |
+| Complete Order button(form valid)   | Payment failed                  | Loading animation appears                                           | Pass      |
+| Complete Order button(form valid)   | Payment failed                  | form won't submit                                                   | Pass      |
+| Complete Order button(form valid)   | Payment failed                  | error message at bottom of form                                     | Pass      |
+| Complete Order button(form valid)   | Click                           | Success message appears confirming order successfully processed     | Pass      |
+| Complete Order button(form valid)   | Payment Requires authentication | Authentication box appears                                          | Pass      |
+| Fail Authentication button          | Click                           | Authentication box closes                                           | Pass      |
+| Fail Authentication button          | Click                           | User directed back to form                                          | Pass      |
+| Fail Authentication button          | Click                           | error message at bottom of form                                     | Pass      |
+| Complete Authentication button      | Click                           | loading screen reappears                                            | Pass      |
+| Complete Authentication button      | Click                           | form submits                                                        | Pass      |
+| Complete Authentication button      | Click                           | redirect to order confirmation page                                 | Pass      |
+| Complete Order button(form valid)   | Click                           | Success message appears confirming order successfully processed     | Pass      |
+| Complete Order button(form valid)   | Click                           | User receives an order confirmation email with correct information  | Pass      |
+|                                     |                                 |                                                                     |           |
+| Checkout Success Page               |                                 |                                                                     |           |
+| Element                             | Action                          | Expected Result                                                     | Pass/Fail |
+| Order Confirmation                  | Display                         | Display Correct Order Details                                       | Pass      |
+| Keep Shopping! button               | Click                           | Redirect to products page                                           | Pass      |
