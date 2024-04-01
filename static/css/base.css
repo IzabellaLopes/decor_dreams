@@ -645,25 +645,6 @@ input[name='q']::placeholder {
     max-height: 150px;
 }
 
-
-/*--------------------------------------------------------------
-# Checkout
---------------------------------------------------------------*/
-
-.checkout-img {
-    width: 100% !important;
-    min-width: 50px;
-}
-
-#payment-form .form-control, #card-element {
-    border: 1px solid var(--light-green) !important;
-    border-radius: .25rem !important;
-}
-
-.stripe-style-input {
-    padding: .375rem .75rem !important;
- }
-
 /*--------------------------------------------------------------
 # Bootstrap toasts
 --------------------------------------------------------------*/
