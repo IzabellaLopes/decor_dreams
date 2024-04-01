@@ -29,6 +29,7 @@ This document provides an overview of the testing strategies applied throughout 
   - [Manual Testing](#manual-testing)
     - [Site Navigation](#site-navigation)
     - [Home Page](#home-page)
+    - [All Auth Pages](#all-auth-pages)
 ---
 
 ## User Story Testing
@@ -383,3 +384,56 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 | Shop Now Button        | Click  | Open Shop Products Page               | Pass      |
 | Schedule a Consultation Button | Click  | Open Interior Design Services Page | Pass      |
 
+### All Auth Pages 
+
+| Element                         | Action                                    | Expected Result                              | Pass/Fail |
+|---------------------------------|-------------------------------------------|----------------------------------------------|-----------|
+| Sign Up                         |                                           |                                              |           |
+| Sign in link                    | Click                                     | Redirect to sign in page                     | Pass      |
+| Email field                     | Insert incorrect format                   | On submit: form won't submit                 | Pass      |
+| Email field                     | Insert incorrect format                   | Error message displays                       | Pass      |
+| Email field                     | Insert correct format                     | On submit: form submit                       | Pass      |
+| Email field                     | Leave empty                               | On submit: form won't submit                 | Pass      |
+| Email field                     | Insert duplicate email                    | On submit: form won't submit                 | Pass      |
+| Email field                     | Insert duplicate email                    | Error message displays                       | Pass      |
+| Email Confirmation field        | Insert different email                    | On submit: form won't submit                 | Pass      |
+| Email Confirmation field        | Insert different email                    | Error message displays                       | Pass      |
+| Username field                  | Leave empty/incorrect format              | On submit: form won't submit                 | Pass      |
+| Username field                  | Leave empty/incorrect format              | Error message displays                       | Pass      |
+| Username field                  | Insert correct format                     | On submit: form submit                       | Pass      |
+| Username field                  | Insert duplicate username                 | On submit: form won't submit                 | Pass      |
+| Username field                  | Insert duplicate username                 | Error message displays                       | Pass      |
+| Password field                  | Insert incorrect format/length            | On submit: form won't submit                 | Pass      |
+| Password field                  | Insert incorrect format/length            | Error message displays                       | Pass      |
+| Password field                  | Passwords don't match                     | On submit: form won't submit                 | Pass      |
+| Password field                  | Passwords don't match                     | Error message displays                       | Pass      |
+| Password field                  | Insert correct format and passwords match | On submit: form submit                       | Pass      |
+| Sign Up button(form valid)      | Click                                     | Form submit                                  | Pass      |
+| Sign Up button(form valid)      | Click                                     | Redirect to Verify Email Address page        | Pass      |
+| Sign Up button(form valid)      | Click                                     | Alert message confirming email sent appears  | Pass      |
+| Confirmation Email Confirm Link | Click                                     | Open Confirm Email Address Page              | Pass      |
+| Confirm Button                  | Click                                     | Success message confirming new user appears  | Pass      |
+| Confirm Button                  | Click                                     | Redirect to sign in page                     | Pass      |
+|                                 |                                           |                                              |           |
+| Log in                          |                                           |                                              |           |
+| Sign up link                    | Click                                     | Redirect to sign up page                     | Pass      |
+| Username field                  | Leave empty                               | On submit: form won't submit                 | Pass      |
+| Username field                  | Leave empty                               | Error message displays                       | Pass      |
+| Username field                  | Insert wrong username                     | On submit: form won't submit                 | Pass      |
+| Username field                  | Insert wrong username                     | Error message displays                       | Pass      |
+| Password field                  | Leave empty                               | On submit: form won't submit                 | Pass      |
+| Password field                  | Leave empty                               | Error message displays                       | Pass      |
+| Password field                  | Insert wrong password                     | On submit: form won't submit                 | Pass      |
+| Password field                  | Insert wrong password                     | Error message displays                       | Pass      |
+| Login button(form valid)        | Click                                     | Form submit                                  | Pass      |
+| Login button(form valid)        | Click                                     | Redirect to home page                        | Pass      |
+| Login button(form valid)        | Click                                     | Success message confirming login appears     | Pass      |
+| Forgot Password Link            | Click                                     | Redirect to Password Reset page              | Pass      |
+| Email field                     | Leave empty/incorrect format              | On submit: form submit                       | Pass      |
+| Reset My Password Button        | Click                                     | Confirmation message that email sent         | Pass      |
+| Password Reset Email Link       | Click                                     | Open Change Password Page                    | Pass      |
+| Change Password Button          | Click                                     | Success message confirming Password Changed  | Pass      |
+|                                 |                                           |                                              |           |
+| Sign Out Confirmation           |                                           |                                              |           |
+| Sign Out  button                | Click                                     | Redirect to homepage                         | Pass      |
+| Sign Out  button                | Click                                     | Success message confirming Sign Out  appears | Pass      |
