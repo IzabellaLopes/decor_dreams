@@ -76,6 +76,11 @@ This is a fictional B2C e-commerce store created for educational purposes as par
       - [Newsletter Engagement](#newsletter-engagement)
       - [Future Marketing Strategies](#future-marketing-strategies)
   - [Testing](#testing)
+  - [Technologies Used](#technologies-used)
+    - [Languages Used](#languages-used)
+    - [Databases Used](#databases-used)
+    - [Frameworks Used](#frameworks-used)
+    - [Programs Used](#programs-used)
 
 ---
 
@@ -1038,6 +1043,59 @@ Sitemap: https://decor-dreams-ff212364915e.herokuapp.com/sitemap.xml
 ## Testing
 
 Comprehensive manual testing was conducted to ensure all functionalities work as intended. Details provided in [TESTING.md](TESTING.md).
+
+[Back to Contents](#contents)
+
+---
+
+## Technologies Used
+
+### Languages Used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Databases Used
+
+- [ElephantSQL](https://www.elephantsql.com/) - Postgres database
+- [AWS](https://aws.amazon.com/) - Online static/media file storage
+
+### Frameworks Used
+
+- [Django](https://www.djangoproject.com/) - Python framework
+- [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - CSS framework
+
+### Programs Used
+
+- [VS Code](https://code.visualstudio.com/) - IDE used to create the Decor Dreams.
+- [GitHub](https://github.com/) - Used for file storage, version control, and agile tool.
+- [Heroku](https://www.heroku.com/) - Used to deploy the project.
+- [Django](https://www.djangoproject.com/) - Main python framework used in the development of this project.
+- [Django-allauth](https://pypi.org/project/django-allauth/) - Authentication library used to create the user accounts.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Used to manage Django Forms.
+- [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - CSS Framework for developing responsiveness and styling.
+- [PostgreSQL](https://www.postgresql.org/) - Used as the database for this project.
+- [Balsamiq](https://balsamiq.com/) - Used to generate Wireframes.
+- [Coolors](https://coolors.co/) - Used to create color palette.
+- [Google Fonts](https://fonts.google.com/) - Used to import and alter fonts on the page.
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) - Used to check contrast.
+- [Canva](https://www.canva.com/) - To create the logo.
+- [Lexica Art](https://lexica.art/) - Used to generate Decor Dreams images.
+- [Favicon.io](https://favicon.io/) - To create favicon.
+- [Lucidchart](https://lucid.app/documents#/dashboard) - Used to create the database model design.
+- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - To troubleshoot and test features, resolve issues related to responsiveness and styling.
+- [Font Awesome](https://fontawesome.com/) - For the iconography on the website.
+- [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
+- [Code Institute Python Linter](https://pep8ci.herokuapp.com/) - Verify code conformity with PEP8.
+- [Jshint](https://jshint.com/) - Used to validate Javascript.
+- [Responsinator](http://www.responsinator.com/) - Used to verify responsiveness of website on different devices.
+- [Techsini](https://techsini.com/multi-mockup/index.php) - To display the website image across various devices.
+- [ChatGPT by OpenAI](https://chat.openai.com/) - Enhance Readme.md readability; streamline content for effective communication.
+- [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) - A Google Chrome extension that allows you to view your site as people with accessibility needs would see it.
+- [Privacy Policy Generator](https://www.privacypolicygenerator.info/) - To generate privacy policy.
+
 
 [Back to Contents](#contents)
 
