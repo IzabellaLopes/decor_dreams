@@ -1,6 +1,6 @@
 # Decor Dreams
 
-![Home Page]()
+![Home Page](documentation/readme_images/features/devices.png)
 
 Welcome to [Decor Dreams](https://decor-dreams-ff212364915e.herokuapp.com/), your destination for all your home decor needs!
 
