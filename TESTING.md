@@ -18,6 +18,8 @@ This document provides an overview of the testing strategies applied throughout 
       - [EPIC - Design \& Planning](#epic---design--planning)
       - [EPIC - Marketing and SEO](#epic---marketing-and-seo)
   - [Site Administration](#site-administration)
+  - [Code Validation](#code-validation)
+    - [HTML](#html)
 ---
 
 ## User Story Testing
@@ -97,3 +99,42 @@ This document provides an overview of the testing strategies applied throughout 
 [Back to Contents](#contents)
 
 ---
+
+## Code Validation
+
+### HTML
+
+I've used [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+
+| Page                           | Screenshot | Notes     |
+|--------------------------------|------------|-----------|
+| Home                           | ![screenshot](documentation/readme_images/testing/html_validation/home.png)  | Pass: No Errors |
+| Products                       | ![screenshot](documentation/readme_images/testing/html_validation/products.png)  | Pass: No Errors |
+| Product Details                | ![screenshot](documentation/readme_images/testing/html_validation/product_details.PNG)  | Pass: No Errors |
+| Add Product                    | ![screenshot](documentation/readme_images/testing/html_validation/add_product.PNG)        | Pass: No Errors      |
+| Edit Product                   | ![screenshot](documentation/readme_images/testing/html_validation/edit_product.PNG)        | Pass: No Errors      |
+| Confirm Delete Product         | ![screenshot](documentation/readme_images/testing/html_validation/delete_product.PNG)        | Pass: No Errors |
+| Bag                            | ![screenshot](documentation/readme_images/testing/html_validation/bag.PNG)  | Pass: No Errors |
+| Checkout                       | ![screenshot](documentation/readme_images/testing/html_validation/checkout_success.PNG)  | Pass: No Errors |
+| Profile                        | ![screenshot](documentation/readme_images/testing/html_validation/profile.PNG)        | Pass: No Errors |
+| Search                         | ![screenshot](documentation/readme_images/testing/html_validation/search.PNG)        | Pass: No Errors |
+| Interior Design Services       | ![screenshot](documentation/readme_images/testing/html_validation/interior_design.PNG)  | Pass: No Errors |
+| Add Interior Design Service    | ![screenshot](documentation/readme_images/testing/html_validation/add_interior.PNG)        | Pass: No Errors      |
+| Edit Interior Design Service   | ![screenshot](documentation/readme_images/testing/html_validation/edit_interior.PNG)        | Pass: No Errors      |
+| Delete Interior Design Service | ![screenshot](documentation/readme_images/testing/html_validation/delete_interior.PNG)        | Pass: No Errors |
+| Decor Dreams Projects          | ![screenshot](documentation/readme_images/testing/html_validation/decor_projects.PNG)  | Pass: No Errors |
+| Add Interior Design Project    | ![screenshot](documentation/readme_images/testing/html_validation/add_decor.PNG)        | Pass: No Errors      |
+| Edit Decor Dreams Projects     | ![screenshot](documentation/readme_images/testing/html_validation/edit_decor.PNG)  | Pass: No Errors |
+| Delete Interior Design         | ![screenshot](documentation/readme_images/testing/html_validation/delete_decor.PNG)        | Pass: No Errors |
+| Testimonials                   | ![screenshot](documentation/readme_images/testing/html_validation/testimonials.PNG)  | Pass: No Errors |
+| Add Testimonial                | ![screenshot](documentation/readme_images/testing/html_validation/add_testimonial.PNG)        | Pass: No Errors |
+| Edit Testimonial               | ![screenshot](documentation/readme_images/testing/html_validation/edit_testimonial.PNG)        | Pass: No Errors |
+| Delete Testimonial             | ![screenshot](documentation/readme_images/testing/html_validation/delete_testimonial.PNG)        | Pass: No Errors |
+| Contact                        | ![screenshot](documentation/readme_images/testing/html_validation/contact.PNG)  | Pass: No Errors |
+| Consultation Dashboard         | ![screenshot](documentation/readme_images/testing/html_validation/consultation.PNG)        | Pass: No Errors |
+| Consultation Detail            | ![screenshot](documentation/readme_images/testing/html_validation/consultation_detail.PNG)        | Pass: No Errors |
+| Delete Consultation            | ![screenshot](documentation/readme_images/testing/html_validation/delete_consultation.PNG)        | Pass: No Errors |
+| Sign In                        | ![screenshot](documentation/readme_images/testing/html_validation/signin.PNG)  | Pass: No Errors |
+| Sign Up                        | ![screenshot](documentation/readme_images/testing/html_validation/signup.PNG)  | Pass: No Errors |
+| Log Out                        | ![screenshot](documentation/readme_images/testing/html_validation/logout.PNG)        | Pass: No Errors |
+| Password Reset                 | ![screenshot](documentation/readme_images/testing/html_validation/password_reset.PNG)  | Pass: No Errors |
