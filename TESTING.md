@@ -13,6 +13,7 @@ This document provides an overview of the testing strategies applied throughout 
   - [User Story Testing](#user-story-testing)
       - [EPIC - Viewing and Navigation](#epic---viewing-and-navigation)
       - [EPIC - User Authentication](#epic---user-authentication)
+      - [EPIC - Shop Products](#epic---shop-products)
 ---
 
 ## User Story Testing
@@ -42,4 +43,17 @@ This document provides an overview of the testing strategies applied throughout 
 | *"As a Site User I want to be able to save my personal details in my user profile so that I do not have to fill them out for future orders."*                                       | ![Save Personal Details](documentation/readme_images/features/save_personal_details.PNG)         |
 | *"As a Site User I want to be able to recover my password if I forget it so that I can regain access to my account."*                                       | ![Password reset](documentation/readme_images/features/password_reset.PNG)         |
 
+#### EPIC - Shop Products
+
+| User Story                                                                                                                                                                     | Screenshot                                                               |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| *"As a Shopper I want to be able to add multiple products in varying quantities to my shopping bag so that I can purchase them all together when I'm ready."*                                       | ![Product Details](documentation/readme_images/features/product_details.png)          |
+| *"As a Shopper I want to be able to see a running total of my shopping bag as I add items so that I can keep track of the total cost."*                                       | ![Bag success](documentation/readme_images/features/bag_success.png)         |
+| *"As a Shopper I want to be able to view a summary of my shopping cart during checkout so that I can review the included products and the total cost before finalizing my purchase."*                                       | ![Shopping Bag](documentation/readme_images/features/shopping_bag.png)          |
+| *"As a Shopper I want to be able to modify the quantity of individual products in my shopping bag so that I can easily make changes before finalizing my purchase."*                                       | ![Quantity](documentation/readme_images/features/quantity.PNG)          |
+| *"As a Shopper I want to be able to securely enter my payment information easily so that I can ensure a quick and hassle-free purchase process for my selected products."*                                       | ![Payment](documentation/readme_images/features/payment.PNG)          |
+| *"As a Shopper I want to be able to view the contents of my shopping bag at any time so that I can review what items are included and the total cost."*                                       | ![Shopping Bag](documentation/readme_images/features/shopping_bag.png)          |
+| *"As a Shopper I want to be able to checkout as a guest so that I can make a purchase without having to sign up for an account."*                                       | ![Guest checkout](documentation/readme_images/features/guest_checkout.png)          |
+| *"As a Shopper I want to be able to view an order confirmation after completing the checkout process so that I can ensure that my purchase was successful."*                                       | ![Thank you](documentation/readme_images/features/thankyou.png)          |
+| *"As a Shopper I want to be able to receive an email confirmation of my order so that I can have a record of my purchase."*                                       | ![Order success](documentation/readme_images/features/order_success.PNG)         |
 
