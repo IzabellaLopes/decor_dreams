@@ -125,7 +125,8 @@ header {
     height: 70px;
 }
 
-a.nav-link {
+a.nav-link,
+.dropdown-item {
     color: var(--dark-green) !important;
 }
 
@@ -134,13 +135,16 @@ a.nav-link {
 }
 
 .navbar ul a,
-.dropdown-menu.show {
+.dropdown-menu.show,
+.dropdown-item {
     text-transform: uppercase;
     font-size: .8rem;
 }
 
 .dropdown-item {
     padding: .25rem .5rem;
+    line-height: 2;
+    font-weight: 700;
 }
 
 .navbar ul a:hover {
@@ -150,7 +154,6 @@ a.nav-link {
 .navbar-nav .nav-item.active .nav-link {
     border-bottom: 2px solid var(--golden);
   }
-
 
 /* Remove border from toggler */
 /* Source: Navbar Hamburger Animation with CSS - Bootstrap 5 - https://www.youtube.com/watch?v=vJ85fm4m7lw */
@@ -381,10 +384,10 @@ a.nav-link {
 @keyframes underline-animation {
     from {
         width: 0;
+    }
     to {
         width: 100%;
     }
-}
 }
 
 /*--------------------------------------------------------------
@@ -786,7 +789,8 @@ input[name='q']::placeholder {
 /* For Large devices (laptops, less than 1200px) */
 @media (max-width: 1200px) {
     .navbar ul a, 
-    .dropdown-menu.show {
+    .dropdown-menu.show,
+    .dropdown-item {
         font-size: .7rem;
     }
 }
@@ -821,7 +825,8 @@ input[name='q']::placeholder {
         height: calc(100vh - 116px);
     }
 
-    .navbar ul a {
+    .navbar ul a,
+    .dropdown-item {
         font-size: .8rem;
         line-height: 2;
         padding-top: 10px;
@@ -941,6 +946,13 @@ input[name='q']::placeholder {
     }
 }
 
+/* Small devices (phones, less than 480px */
+@media screen and (max-width: 480px) {
+    .dropdown-item {
+        white-space: normal;
+    }
+}
+
 /* Small devices (phones, less than 453px */
 @media screen and (max-width: 453px) {
     .home-button {
@@ -973,7 +985,6 @@ input[name='q']::placeholder {
         font-size: small;
     }
 }
-
 
 /* Small devices (phones, less than 384px */
 @media screen and (max-width: 384px) {
@@ -1014,7 +1025,6 @@ input[name='q']::placeholder {
         font-size: 7px;
     }
 }
-
 
 /* Small devices (phones, less than 325px */
 @media screen and (max-width: 325px) {
