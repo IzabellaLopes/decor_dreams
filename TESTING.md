@@ -821,7 +821,11 @@ The Lighthouse audit has been instrumental in pinpointing areas where the site p
 
 | **BUG** | **DESCRIBE THE BUG**  | **HOW I SOLVED**|
 | ------- | -------               | -------         |
- 
+| Contact Confirmation template wasn't displaying | Unable to access the Contact Confirmation template. | I had mistakenly written template_name = 'confirmation.html' instead of template_name = 'contact/confirmation.html'. |
+| Message not displayed - Contact Form | The message was not displayed after submitting the contact form | I forgot to include "from django.contrib.messages.views import SuccessMessageMixin." |
+| Submission checkout form allows whitespaces | When testing the Checkout Form, I was able to input whitespace into the form text fields and enter text into the phone number field and still submit the form. This would then return a 500 error; however, the Stripe payment would still get processed. | checkout forms.py: Added form validation patterns to avoid submission of forms containing only whitespace found in [Stack](https://stackoverflow.com/questions/19619428/html5-form-validation-pattern-alphanumeric-with-spaces) |
+| Webhook handler error | I was getting the error: "Pending webhook response. A webhook that is subscribed to the event hasn’t successfully responded yet." ![Pending Webhook response](documentation/readme_images/testing/pending_webhook_response.PNG)| My modifications in webhook_handler.py: First, I realized I made a silly mistake in my code. I was supposed to write "def handle_payment_intent_payment_failed(self, event)" but instead, I wrote "def handle_payment_intent_failed(self, event)." Then, after consulting the [Code Institute Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1669282486321559), I realized that I needed to update my Stripe Webhook Handler due to changes implemented by Stripe on November 16, 2022. Specifically, the charges attribute was no longer directly available from the payment intent. To resolve this, I included stripe_charge in my code, and it resolved the issue. ![Webhook sucess](documentation/readme_images/testing/webhook_success.PNG) | 
+
 [Back to Contents](#contents)
 
 ---
