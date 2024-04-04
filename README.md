@@ -1050,6 +1050,20 @@ Various marketing strategies have been employed to promote Decor Dreams, includi
   - We've identified a mix of short-tail and long-tail keywords that align with our products and brand, optimizing our site's visibility in search engine results.
   - The most relevant keywords have been added to the site's meta-keywords and meta-description. These keywords have also been carefully included in page titles, headings, site content, <strong></strong> tags, image alt attributes and anchor tag links across the site.
 
+| **Short-tail keywords** | **Long-tail keywords**                               |
+|-------------------------|------------------------------------------------------|
+| **Decor Dreams**        | **Interior design consultation**                     |
+| **Home decor**          | Elegant tables and chairs for home decor             |
+| Furniture               | Cozy sofas for Dublin homes                          |
+| Decorations             | Outdoor essentials for stylish living                |
+| Interior design         | **Interior design service Dublin**                   |
+| Dublin                  | Expert consultation for personalized decor solutions |
+| **Home products**       | Luxury furnishings for modern interiors              |
+| **Luxury furnishings**  | Beautiful decorations to enhance your home           |
+| Design services         | Top-notch collection of home decor items             |
+| Expert consultation     | Stylish furniture for every room                     |
+| Decor essentials        | Expert interior design services in Dublin, Ireland   |
+
 - **Building Trust**:
   - To establish brand trust, a dedicated testimonial page showcasing interior design services has been integrated into the site. The link to this page is conveniently included both in the page footer and the main navigation bar.
   - Additionally, the page footer provides links to the privacy policy, ensuring users are informed about the collection and processing of their data.
