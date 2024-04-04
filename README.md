@@ -1493,7 +1493,10 @@ To clone the repository:
 - [Django All Auth Documentation](https://docs.allauth.org/en/latest/installation/quickstart.html)
 - [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets)
 - [Bootstrap 4.6 Docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
-- [Stack Overflow](https://stackoverflow.com/questions/19619428/html5-form-validation-pattern-alphanumeric-with-spaces) - To prevent form being submitted with whitespace
+- [Clueless Expert - Youtube](https://www.youtube.com/watch?v=vJ85fm4m7lw) - To create a Navbar Hamburger Animation with CSS - Bootstrap
+- [Code Institute Slack](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1669282486321559) - To solve my Stripe Webhook handler issue
+- [Stack Overflow - SucessMessageMixin](https://stackoverflow.com/questions/24822509/success-message-in-deleteview-not-shown) - To display success message given SucessMessageMixin in generic.DeleteView
+- [Stack Overflow - Form validation pattern](https://stackoverflow.com/questions/19619428/html5-form-validation-pattern-alphanumeric-with-spaces) - To prevent form being submitted with whitespace
 
 ### Content
 
