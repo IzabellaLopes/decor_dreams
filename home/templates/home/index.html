@@ -68,19 +68,23 @@
 
   {% if top_products %}
     <section class="container top-products">
-      <div class="row">
-        <div class="col">
-          <h2 class="title">Top Products</h2>
+      <div class="container container-wide">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6">
+            <hr />
+            <h2 class="logo-font title text-center">Top Products</h2>
+            <hr />
+          </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-3">
         {% for product in top_products %}
           <div class="col-6 col-md-4 mb-4">
             <div class="card item-card rounded-4 h-100">
               <div class="card-body d-flex flex-column justify-content-between">
-                <img class="card-img m-auto mb-2" src="{{ product.image.url }}" draggable="false" alt="{{ product.name }}" />
-                <p class="card-title text-center mt-auto">{{ product.name }}</p>
-                <a class="align-self-end stretched-link mt-3" href="{% url 'product_detail' product.id %}"><b>€ {{ product.price }}</b></a>
+                <a href="{% url 'product_detail' product.id %}"><img class="card-img-top img-fluid product-img mb-2" src="{{ product.image.url }}" draggable="false" alt="{{ product.name }}" /></a>
+                <p class="card-text card-title pl-1">{{ product.name }}</p>
+                <p class="card-price text-right lead font-weight-bold pr-1">€ {{ product.price }}</p>
               </div>
             </div>
           </div>
