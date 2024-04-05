@@ -293,7 +293,8 @@ a.nav-link,
     animation: slideInFromTop 1s ease-out;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 50px 50px 0 0;
-  }
+    max-height: 22rem;
+}
   
   @keyframes slideInFromTop {
     0% {
@@ -305,6 +306,10 @@ a.nav-link,
       opacity: 1;
     }
   }
+
+.card-body-top-products {
+    padding: .5rem !important;
+}
 
 /*--------------------------------------------------------------
 # Mailchimp
@@ -394,10 +399,6 @@ a.nav-link,
 /*--------------------------------------------------------------
 # Product
 --------------------------------------------------------------*/
-
-.card-body {
-    padding: .5rem !important;
-}
 
 .item-card {
     background-color: #ffffff;
@@ -964,6 +965,10 @@ input[name='q']::placeholder {
         font-size: 10px;
     }
 
+    .jumbotron {
+        max-height: 13rem;
+    }
+
     .card-title,
     .card-price {
         font-size: 12px;
@@ -996,6 +1001,14 @@ input[name='q']::placeholder {
     .home-button {
         font-size: 8px;
         min-width: 140px;
+    }
+
+    .jumbotron {
+        max-height: 14rem;
+    }
+
+    .jumbotron-text {
+        font-size: .9rem;
     }
 
     .footer {
