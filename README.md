@@ -558,6 +558,12 @@ The "Who we are" section offers a brief summary of the site's offerings, highlig
 
 ![Who we are](documentation/readme_images/features/who_we_are.png)
 
+**Top products section**
+
+The "Top Products" section showcases 6 selected products chosen by the site owner to draw the user's attention to the most sought-after items. Upon clicking on the card, the user will be redirected to the product details page.
+
+![Top products](documentation/readme_images/features/top_products.png)
+
 ### User Account Pages
 
 - Django Allauth was installed and utilized to implement Sign Up, Log In, and Log Out functionalities. 
