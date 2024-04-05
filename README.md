@@ -1508,6 +1508,8 @@ To clone the repository:
 
 - [Code Institute - Boutique Ado Walkthrough Project](https://github.com/Code-Institute-Solutions/boutique_ado_v1)
 - [Code Institute Template](https://github.com/Code-Institute-Org/ci-full-template)
+- [README.md examples from kera-cudmore](https://github.com/kera-cudmore/readme-examples/tree/main) - I wish to express my gratitude to Kera Cudmore for furnishing the foundational structure of a README file. Since my first project, I have been using her README examples as a robust foundation for composing my own.
+- [Alison O'Keeffe - PP5 Fresh Nest](https://github.com/AliOKeeffe/PP5-Fresh-Nest) - I would like to thank Alison O'Keeffe; her splendid work served as a foundation and inspiration for me.
 - [W3Schools](https://www.w3schools.com/)
 - [Django Docs](https://docs.djangoproject.com/en/4.0/)
 - [Django All Auth Documentation](https://docs.allauth.org/en/latest/installation/quickstart.html)
