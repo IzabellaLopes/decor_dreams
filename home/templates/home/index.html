@@ -41,26 +41,10 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <div class="jumbotron text-center">
-            <div class="about-us-text">
-              <h3 class="logo-font title"><strong>Discover Unique Pieces</strong></h3>
-              <p>
-                Explore our carefully selected collection of <strong>stylish homeware and decorations</strong>
-              </p>
-              <a href="{% url 'products' %}" class="btn-green home-button btn rounded-4 text-uppercase py-3 logo-font font-weight-bold mb-5 mr-2">Shop Now</a>
-            </div>
-          </div>
+          {% include 'home/unique_pieces.html' %}
         </div>
         <div class="col-md-6">
-          <div class="jumbotron text-center">
-            <div class="about-us-text">
-              <h3 class="logo-font title mb-2"><strong>Elevate Your Space</strong></h3>
-              <p class="jumbotron-text">
-                Transform your home with our tailored <strong>interior design services</strong>, all across Ireland
-              </p>
-              <a href="{% url 'interiordesign' %}" class="btn-green home-button btn rounded-4 text-uppercase py-3 logo-font font-weight-bold mb-5">Schedule a Consultation</a>
-            </div>
-          </div>
+          {% include 'home/elevate_space.html' %}
         </div>
       </div>
     </div>
